@@ -7,7 +7,17 @@ CFLAGS=-O3 -pg -Wall
 LDFLAGS=-lm
 
 
-SOURCES=main.c
+SOURCES=main.c \
+	strings.c \
+	mtf.c \
+	rotate.c \
+	tt.c \
+	tt_print.c \
+	stoc/dice.c \
+	stoc/mersenne.c \
+	stoc/shuffle.c \
+	stoc/stoc.c
+
 OBJECTS=$(SOURCES:.c=.o)
 
 EXECUTABLE=random
