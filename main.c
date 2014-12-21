@@ -65,32 +65,43 @@ void test_tt(char *arg)
 
         tt_print(tree, "%c");
 
-
         struct tt_node *a;
         struct tt_node *b;
         
         a = tt_random_leaf(tree);
         b = tt_random_leaf(tree);
         
-        tt_LEAF_INTERCHANGE(a, b);
+        /*tt_LEAF_INTERCHANGE(a, b);*/
 
+        /*tt_print(tree, "%c");*/
+        int c = 0;
+        int C = leaf_count(tree);
+
+        for (i=0; i<100; i++) {
+                a = tt_random_node(tree);
+                b = tt_random_node(tree);
+
+                tt_SUBTREE_INTERCHANGE(a, b);
+                tt_SUBTREE_TRANSFER(a, b);
+
+                c = leaf_count(tree);
+
+                if (c != C) {
+                        printf("HALT\n");
+                        tt_print(tree, "%c");
+                        return;
+                }
+        }
+
+        printf("ALL OK after %d iterations\n", i);
         tt_print(tree, "%c");
 
+        /*a = tt_random_node(tree);*/
+        /*b = tt_random_node(tree);*/
 
-        a = tt_random_node(tree);
-        b = tt_random_node(tree);
+        /*tt_SUBTREE_TRANSFER(a, b);*/
 
-        tt_SUBTREE_INTERCHANGE(a, b);
-
-        tt_print(tree, "%c");
-
-
-        a = tt_random_node(tree);
-        b = tt_random_node(tree);
-
-        tt_SUBTREE_TRANSFER(a, b);
-
-        tt_print(tree, "%c");
+        /*tt_print(tree, "%c");*/
 }
 
 

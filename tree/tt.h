@@ -43,6 +43,9 @@ void tt_SUBTREE_TRANSFER(struct tt_node *a, struct tt_node *b);
 struct tt_node *tt_random_node(struct tt_node *n);
 
 
+int leaf_count(struct tt_node *a);
+
+
 
 #endif
 

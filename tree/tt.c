@@ -344,9 +344,14 @@ struct tt_node *tt_random_node(struct tt_node *n)
 {
         maybe = NULL;
 
-        tt_traverse_inorder(n, tt_random_node_impl);
-
-        printf("got random node:%c id:%d\n", maybe->value, maybe->id);
+        if (n != NULL) {
+                tt_traverse_inorder(n, tt_random_node_impl);
+                if (maybe != NULL) {
+                        /*printf("got random node:%c id:%d\n", maybe->value, maybe->id);*/
+                } else {
+                        /*printf("maybe was NULL\n");*/
+                }
+        }
 
         return maybe;
 }
@@ -379,7 +384,7 @@ int subtree_of(struct tt_node *a, struct tt_node *b)
 
 int are_disjoint(struct tt_node *a, struct tt_node *b)
 {
-        return (!subtree_of(a, b) && !subtree_of(a, b));
+        return (!subtree_of(a, b) && !subtree_of(b, a));
 }
 
 int are_siblings(struct tt_node *a, struct tt_node *b)
@@ -409,13 +414,33 @@ int is_internal(struct tt_node *a)
 
 int is_leaf(struct tt_node *a)
 {
-        return (a && a->value != INTERNAL_NODE_LABEL);
+        return (a && a->value != INTERNAL_NODE_LABEL && a->value != '*');
 }
 
 int is_root(struct tt_node *a)
 {
         return (a && a->P == NULL);
 }
+
+
+int Leaf_count = 0;
+
+void _leaf_count(struct tt_node *a, int i)
+{
+        if (is_leaf(a)) {
+                Leaf_count++;
+        }
+}
+
+int leaf_count(struct tt_node *a)
+{
+        Leaf_count = 0;
+
+        tt_traverse_inorder(a, _leaf_count);
+
+        return Leaf_count;
+}
+
 
 
 /******************************************************************************
@@ -470,17 +495,17 @@ void tt_SUBTREE_INTERCHANGE(struct tt_node *a, struct tt_node *b)
 
         if (a != NULL && b != NULL) {
                 if (are_equal(a, b)) {
-                        fprintf(stderr, "Identical subtrees. Interchange declined\n");
+                        /*printf("Identical subtrees. Interchange declined\n");*/
                         return;
                 }
                 /* The root node cannot participate */
                 if (is_root(a) || is_root(b)) {
-                        fprintf(stderr, "Cannot interchange root. Interchange declined\n");
+                        /*printf("Cannot interchange root. Interchange declined\n");*/
                         return;
                 } else {
 
                         if (are_siblings(a, b)) {
-                                fprintf(stderr, "Sibling nodes.\n");
+                                /*printf("Sibling nodes.\n");*/
                                 if (is_left(a)) {
                                         a->P->L = b;
                                         a->P->R = a;
@@ -492,7 +517,7 @@ void tt_SUBTREE_INTERCHANGE(struct tt_node *a, struct tt_node *b)
                         }
 
                         if (!are_disjoint(a, b)) {
-                                fprintf(stderr, "Non-disjoint subtrees. Interchange declined\n");
+                                /*printf("Non-disjoint subtrees. Interchange declined\n");*/
                                 return;
                         }
 
@@ -531,18 +556,18 @@ void tt_SUBTREE_TRANSFER(struct tt_node *a, struct tt_node *b)
 
         if (a != NULL && b != NULL) {
                 if (are_equal(a, b)) {
-                        fprintf(stderr, "Identical subtrees. Transfer declined\n");
+                        /*printf("Identical subtrees. Transfer declined\n");*/
                         return;
                 }
                 
                 /* The root node cannot participate */
                 if (is_root(a) || is_root(b)) {
-                        fprintf(stderr, "Cannot transfer root. Transfer declined\n");
+                        /*printf("Cannot transfer root. Transfer declined\n");*/
                         return;
                 } else {
 
                         if (are_siblings(a, b)) {
-                                fprintf(stderr, "Sibling nodes.\n");
+                                /*printf("Sibling nodes.\n");*/
                                 if (is_left(a)) {
                                         a->P->L = b;
                                         a->P->R = a;
@@ -554,19 +579,19 @@ void tt_SUBTREE_TRANSFER(struct tt_node *a, struct tt_node *b)
                         }
 
                         if (!are_disjoint(a, b)) {
-                                fprintf(stderr, "Non-disjoint subtrees. Interchange declined\n");
+                                /*printf("Non-disjoint subtrees. Interchange declined\n");*/
                                 return;
                         }
 
-                        new  = tt_add_before(b, '*');
+                        new  = tt_add_before(b, '.');
                         par  = a->P;
                         a->P = new;
 
-                        if (par->L && par->L->id == a->id) {
-                                par->L  = NULL;
-                        } else {
-                                par->R  = NULL;
-                        }
+                        /*if (par->L && par->L->id == a->id) {*/
+                                /*par->L  = NULL;*/
+                        /*} else {*/
+                                /*par->R  = NULL;*/
+                        /*}*/
 
                         if (new->L == NULL) {
                                 new->L = a;
@@ -574,28 +599,59 @@ void tt_SUBTREE_TRANSFER(struct tt_node *a, struct tt_node *b)
                                 new->R = a;
                         }
 
-                        if (is_internal(par)) {
-                                if (par->L && par->L->id == a->id) {
-                                        if (is_internal(par->R)) {
-                                                /* ... */
-                                                printf("would contract R\n");
-                                                /*tt_contract(par, par->R);*/
-                                                return;
+                        if (par->L && par->L->id == a->id) {
+                                par->L  = NULL;
+                                if (!is_root(par)) {
+                                        /* Edge contraction */
+                                        if (par->R) {
+                                                par->R->P = par->P;
+                                                if (is_left(par)) {
+                                                        par->P->L = par->R;
+                                                } else {
+                                                        par->P->R = par->R;
+                                                }
                                         }
-                                } else {
-                                        if (is_internal(par->L)) {
-                                                printf("would contract L\n");
-                                                /*tt_contract(par, par->L);*/
-                                                /* ... */
-                                                return;
-                                        }
+                                        tt_destroy_node(par);
                                 }
-                                if (is_internal(par->P)) {
-                                        printf("would contract parent\n");
-                                        /*tt_contract(par->P, par);*/
-                                        return;
+                        } else {
+                                par->R = NULL;
+                                if (!is_root(par)) {
+                                        /* Edge contraction */
+                                        if (par->L) {
+                                                par->L->P = par->P;
+                                                if (is_left(par)) {
+                                                        par->P->L = par->L;
+                                                } else {
+                                                        par->P->R = par->L;
+                                                }
+                                        }
+                                        tt_destroy_node(par);
                                 }
                         }
+
+
+                        /*if (is_internal(par)) {*/
+                                /*if (par->L && par->L->id == a->id) {*/
+                                        /*if (is_internal(par->R)) {*/
+                                                /*[> ... <]*/
+                                                /*printf("would contract R\n");*/
+                                                /*tt_contract(par, par->R);*/
+                                                /*return;*/
+                                        /*}*/
+                                /*} else {*/
+                                        /*if (is_internal(par->L)) {*/
+                                                /*printf("would contract L\n");*/
+                                                /*tt_contract(par, par->L);*/
+                                                /*[> ... <]*/
+                                                /*return;*/
+                                        /*}*/
+                                /*}*/
+                                /*if (is_internal(par->P)) {*/
+                                        /*printf("would contract parent\n");*/
+                                        /*[>tt_contract(par->P, par);<]*/
+                                        /*return;*/
+                                /*}*/
+                        /*}*/
                 }
         }
 }
