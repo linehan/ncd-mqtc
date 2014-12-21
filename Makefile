@@ -7,20 +7,17 @@ CFLAGS=-O3 -pg -Wall
 LDFLAGS=-lm
 
 
-SOURCES=main.c \
-	strings.c \
-	mtf.c \
-	rotate.c \
-	tt.c \
-	tt_print.c \
-	stoc/dice.c \
-	stoc/mersenne.c \
-	stoc/shuffle.c \
-	stoc/stoc.c
+SOURCES=main.c		 \
+	string/strings.c \
+	string/mtf.c	 \
+	string/rotate.c  \
+	tree/tt.c	 \
+	tree/tt_print.c  \
+	random/mersenne.c
 
 OBJECTS=$(SOURCES:.c=.o)
 
-EXECUTABLE=random
+EXECUTABLE=r
 
 all: $(SOURCES)
 	$(CC) $(CFLAGS) $(SOURCES) -o $(EXECUTABLE) $(LDFLAGS)

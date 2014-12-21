@@ -3,12 +3,11 @@
 #include <stdbool.h>
 #include <string.h>
 #include <time.h>
-#include "strings.h"
-#include "mtf.h"
-#include "rotate.h"
-#include "tt.h"
-#include "tt_print.h"
-#include "stoc/stoc.h"
+#include "string/strings.h"
+#include "string/mtf.h"
+#include "string/rotate.h"
+#include "tree/tt.h"
+#include "tree/tt_print.h"
 
 
 void test_mtf(char *arg)
@@ -57,7 +56,7 @@ void test_tt(char *arg)
 
         tree = tt_create();
 
-        for (i=0; i<strlen(arg); i++) {
+        for (i=0; i<strlen(arg)-1; i++) {
                 printf("%c - ", arg[i]);
                 tt_insert(tree, arg[i]);
         }
@@ -73,7 +72,7 @@ void test_tt(char *arg)
         a = tt_random_leaf(tree);
         b = tt_random_leaf(tree);
         
-        tt_swap(a, b);
+        tt_LEAF_INTERCHANGE(a, b);
 
         tt_print(tree, "%c");
 
@@ -81,7 +80,15 @@ void test_tt(char *arg)
         a = tt_random_node(tree);
         b = tt_random_node(tree);
 
-        tt_swap(a, b);
+        tt_SUBTREE_INTERCHANGE(a, b);
+
+        tt_print(tree, "%c");
+
+
+        a = tt_random_node(tree);
+        b = tt_random_node(tree);
+
+        tt_SUBTREE_TRANSFER(a, b);
 
         tt_print(tree, "%c");
 }
@@ -89,8 +96,6 @@ void test_tt(char *arg)
 
 int main(int argc, char *argv[])
 {
-        init_stochastics();
-
         if (argv[1] != NULL) { 
                 test_tt(argv[1]);
         }

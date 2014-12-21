@@ -61,10 +61,10 @@
  * Generates a random value between 0 and 1. If b is less than the random 
  * value, the coin is said to be "heads", otherwise it is "tails".  
  */
-int flip_biased(double b)
-{
-        return (mt_normalize()<b) ? 1 : 0;
-}
+/*int flip_biased(double b)*/
+/*{*/
+        /*return (mt_normalize()<b) ? 1 : 0;*/
+/*}*/
 
 
 
@@ -72,17 +72,17 @@ int flip_biased(double b)
  * roll_fair - simulate a fair roll of an n sided die. Returns an int
  *             between 0 and (n-1)
  */
-int roll_fair(int n)                                                          
-{                                       
-        /*n = (n > 0) ? (n-1) : n;*/
-        return (int)(floor(mt_normalize() * (double)n))%n;
-}                
+/*int roll_fair(int n)                                                          */
+/*{                                       */
+        /*[>n = (n > 0) ? (n-1) : n;<]*/
+        /*return (int)(floor(mt_normalize() * (double)n))%n;*/
+/*}                */
 
 
-int flip_sign(double bias)
-{
-        return (flip_biased(bias)) ? -1 : 1;
-}
+/*int flip_sign(double bias)*/
+/*{*/
+        /*return (flip_biased(bias)) ? -1 : 1;*/
+/*}*/
 
 
 

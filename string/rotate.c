@@ -1,9 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-#include "mtf.h"
 
-                
 int booth_minimal_string_rotation(const char *string)
 {
         char  *buffer;
@@ -54,3 +52,4 @@ int booth_minimal_string_rotation(const char *string)
 
         return k;
 }
+

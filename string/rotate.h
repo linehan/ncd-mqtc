@@ -3,5 +3,4 @@
 
 int booth_minimal_string_rotation(const char *string);
 
-
 #endif

@@ -5,7 +5,6 @@
 #include "mtf.h"
 
 
-
 int move_to_front(char *string, size_t length, char c)
 {
         int shift;
@@ -14,21 +13,16 @@ int move_to_front(char *string, size_t length, char c)
         shift = index_of(string, length, c); 
 
         if (shift == -1) {
-                printf("error, no dictionary entry for %c\n", c);
+                fprintf(stderr, "error, no dictionary entry for %c\n", c);
         }
 
         i = shift;
-        /*printf("string: %s\n", string);*/
 
         do {
-                /*printf("string[%d](%c) = string[%d](%c)\t", i, string[i], i-1, string[i-1]);*/
                 string[i] = string[i-1];
-                /*printf("string: %s\n", string);*/
         } while (--i>0);
 
         string[0] = c;
-
-        /*printf("mtf(%c): index: %d string: %s\n", c, shift, string); */
 
         return shift; 
 }
@@ -52,7 +46,7 @@ void mtf_encode(char *string, char **encoding, char **dictionary)
 
         for (i=0; i<length; i++) {
                 if (index_of(*dictionary, length, string[i]) == -1) {
-                        printf("%c was not in dictionary\n", string[i]);
+                        fprintf(stderr, "%c was not in dictionary\n", string[i]);
                         (*dictionary)[j] = string[i];
                         j++;
                 }
@@ -90,13 +84,8 @@ void mtf_decode(const char *string, char **decoding, char *dictionary)
 
                 (*decoding)[i] = c;
                 move_to_front(dictionary, length_dict, c);
-
-                /*if (string[i] != index) {*/
-                        /*printf("error\n");*/
-                /*}*/
         }
-
-        /**decoding[i] = '\0';*/
 
         return;
 }
+

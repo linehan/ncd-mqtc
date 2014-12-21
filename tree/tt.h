@@ -34,6 +34,12 @@ struct tt_node *tt_random_leaf(struct tt_node *n);
 void            tt_swap       (struct tt_node *a, struct tt_node *b);
 
 
+void tt_LEAF_INTERCHANGE(struct tt_node *a, struct tt_node *b);
+void tt_SUBTREE_INTERCHANGE(struct tt_node *a, struct tt_node *b);
+void tt_SUBTREE_TRANSFER(struct tt_node *a, struct tt_node *b);
+
+
+
 struct tt_node *tt_random_node(struct tt_node *n);
 
 

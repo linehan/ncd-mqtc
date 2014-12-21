@@ -72,10 +72,6 @@ int index_of(char *string, size_t string_length, char c)
 }
 
 
-
-         
-
-
 void bubble_sort(char *string)
 {
         int n = strlen(string);
@@ -93,6 +89,7 @@ void bubble_sort(char *string)
                 n = m;
         }
 }
+
 
 void bubble_sort_string(char *string, size_t length)
 {
@@ -115,8 +112,6 @@ void bubble_sort_string(char *string, size_t length)
                 }
                 n = m;
         } while (n!=0);
-
-        /*printf("bubble sorted:%s\n", string);*/
 }
 
 
@@ -144,4 +139,5 @@ void print_binary(void const *memory, size_t size, bool pad)
 
         return;
 }
+
 

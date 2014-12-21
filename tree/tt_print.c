@@ -72,6 +72,15 @@ int print_next;
  * CONVERT a normal binary tree to the ASCIItree 
  ******************************************************************************/
 
+/**
+ * build_ascii_tree_recursive()
+ * ----------------------------
+ * Recursively build out the ASCII tree.
+ *
+ * @n    : Native binary tree node.
+ * @fmt  : Format specifier for printing each value.
+ * Return: ASCII tree 
+ */
 struct asciinode_t *build_ascii_tree_recursive(struct tt_node *n, const char *fmt) 
 {
         struct asciinode_t *node;
@@ -99,7 +108,15 @@ struct asciinode_t *build_ascii_tree_recursive(struct tt_node *n, const char *fm
 }
 
 
-//Copy the tree into the ascii node structre
+/**
+ * build_ascii_tree()
+ * ------------------
+ * Copy the tree into the ASCII tree structure.
+ *
+ * @n    : Native binary tree node.
+ * @fmt  : Format specifier for printing each value.
+ * Return: ASCII tree 
+ */
 struct asciinode_t *build_ascii_tree(struct tt_node *n, const char *fmt) 
 {
         struct asciinode_t *node;
@@ -113,7 +130,14 @@ struct asciinode_t *build_ascii_tree(struct tt_node *n, const char *fmt)
 }
 
 
-//Free all the nodes of the given tree
+/**
+ * free_ascii_tree()
+ * -----------------
+ * Free the nodes of the ASCII tree.
+ *
+ * @node : ASCII tree
+ * Return: nothing
+ */
 void free_ascii_tree(struct asciinode_t *node) 
 {
         if (node == NULL) {
@@ -186,10 +210,20 @@ void print_level(struct asciinode_t *node, int x, int level)
 
 
 
-//The following function fills in the lprofile array for the given tree.
-//It assumes that the center of the label of the root of this tree
-//is located at a position (x,y).  It assumes that the edge_length
-//fields have been computed for this tree.
+/**
+ * compute_lprofile()
+ * ------------------
+ * Construct the lprofile array for the tree.
+ *
+ * NOTE
+ * Assumes the center of the root label is at (x,y).
+ * Assumes that edge_length fields have been computed.
+ *
+ * @node : ASCII tree
+ * @x    : x-coordinate of the root node label
+ * @y    : x-coordinate of the root node label
+ * Return: nothing
+ */
 void compute_lprofile(struct asciinode_t *node, int x, int y) 
 {
         int i;
@@ -210,6 +244,20 @@ void compute_lprofile(struct asciinode_t *node, int x, int y)
 }
 
 
+/**
+ * compute_rprofile()
+ * ------------------
+ * Construct the rprofile array for the tree.
+ *
+ * NOTE
+ * Assumes the center of the root label is at (x,y).
+ * Assumes that edge_length fields have been computed.
+ *
+ * @node : ASCII tree
+ * @x    : x-coordinate of the root node label
+ * @y    : x-coordinate of the root node label
+ * Return: nothing
+ */
 void compute_rprofile(struct asciinode_t *node, int x, int y) 
 {
         int i;
@@ -233,6 +281,14 @@ void compute_rprofile(struct asciinode_t *node, int x, int y)
 
 
 
+/**
+ * compute_edge_lengths()
+ * ----------------------
+ * Construct the edge lengths for the tree.
+ *
+ * @node : ASCII tree
+ * Return: nothing
+ */
 void compute_edge_lengths(struct asciinode_t *node) 
 {
         int h;
@@ -247,7 +303,7 @@ void compute_edge_lengths(struct asciinode_t *node)
         compute_edge_lengths(node->L);
         compute_edge_lengths(node->R);
 
-        /* first fill in the edge_length of node */
+        /* First, fill in the edge_length of node */
         if (node->R == NULL && node->L == NULL) {
                 node->edge_length = 0;
         } else {
@@ -274,8 +330,11 @@ void compute_edge_lengths(struct asciinode_t *node)
                         delta = MAX(delta, gap + 1 + rprofile[i] - lprofile[i]);
                 }
 
-                // If the node has two children of height 1, then we allow the
-                // two leaves to be within 1, instead of 2 
+                /*
+                 * If the node has 2 children of height 1,
+                 * then we allow the 2 leaves to be within
+                 * 1, instead of 2.
+                 */
                 if (((node->L != NULL && node->L->height == 1) 
                 || (node->R != NULL && node->R->height == 1))&&delta>4) {
                         delta--;
@@ -284,7 +343,7 @@ void compute_edge_lengths(struct asciinode_t *node)
                 node->edge_length = ((delta+1)/2) - 1;
         }
 
-        //now fill in the height of node
+        /* Now fill in the height of node */
         h = 1;
         if (node->L != NULL) {
                 h = MAX(node->L->height + node->edge_length + 1, h);
