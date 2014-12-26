@@ -9,19 +9,23 @@
 static struct mt_t Generator = {0};
 static int ID;
 
-#define MAX(a, b) ((a) <= (b)) ? (b) : (a)
-
-#define NO_INTERNAL_LABELING
 #define RANDOM_INSERT 
 #define INTERNAL_NODE_LABEL '.'
-
-#define IS_INTERNAL_NODE(x) ((x)->value == INTERNAL_NODE_LABEL)
 
 
 /******************************************************************************
  * PROPERTIES 
  ******************************************************************************/
 
+/**
+ * subtree_of()
+ * ------------
+ * Determine whether a node is a subtree of another. 
+ *
+ * @a    : Node to be checked
+ * @b    : Node to be checked
+ * Return: 1 (TRUE), or 0 (FALSE)
+ */
 int subtree_of(struct tt_node *a, struct tt_node *b)
 {
         if (a->P == NULL) {
@@ -43,52 +47,168 @@ int subtree_of(struct tt_node *a, struct tt_node *b)
         return 0;
 }
 
+
+/**
+ * are_disjoint()
+ * --------------
+ * Determine whether two nodes are disjoint. 
+ *
+ * @a    : Node to be checked
+ * @b    : Node to be checked
+ * Return: 1 (TRUE), or 0 (FALSE)
+ */
 int are_disjoint(struct tt_node *a, struct tt_node *b)
 {
         return (!subtree_of(a, b) && !subtree_of(b, a));
 }
 
+
+/**
+ * are_siblings()
+ * --------------
+ * Determine whether two nodes are siblings. 
+ *
+ * @a    : Node to be checked
+ * @b    : Node to be checked
+ * Return: 1 (TRUE), or 0 (FALSE)
+ */
 int are_siblings(struct tt_node *a, struct tt_node *b)
 {
         return (a && b && a->P && b->P && a->P->id == b->P->id);
 }
 
+
+/**
+ * are_equal()
+ * -----------
+ * Determine whether two nodes are equal. 
+ *
+ * @a    : Node to be checked
+ * @b    : Node to be checked
+ * Return: 1 (TRUE), or 0 (FALSE)
+ */
 int are_equal(struct tt_node *a, struct tt_node *b)
 {
         return (a && b && a->id == b->id);
 }
 
+
+/**
+ * is_left()
+ * ---------
+ * Determine whether a node is a left-child. 
+ *
+ * @a    : Node to be checked
+ * Return: 1 (TRUE), or 0 (FALSE)
+ */
 int is_left(struct tt_node *a)
 {
         return (a && a->P && a->P->L && a->P->L->id == a->id);
 }
 
+
+/**
+ * is_right()
+ * ----------
+ * Determine whether a node is a right-child. 
+ *
+ * @a    : Node to be checked
+ * Return: 1 (TRUE), or 0 (FALSE)
+ */
 int is_right(struct tt_node *a)
 {
         return (a && a->P && a->P->R && a->P->R->id == a->id);
 }
 
+
+/**
+ * is_full()
+ * ---------
+ * Determine whether an (internal) node is full.
+ *
+ * @a    : Node to be checked
+ * Return: 1 (TRUE), or 0 (FALSE)
+ */
 int is_full(struct tt_node *a)
 {
         return (a && a->L != NULL && a->R != NULL);
 }
 
+
+/**
+ * is_internal()
+ * -------------
+ * Determine whether a node is internal. 
+ *
+ * @a    : Node to be checked
+ * Return: 1 (TRUE), or 0 (FALSE)
+ */
 int is_internal(struct tt_node *a)
 {
         return (a && (a->L != NULL || a->R != NULL));
         /*return (a && a->value == INTERNAL_NODE_LABEL);*/
 }
 
+
+/**
+ * is_leaf()
+ * ---------
+ * Determine whether a node is a leaf. 
+ *
+ * @a    : Node to be checked
+ * Return: 1 (TRUE), or 0 (FALSE)
+ */
 int is_leaf(struct tt_node *a)
 {
         return (a && a->L == NULL && a->R == NULL);
 }
 
+
+/**
+ * is_root()
+ * ---------
+ * Determine whether a node is the root. 
+ *
+ * @a    : Node to be checked
+ * Return: 1 (TRUE), or 0 (FALSE)
+ */
 int is_root(struct tt_node *a)
 {
         return (a && a->P == NULL);
 }
 
+
+/* Holds state for the leaf count as it recurses. */ 
+int Leaf_count = 0;
+
+/**
+ * __impl__leaf_count()
+ * --------------------
+ * Implements leaf_count().
+ */
+void __impl__leaf_count(struct tt_node *a, int i)
+{
+        if (is_leaf(a)) {
+                Leaf_count++;
+        }
+}
+
+/**
+ * leaf_count()
+ * ------------
+ * Count the number of leaf nodes in a tree.
+ * 
+ * @n    : Node from which to count (pseudo-root).
+ * Return: number of leaf nodes
+ */
+int leaf_count(struct tt_node *n)
+{
+        Leaf_count = 0;
+
+        tt_traverse_inorder(n, __impl__leaf_count);
+
+        return Leaf_count;
+}
 
 
 /******************************************************************************
@@ -154,6 +274,7 @@ struct tt_node *tt_add_left(struct tt_node *n, tt_value_t value)
         return n->L;
 }
 
+
 /**
  * tt_add_right()
  * --------------
@@ -174,6 +295,7 @@ struct tt_node *tt_add_right(struct tt_node *n, tt_value_t value)
 
         return n->R;
 }
+
 
 /**
  * tt_add_left_level()
@@ -201,6 +323,7 @@ struct tt_node *tt_add_left_level(struct tt_node *n, tt_value_t value)
 
         return n->L;
 }
+
 
 /**
  * tt_add_right_level()
@@ -374,19 +497,20 @@ struct tt_node *tt_create(void)
  * TRAVERSAL 
  ******************************************************************************/
 
-static int num_visits = 1;
+/* Tracks the index of the traversal during recursion */
+static int Traversal_index = 1;
 
 /**
- * _tt_traverse_inorder()
- * ----------------------
- * Implementation of tt_traverse_inorder()
+ * __impl__tt_traverse_inorder()
+ * -----------------------------
+ * Implements tt_traverse_inorder()
  */
-void _tt_traverse_inorder(struct tt_node *n, tt_callback_t visit)
+void __impl__tt_traverse_inorder(struct tt_node *n, tt_callback_t visit)
 {
         if (n != NULL) {
-                _tt_traverse_inorder(n->L, visit);
-                visit(n, num_visits++);
-                _tt_traverse_inorder(n->R, visit);
+                __impl__tt_traverse_inorder(n->L, visit);
+                visit(n, Traversal_index++);
+                __impl__tt_traverse_inorder(n->R, visit);
         }
         return;
 }
@@ -402,23 +526,24 @@ void _tt_traverse_inorder(struct tt_node *n, tt_callback_t visit)
  */
 void tt_traverse_inorder(struct tt_node *n, tt_callback_t visit)
 {
-        num_visits = 1;
+        Traversal_index = 1; // prevent division by 0
         if (n != NULL) {
-                _tt_traverse_inorder(n, visit);
+                __impl__tt_traverse_inorder(n, visit);
         }
 }
 
+
 /**
- * _tt_traverse_preorder()
- * -----------------------
- * Implementation of tt_traverse_preorder()
+ * __impl__tt_traverse_preorder()
+ * ------------------------------
+ * Implements of tt_traverse_preorder()
  */
-void _tt_traverse_preorder(struct tt_node *n, tt_callback_t visit)
+void __impl__tt_traverse_preorder(struct tt_node *n, tt_callback_t visit)
 {
         if (n != NULL) {
-                visit(n, num_visits++);
-                _tt_traverse_preorder(n->L, visit);
-                _tt_traverse_preorder(n->R, visit);
+                visit(n, Traversal_index++);
+                __impl__tt_traverse_preorder(n->L, visit);
+                __impl__tt_traverse_preorder(n->R, visit);
         }
         return;
 }
@@ -434,24 +559,25 @@ void _tt_traverse_preorder(struct tt_node *n, tt_callback_t visit)
  */
 void tt_traverse_preorder(struct tt_node *n, tt_callback_t visit)
 {
-        num_visits = 1;
+        Traversal_index = 1;
         if (n != NULL) {
-                _tt_traverse_preorder(n, visit);
+                __impl__tt_traverse_preorder(n, visit);
         }
         return;
 }
 
+
 /**
- * _tt_traverse_postorder()
- * ------------------------
- * Implementation of tt_traverse_postorder()
+ * __impl__tt_traverse_postorder()
+ * -------------------------------
+ * Implements tt_traverse_postorder()
  */
-void _tt_traverse_postorder(struct tt_node *n, tt_callback_t visit)
+void __impl__tt_traverse_postorder(struct tt_node *n, tt_callback_t visit)
 {
         if (n != NULL) {
-                visit(n, num_visits++);
-                _tt_traverse_postorder(n->L, visit);
-                _tt_traverse_postorder(n->R, visit);
+                visit(n, Traversal_index++);
+                __impl__tt_traverse_postorder(n->L, visit);
+                __impl__tt_traverse_postorder(n->R, visit);
         }
         return;
 }
@@ -467,19 +593,53 @@ void _tt_traverse_postorder(struct tt_node *n, tt_callback_t visit)
  */
 void tt_traverse_postorder(struct tt_node *n, tt_callback_t visit)
 {
-        num_visits = 1;
+        Traversal_index = 1;
         if (n != NULL) {
-                _tt_traverse_postorder(n, visit);
+                __impl__tt_traverse_postorder(n, visit);
         }
         return;
 }
         
-        
+
 /******************************************************************************
  * SELECTION 
  ******************************************************************************/
 
-struct tt_node *maybe;
+/* Holds the random node during recursion. */
+struct tt_node *Random_node;
+
+
+/**
+ * __impl__tt_random_node()
+ * ------------------------
+ * Implements tt_random_node().
+ */
+void __impl__tt_random_node(struct tt_node *n, int i) 
+{
+        if (dice_fair(&Generator, i) == 1) {
+                Random_node = n;
+        }
+}
+
+/**
+ * tt_random_node()
+ * ----------------
+ * Select a random node from the tree.
+ *
+ * @n    : Pointer to root or pseudo-root node 
+ * Return: Pointer to some node under @n.
+ */
+struct tt_node *tt_random_node(struct tt_node *n)
+{
+        Random_node = NULL;
+
+        if (n != NULL) {
+                tt_traverse_inorder(n, __impl__tt_random_node);
+        }
+
+        return Random_node;
+}
+
 
 /**
  * tt_random_leaf()
@@ -495,8 +655,7 @@ struct tt_node *tt_random_leaf(struct tt_node *n)
                 return NULL;
         }
 
-        if (n->L == NULL && n->R == NULL) {
-                /*printf("got random leaf:%c\n", n->value);*/
+        if (is_leaf(n)) {
                 return n;
         }
 
@@ -508,31 +667,14 @@ struct tt_node *tt_random_leaf(struct tt_node *n)
 }
 
 
-void tt_random_node_impl(struct tt_node *n, int i) 
-{
-        if (dice_fair(&Generator, i) == 1) {
-                /*printf("maybe ");*/
-                maybe = n;
-        }
-}
-
-
-struct tt_node *tt_random_node(struct tt_node *n)
-{
-        maybe = NULL;
-
-        if (n != NULL) {
-                tt_traverse_inorder(n, tt_random_node_impl);
-                if (maybe != NULL) {
-                        /*printf("got random node:%c id:%d\n", maybe->value, maybe->id);*/
-                } else {
-                        /*printf("maybe was NULL\n");*/
-                }
-        }
-
-        return maybe;
-}
-
+/**
+ * tt_sibling_of()
+ * ---------------
+ * Select the sibling of a given node.
+ *
+ * @n    : Pointer to a node 
+ * Return: Pointer to the sibling of @n, or NULL.
+ */
 struct tt_node *tt_sibling_of(struct tt_node *n)
 {
         if (n != NULL) {
@@ -551,38 +693,28 @@ struct tt_node *tt_sibling_of(struct tt_node *n)
 }
 
 
-
-
-
-
-int Leaf_count = 0;
-
-void _leaf_count(struct tt_node *a, int i)
-{
-        if (is_leaf(a)) {
-                Leaf_count++;
-        }
-}
-
-int leaf_count(struct tt_node *a)
-{
-        Leaf_count = 0;
-
-        tt_traverse_inorder(a, _leaf_count);
-
-        return Leaf_count;
-}
-
-
-
 /******************************************************************************
  * MUTATION HELPERS
  ******************************************************************************/
 
-/*
- * An operation from the parent to the child. 
- * Parent kills child.
- * Note that at the end of this operation, a can be destroyed.
+/**
+ * tt_contract()
+ * -------------
+ * Contract a relation, destroying the child.
+ * 
+ * @n    : Parent node (child will be contracted)
+ * Return: Child node (can be destroyed)
+ *
+ * NOTE
+ * This operation takes place between a parent node
+ * and a child node. It destroys an un-necessary internal
+ * linkage.
+ *
+ *      x               x 
+ *      |              / \
+ *      y             A   B
+ *     / \
+ *    A   B
  */
 struct tt_node *tt_contract(struct tt_node *n)
 {
@@ -621,9 +753,24 @@ struct tt_node *tt_contract(struct tt_node *n)
         return NULL;
 }
 
-/*
- * An operation from the child to the parent.
- * Child kills parent.
+/**
+ * tt_promote()
+ * ------------
+ * Promote a child node, overwriting its parent.
+ * 
+ * @n    : Child node (parent will be destroyed)
+ * Return: Parent node (can be destroyed)
+ *
+ * NOTE
+ * This operation takes place between a parent node
+ * and a child node. It destroys an un-necessary internal
+ * linkage.
+ *
+ *      x               y 
+ *      |              / \
+ *      y             A   B
+ *     / \
+ *    A   B
  */
 struct tt_node *tt_promote(struct tt_node *n)
 {
@@ -666,8 +813,14 @@ struct tt_node *tt_promote(struct tt_node *n)
  * MUTATION  
  ******************************************************************************/
 
-/*
- * Just change the parent pointers. 
+/**
+ * tt_LEAF_INTERCHANGE()
+ * ---------------------
+ * Given two leaf nodes, exchange their position in the tree.
+ *
+ * @a    : Pointer to (leaf) node
+ * @b    : Pointer to (leaf) node
+ * Return: Nothing.
  */
 void tt_LEAF_INTERCHANGE(struct tt_node *a, struct tt_node *b)
 {
@@ -704,8 +857,14 @@ void tt_LEAF_INTERCHANGE(struct tt_node *a, struct tt_node *b)
 }
 
 
-/*
- * Could be a leaf leaf node or an internal node. 
+/**
+ * tt_SUBTREE_INTERCHANGE()
+ * ------------------------
+ * Given two nodes, possibly leaves, exchange the subtrees they root.
+ *
+ * @a    : Pointer to (leaf/internal) node
+ * @b    : Pointer to (leaf/internal) node
+ * Return: Nothing.
  */
 void tt_SUBTREE_INTERCHANGE(struct tt_node *a, struct tt_node *b)
 {
@@ -762,11 +921,14 @@ void tt_SUBTREE_INTERCHANGE(struct tt_node *a, struct tt_node *b)
 }
 
 
-
-
-
-/*
- * Could be a leaf leaf node or an internal node. 
+/**
+ * tt_SUBTREE_TRANSFER()
+ * ---------------------
+ * Given two nodes, possibly leaves, graft the subtree of one at another.
+ *
+ * @a    : Pointer to (leaf/internal) node
+ * @b    : Pointer to (leaf/internal) node
+ * Return: Nothing.
  */
 void tt_SUBTREE_TRANSFER(struct tt_node *a, struct tt_node *b)
 {

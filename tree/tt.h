@@ -34,6 +34,11 @@ struct tt_node *tt_random_leaf(struct tt_node *n);
 struct tt_node *tt_random_node(struct tt_node *n);
 
 
+void tt_traverse_inorder      (struct tt_node *n, tt_callback_t visit);
+void tt_traverse_preorder     (struct tt_node *n, tt_callback_t visit);
+void tt_traverse_postorder    (struct tt_node *n, tt_callback_t visit);
+
+
 void tt_LEAF_INTERCHANGE   (struct tt_node *a, struct tt_node *b);
 void tt_SUBTREE_INTERCHANGE(struct tt_node *a, struct tt_node *b);
 void tt_SUBTREE_TRANSFER   (struct tt_node *a, struct tt_node *b);
