@@ -35,37 +35,54 @@ struct asciinode_t {
         struct asciinode_t *L;
         struct asciinode_t *R;
 
-        //length of the edge from this node to its children
+        /* 
+         * Length of the edge to draw from
+         * this node to its children
+         */
         int edge_length; 
 
+        /* Height of the node (its rank) */
         int height;      
-        int lablen;
 
-        //-1=I am left, 0=I am root, 1=right   
+        /* Length of the label string */
+        int label_length;
+
+        /*
+         * -1: I am the left child
+         *  0: I am the root
+         *  1: I am the right child
+         */
         int parent_dir;   
 
-        //max supported unit32 in dec, 10 digits max
+        /*
+         * Label value. Max supported is uint32_t in 
+         * decimal, 10 digits maximum.
+         */
         char label[11];  
 };
 
 
+#define MAX_HEIGHT      10000
+#define INFINITY        (1<<20)
+#define MIN(x, y)       ((x) <= (y)) ? x : y
+#define MAX(x, y)       ((x) <= (y)) ? y : x 
 
 
-#define MAX_HEIGHT 1000
 int lprofile[MAX_HEIGHT];
 int rprofile[MAX_HEIGHT];
-#define INFINITY (1<<20)
 
-//adjust gap between left and right nodes
-int gap = 3;  
 
-//used for printing next node in the same level, 
-//this is the x coordinate of the next char printed
+/* Adjust the gap between the left and right nodes */
+int gap = 3;
+
+/*
+ * X coordinate of the next character printed; used
+ * for printing the next node in the same rank. 
+ */
 int print_next;    
 
 
-#define MIN(x, y) ((x) <= (y)) ? x : y
-#define MAX(x, y) ((x) <= (y)) ? y : x 
+
 
 
 /******************************************************************************
@@ -102,7 +119,7 @@ struct asciinode_t *build_ascii_tree_recursive(struct tt_node *n, const char *fm
         }
 
         sprintf(node->label, fmt, n->value);
-        node->lablen = strlen(node->label);
+        node->label_length = strlen(node->label);
 
         return node;
 }
@@ -170,21 +187,21 @@ void free_ascii_tree(struct asciinode_t *node)
 void print_level(struct asciinode_t *node, int x, int level) 
 {
         int i;
-        int isleft;
+        int is_left;
 
         if (node == NULL) {
                 return;
         }
 
-        isleft = (node->parent_dir == -1);
+        is_left = (node->parent_dir == -1);
 
         if (level == 0) {
-                for (i=0; i<(x-print_next-((node->lablen-isleft)/2)); i++) {
+                for (i=0; i<(x-print_next-((node->label_length-is_left)/2)); i++) {
                         printf(" ");
                 }
                 print_next += i;
                 printf("%s", node->label);
-                print_next += node->lablen;
+                print_next += node->label_length;
         } else if (node->edge_length >= level) {
                 if (node->L != NULL) {
                         for (i=0; i<(x-print_next-(level)); i++) {
@@ -192,7 +209,7 @@ void print_level(struct asciinode_t *node, int x, int level)
                         }
                         print_next += i;
                         printf("/");
-                        print_next++;
+                        print_next += 1;
                 }
                 if (node->R != NULL) {
                         for (i=0; i<(x-print_next+(level)); i++) {
@@ -200,7 +217,7 @@ void print_level(struct asciinode_t *node, int x, int level)
                         }
                         print_next += i;
                         printf("\\");
-                        print_next++;
+                        print_next += 1;
                 }
         } else {
                 print_level(node->L, x-node->edge_length-1, level-node->edge_length-1);
@@ -226,16 +243,19 @@ void print_level(struct asciinode_t *node, int x, int level)
  */
 void compute_lprofile(struct asciinode_t *node, int x, int y) 
 {
+        int is_left;
         int i;
-        int isleft;
 
         if (node == NULL) {
                 return;
         }
-        isleft = (node->parent_dir == -1);
-        lprofile[y] = MIN(lprofile[y], x-((node->lablen-isleft)/2));
+
+        is_left = (node->parent_dir == -1);
+
+        lprofile[y] = MIN(lprofile[y], x-((node->label_length-is_left)/2));
+
         if (node->L != NULL) {
-                for (i=1; i <= node->edge_length && y+i < MAX_HEIGHT; i++) {
+                for (i=1; (i<=node->edge_length) && ((y+i)<MAX_HEIGHT); i++) {
                         lprofile[y+i] = MIN(lprofile[y+i], x-i);
                 }
         }
@@ -260,17 +280,19 @@ void compute_lprofile(struct asciinode_t *node, int x, int y)
  */
 void compute_rprofile(struct asciinode_t *node, int x, int y) 
 {
+        int not_left;
         int i;
-        int notleft;
 
         if (node == NULL) {
                 return;
         }
-        notleft = (node->parent_dir != -1);
-        rprofile[y] = MAX(rprofile[y], x+((node->lablen-notleft)/2));
+        
+        not_left = (node->parent_dir != -1);
+
+        rprofile[y] = MAX(rprofile[y], x+((node->label_length-not_left)/2));
 
         if (node->R != NULL) {
-                for (i=1; i <= node->edge_length && y+i < MAX_HEIGHT; i++) {
+                for (i=1; (i<=node->edge_length) && ((y+i)<MAX_HEIGHT); i++) {
                         rprofile[y+i] = MAX(rprofile[y+i], x+i);
                 }
         }
