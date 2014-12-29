@@ -1,0 +1,3 @@
+[submodule "lib/jlib"]
+	path = lib/jlib
+	url = git@olm.ec:jlib

@@ -8,129 +8,151 @@
 #include "string/rotate.h"
 #include "tree/tt.h"
 #include "tree/tt_print.h"
+#include "test.h"
 
 
-void test_mtf(char *arg)
+float **read_10x10_matrix(const char *path)
 {
-        char *encoded;
-        char *decoded;
-        char *dictionary;
-
-        printf("original: %s\n", arg);
-
-        mtf_encode(arg, &encoded, &dictionary);
-
-        printf("mtf dictionary: %s\n", dictionary);
-
-        printf("mtf encoded: %s\n", encoded);
-
-        mtf_decode(encoded, &decoded, dictionary);
-
-        printf("mtf decoded: %s\n", decoded);
-
-        return;
-}
-
-void test_booth_rotation(char *arg)
-{
-        int k;
-
-        k = booth_minimal_string_rotation(arg);
-        
-        printf("should rotate by:%d\n", k);
-
-        printf("%s\t", arg);
-        print_binary(arg, strlen(arg), true);
-
-        rotate_str(arg, k);
-
-        printf("%s\t", arg);
-        print_binary(arg, strlen(arg), true);
-}
-
-
-void test_tt(char *arg)
-{
-        struct tt_node *tree;
+        FILE    *f;
+        float **matrix;
         int i;
+        int j;
 
-        tree = tt_create();
-
-        for (i=0; i<strlen(arg); i++) {
-                printf("%c - ", arg[i]);
-                tt_insert(tree, arg[i]);
+        if (NULL == (matrix=calloc(10, sizeof(float *)))) {
+                fprintf(stderr, "Out of memory.\n");
         }
-
-
-        printf("\n");
-
-        tt_print(tree, "%c");
-
-        /*printf("\n");*/
-
-        /*tt_print(tree, "%d");*/
-
-        struct tt_node *a;
-        struct tt_node *b;
-        
-        /*a = tt_random_leaf(tree);*/
-        /*b = tt_random_leaf(tree);*/
-        
-        /*tt_LEAF_INTERCHANGE(a, b);*/
-
-        /*tt_print(tree, "%c");*/
-        int c = 0;
-        int C = leaf_count(tree);
-
-        for (i=0; i<100; i++) {
-
-                a = tt_random_leaf(tree);
-                b = tt_random_leaf(tree);
-
-                tt_LEAF_INTERCHANGE(a, b);
-
-                a = tt_random_node(tree);
-                b = tt_random_node(tree);
-
-                tt_SUBTREE_INTERCHANGE(a, b);
-
-                a = tt_random_node(tree);
-                b = tt_random_node(tree);
-
-                tt_SUBTREE_TRANSFER(a, b);
-
-                c = leaf_count(tree);
-
-                if (c != C) {
-                        printf("HALT\n");
-                        printf("\n");
-                        tt_print(tree, "%c");
-                        printf("\n");
-                        tt_print(tree, "%d");
-                        return;
+        for (i=0; i<10; i++) {
+               if (NULL == (matrix[i]=calloc(10, sizeof(float)))) {
+                       fprintf(stderr, "Out of memory.\n");
                 }
         }
 
-        printf("ALL OK after %d iterations\n", i);
-        printf("\n");
-        tt_print(tree, "%c");
-        /*printf("\n\n");*/
-        /*tt_print(tree, "%d");*/
+        if (NULL == (f=fopen(path, "r"))) {
+                fprintf(stderr, "Could not open file");
+        }
+
+        
+        for (i=0; i<10; i++) {
+                for (j=0; j<10; j++) {
+                        if (EOF == (fscanf(f, "%f", &matrix[i][j]))) {
+                                fprintf(stderr, "EOF reached prematurely.\n");
+                        }
+                }
+        }
+
+        fclose(f);
+
+        return matrix;
+}
+
+void print_10x10_matrix(float **matrix)
+{
+        int i;
+        int j;
+
+        for (i=0; i<10; i++) {
+                for (j=0; j<10; j++) {
+                        printf("%f    ", matrix[i][j]);
+                }
+                printf("\n");
+        }
+}
+
+
+int mutate_tree(struct tt_node *tree)
+{
+        struct tt_node *a;
+        struct tt_node *b;
+
+        int count_before = tt_count_leaves(tree);
+        int count_after  = 0;
+
+        /*a = tt_random_leaf(tree);*/
+        /*b = tt_random_leaf(tree);*/
+
+        /*tt_LEAF_INTERCHANGE(a, b);*/
 
         /*a = tt_random_node(tree);*/
         /*b = tt_random_node(tree);*/
 
-        /*tt_SUBTREE_TRANSFER(a, b);*/
+        /*tt_SUBTREE_INTERCHANGE(a, b);*/
 
-        /*tt_print(tree, "%c");*/
+        a = tt_random_node(tree);
+        b = tt_random_node(tree);
+
+        tt_SUBTREE_TRANSFER(a, b);
+
+
+        if (!tt_is_ternary_tree(tree)) {
+
+                tt_print(tree, "%d");
+
+                /*printf("SHIT!\n");*/
+                int lc = tt_count_leaves(tree);
+                int ic = tt_count_internal(tree);
+                printf("[][] leaves:%d internal:%d\n", lc, ic);
+                printf("a->id:%d a->value:%f\n", a->id, a->value);
+                printf("b->id:%d b->value:%f\n", b->id, b->value);
+
+                exit(1);
+                /*exit(1);*/
+        }
+
+
+
+
+        count_after = tt_count_leaves(tree);
+
+        if (count_before != count_after) {
+                printf("CORRUPTED TREE\n");
+                return 0;
+        }
+
+        return 1;
 }
+
+
 
 
 int main(int argc, char *argv[])
 {
-        if (argv[1] != NULL) { 
-                test_tt(argv[1]);
+        struct tt_node *tree;
+        float **data;
+        int i;
+        int j;
+
+        if (argv[1] == NULL) {
+                printf("I require an argument!\n");
+                return 1;
         }
+
+        data = read_10x10_matrix(argv[1]);
+        tree = tt_create();
+
+        for (i=0; i<10; i++) {
+                for (j=0; j<10; j++) {
+                        tt_insert(tree, data[i][j]);
+                        if (!tt_is_ternary_tree(tree)) {
+                                fprintf(stderr, "Malformed tree.\n");
+                                exit(1);
+                        }
+                }
+        }
+
+        for (i=0; i<100; i++) {
+                if (mutate_tree(tree)) {
+                        continue;
+                } else {
+                        break;
+                }
+        }
+
+        if (!tt_is_ternary_tree(tree)) {
+                fprintf(stderr, "Malformed tree.\n");
+                exit(1);
+        }
+
+        tt_print(tree, "%d");
 
         return 1;
 }

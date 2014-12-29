@@ -118,7 +118,7 @@ struct asciinode_t *build_ascii_tree_recursive(struct tt_node *n, const char *fm
                 node->R->parent_dir = 1;
         }
 
-        sprintf(node->label, fmt, n->value);
+        sprintf(node->label, fmt, n->id);
         node->label_length = strlen(node->label);
 
         return node;

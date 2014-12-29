@@ -1,11 +1,28 @@
-CC=gcc
-#
-#          gprof        
-# optimize   |     warnings
-# lvl 3 \    |     /    
-CFLAGS=-O3 -pg -Wall            
-LDFLAGS=-lm
+#########################
+# Configure project     
+#########################
+PROGRAM=r
+INCLUDE=
 
+
+#########################
+# Configure build      
+#########################
+
+COMPILER=gcc
+#
+#  optimize   enable all
+#  level 3    warnings    include paths
+#         \    |           /
+CC_FLAGS=-O3 -Wall $(INCLUDE)
+LD_FLAGS=-lm
+#	  /
+#      math	 
+#
+
+#########################
+# Configure files 
+#########################
 
 SOURCES=main.c		 \
 	string/strings.c \
@@ -15,12 +32,15 @@ SOURCES=main.c		 \
 	tree/tt_print.c  \
 	random/mersenne.c
 
+STATICS=
 OBJECTS=$(SOURCES:.c=.o)
 
-EXECUTABLE=r
 
+#########################
+# Configure rules 
+#########################
 all: $(SOURCES)
-	$(CC) $(CFLAGS) $(SOURCES) -o $(EXECUTABLE) $(LDFLAGS)
+	$(COMPILER) $(CC_FLAGS) $(SOURCES) $(STATICS) -o $(PROGRAM) $(LD_FLAGS)
 
 clean:
-	rm -f $(OBJECTS) $(EXECUTABLE) gmon.out 
+	rm -f $(OBJECTS) $(PROGRAM) gmon.out 

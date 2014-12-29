@@ -9,10 +9,6 @@
 static struct mt_t Generator = {0};
 static int ID;
 
-#define RANDOM_INSERT 
-#define INTERNAL_NODE_LABEL '.'
-
-
 /******************************************************************************
  * PROPERTIES 
  ******************************************************************************/
@@ -145,8 +141,8 @@ int is_full(struct tt_node *a)
  */
 int is_internal(struct tt_node *a)
 {
-        return (a && (a->L != NULL || a->R != NULL));
-        /*return (a && a->value == INTERNAL_NODE_LABEL);*/
+        /*return (a && (a->L != NULL || a->R != NULL));*/
+        return (a && a->value == INTERNAL_NODE_LABEL);
 }
 
 
@@ -160,7 +156,7 @@ int is_internal(struct tt_node *a)
  */
 int is_leaf(struct tt_node *a)
 {
-        return (a && a->L == NULL && a->R == NULL);
+        return (a && a->value != INTERNAL_NODE_LABEL && a->L == NULL && a->R == NULL);
 }
 
 
@@ -178,36 +174,109 @@ int is_root(struct tt_node *a)
 }
 
 
-/* Holds state for the leaf count as it recurses. */ 
-int Leaf_count = 0;
 
 /**
- * __impl__leaf_count()
- * --------------------
- * Implements leaf_count().
+ * is_ternary_tree()
+ * -----------------
+ * Verify the shape properties of a ternary tree.
+ *
+ * @n    : Node (pseudo-root) to check from.
+ * Return: 1 (TRUE) or 0 (FALSE).
  */
-void __impl__leaf_count(struct tt_node *a, int i)
+int tt_is_ternary_tree(struct tt_node *n)
 {
-        if (is_leaf(a)) {
-                Leaf_count++;
+        if (n == NULL) {
+                return 0;
+        }
+
+        int lc = tt_count_leaves(n);
+        int ic = tt_count_internal(n);
+
+        /* 
+         * For n items stored in the tree, there
+         * should be n leaf nodes, and (n-2)
+         * internal nodes.
+         *
+         * Unless of course there are <2 items
+         * in the tree, in which case no new 
+         * nodes will be created, excepting the
+         * root.
+         */
+        if ((lc<=2 && ic==0) || ic==(lc-2)) {
+                #ifdef TT_PRINT_DEBUG 
+                        fprintf(stderr, "leaves:%d internal:%d\n", lc, ic);
+                #endif
+                return 1;
+        } else {
+                return 0;
+        }
+}
+
+
+/******************************************************************************
+ * COUNTS 
+ ******************************************************************************/
+
+/* Holds state for the counting operations as they recurse. */ 
+int Count = 0;
+
+/**
+ * __impl__tt_count_leaves()
+ * -------------------------
+ * Implements tt_count_leaves().
+ */
+void __impl__tt_count_leaves(struct tt_node *n, int i)
+{
+        if (is_leaf(n) && n->value != INTERNAL_NODE_LABEL) {
+                Count++;
+                /*printf("%d %f\n", n->id, n->value);*/
         }
 }
 
 /**
- * leaf_count()
- * ------------
+ * tt_count_leaves()
+ * -----------------
  * Count the number of leaf nodes in a tree.
  * 
  * @n    : Node from which to count (pseudo-root).
  * Return: number of leaf nodes
  */
-int leaf_count(struct tt_node *n)
+int tt_count_leaves(struct tt_node *n)
 {
-        Leaf_count = 0;
+        Count = 0;
 
-        tt_traverse_inorder(n, __impl__leaf_count);
+        tt_traverse_inorder(n, __impl__tt_count_leaves);
 
-        return Leaf_count;
+        return Count;
+}
+
+/**
+ * __impl__tt_count_internal()
+ * ------------------------
+ * Implements tt_count_internal().
+ */
+void __impl__tt_count_internal(struct tt_node *n, int i)
+{
+        if (is_internal(n)) {
+                Count++;
+        }
+}
+
+/**
+ * tt_count_internal()
+ * -------------------
+ * Count the number of internal nodes in a tree.
+ * 
+ * @n    : Node from which to count (pseudo-root).
+ * Return: number of internal nodes
+ */
+int tt_count_internal(struct tt_node *n)
+{
+        Count = 0;
+
+        tt_traverse_inorder(n, __impl__tt_count_internal);
+
+        return Count;
 }
 
 
@@ -425,38 +494,37 @@ struct tt_node *tt_insert(struct tt_node *n, tt_value_t value)
                 return NULL;
         } 
 
-        if (is_internal(n)) {
+        if (is_internal(n) || is_root(n)) {
                 if (is_full(n)) {
                         /* 
                          * This is a full internal node, so we 
                          * have to sink down the tree to find 
                          * a leaf node.
                          */
-                        #ifdef RANDOM_INSERT
-                                /* Random sink. See NOTE */
-                                if (coin_fair(&Generator)) {
-                                        return tt_insert(n->L, value);
-                                } else {
-                                        return tt_insert(n->R, value);
-                                }
-                        #else
-                                /* Non-random sink. */
-                                if (value < n->value) {
-                                        return tt_insert(n->L, value);
-                                } else {
-                                        return tt_insert(n->R, value);
-                                }
-                        #endif
+                        /* Random sink. See NOTE */
+                        if (coin_fair(&Generator)) {
+                                return tt_insert(n->L, value);
+                        } else {
+                                return tt_insert(n->R, value);
+                        }
                 } else {
-                        /* 
-                         * This is a half-full internal node, so 
-                         * we can pick the open leaf and insert 
-                         * the value there.
-                         */
-                        if (n->L == NULL && n->R != NULL) {
+                        if (n->L == NULL && n->R == NULL) {
+                                /* 
+                                 * Both leaves are open. Choose a random
+                                 * leaf to fill.
+                                 *
+                                 * When the tree is empty, the root node 
+                                 * will appear like this. 
+                                 */
+                                if (coin_fair(&Generator)) {
+                                        return tt_add_left(n, value);
+                                } else {
+                                        return tt_add_right(n, value);
+                                }
+                        } else if (n->L == NULL && n->R != NULL) {
                                 /* Left leaf open */
                                 return tt_add_left(n, value);
-                        } else {
+                        } else if (n->L != NULL && n->R == NULL) {
                                 /* Right leaf open */
                                 return tt_add_right(n, value);
                         }
@@ -950,7 +1018,7 @@ void tt_SUBTREE_TRANSFER(struct tt_node *a, struct tt_node *b)
                 } else {
 
                         if (are_siblings(a, b)) {
-                                /*printf("Sibling nodes.\n");*/
+                                printf("Sibling nodes: %d and %d.\n", a->id, b->id);
                                 if (is_left(a)) {
                                         a->P->L = b;
                                         a->P->R = a;
@@ -986,13 +1054,30 @@ void tt_SUBTREE_TRANSFER(struct tt_node *a, struct tt_node *b)
                                 sib    = par->L;
                         }
 
-                        if (!is_root(par)) {
-                                /*del = tt_contract(par); */
-                                /*tt_destroy_node(del);*/
-                        /*} else {*/
+                        if (is_root(par)) {
+                                /* 
+                                 * Preserve the root, but prevent an extra 
+                                 * internal node sneaking in when the root 
+                                 * is the parent of a, by copying the 
+                                 * remaining sibling to the root, and then 
+                                 * removing it. 
+                                 */
+                                if (is_internal(sib)) {
+                                        par->L = sib->L;
+                                        par->R = sib->R;
+                                        par->L->P = par;
+                                        par->R->P = par;
+                                        tt_destroy_node(sib);
+                                }
+                        } else {
+                                /*
+                                 * Promote the sibling normally, if the
+                                 * parent node is not the root node. 
+                                 */
                                 del = tt_promote(sib);
                                 tt_destroy_node(del);
                         }
+
                 }
         }
 }
