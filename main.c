@@ -59,67 +59,33 @@ void print_10x10_matrix(float **matrix)
 }
 
 
-int mutate_tree(struct tt_node *tree)
-{
-        struct tt_node *a;
-        struct tt_node *b;
-
-        int count_before = tt_count_leaves(tree);
-        int count_after  = 0;
-
-        /*a = tt_random_leaf(tree);*/
-        /*b = tt_random_leaf(tree);*/
-
-        /*tt_LEAF_INTERCHANGE(a, b);*/
-
-        /*a = tt_random_node(tree);*/
-        /*b = tt_random_node(tree);*/
-
-        /*tt_SUBTREE_INTERCHANGE(a, b);*/
-
-        a = tt_random_node(tree);
-        b = tt_random_node(tree);
-
-        tt_SUBTREE_TRANSFER(a, b);
-
-
-        if (!tt_is_ternary_tree(tree)) {
-
-                tt_print(tree, "%d");
-
-                /*printf("SHIT!\n");*/
-                int lc = tt_count_leaves(tree);
-                int ic = tt_count_internal(tree);
-                printf("[][] leaves:%d internal:%d\n", lc, ic);
-                printf("a->id:%d a->value:%f\n", a->id, a->value);
-                printf("b->id:%d b->value:%f\n", b->id, b->value);
-
-                exit(1);
-                /*exit(1);*/
-        }
 
 
 
+/*float **Data;*/
 
-        count_after = tt_count_leaves(tree);
+/*void test_leaves(struct tt_node *n, int i)*/
+/*{*/
+        /*if (tt_is_internal(n)) {*/
+                /*printf("cost for node->id:%d\n", n->id);*/
+                /*tt_node_cost(n, Data);*/
+        /*}*/
+        /*return;*/
+/*}*/
 
-        if (count_before != count_after) {
-                printf("CORRUPTED TREE\n");
-                return 0;
-        }
 
-        return 1;
-}
+        /*tt_traverse_preorder(tree, test_leaves);*/
+
 
 
 
 
 int main(int argc, char *argv[])
 {
-        struct tt_node *tree;
-        float **data;
+        struct tt_t *tree;
+        float      **data;
+
         int i;
-        int j;
 
         if (argv[1] == NULL) {
                 printf("I require an argument!\n");
@@ -127,32 +93,49 @@ int main(int argc, char *argv[])
         }
 
         data = read_10x10_matrix(argv[1]);
-        tree = tt_create();
+        tree = tt_tree_create(10, data);
 
-        for (i=0; i<10; i++) {
-                for (j=0; j<10; j++) {
-                        tt_insert(tree, data[i][j]);
-                        if (!tt_is_ternary_tree(tree)) {
-                                fprintf(stderr, "Malformed tree.\n");
-                                exit(1);
+        /*tree2 = tt_tree_copy(tree);*/
+
+        /*tt_print(tree->root, "%d");*/
+
+        /*printf("\n\n");*/
+
+        /*tt_print(tree2->root, "%d");*/
+
+        /*tt_tree_free(tree2);*/
+
+        /*return 1;*/
+
+        struct tt_t *best;
+        float  best_c, init_c;
+
+        best = tt_tree_copy(tree);
+
+        init_c = best_c = tt_tree_cost_scaled(best);
+
+        for (i=0; i<1000; i++) {
+                if (tt_tree_mutate(tree)) {
+                        /*float c = tt_tree_cost(tree);*/
+                        float S = tt_tree_cost_scaled(tree);
+                        if (S > best_c) {
+                                tt_tree_free(best);
+                                best   = tt_tree_copy(tree);
+                                best_c = S;
+                                printf("best:%f\n", S);
+                                tt_print(best->root, "%d");
                         }
-                }
-        }
-
-        for (i=0; i<100; i++) {
-                if (mutate_tree(tree)) {
+                        /*printf("max:%f min:%f Ct:%f St:%f\n", tree->max_cost, tree->min_cost, c, S);*/
+                        /*printf("%f\n", S);*/
                         continue;
                 } else {
                         break;
                 }
         }
 
-        if (!tt_is_ternary_tree(tree)) {
-                fprintf(stderr, "Malformed tree.\n");
-                exit(1);
-        }
+        printf("best:%f init:%f\n", best_c, init_c);
 
-        tt_print(tree, "%d");
+        /*tt_print(best->root, "%d");*/
 
         return 1;
 }

@@ -24,13 +24,14 @@ LD_FLAGS=-lm
 # Configure files 
 #########################
 
-SOURCES=main.c		 \
-	string/strings.c \
-	string/mtf.c	 \
-	string/rotate.c  \
-	tree/tt.c	 \
-	tree/tt_print.c  \
-	random/mersenne.c
+SOURCES=main.c			\
+	string/strings.c	\
+	string/mtf.c		\
+	string/rotate.c		\
+	tree/tt.c		\
+	tree/tt_print.c		\
+	random/mersenne.c	\
+	random/math.c 
 
 STATICS=
 OBJECTS=$(SOURCES:.c=.o)
