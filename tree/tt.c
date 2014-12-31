@@ -4,11 +4,13 @@
 #include <string.h>
 #include <math.h>
 #include <stdbool.h>
-#include "../random/mersenne.h"
-#include "../random/math.h"
+#include "../math/mersenne.h"
+#include "../math/coin.h"
+#include "../math/dice.h"
+#include "../math/math.h"
 #include "tt.h"
 
-static struct mt_t Generator = {0};
+/*static struct mt_t Generator = {0};*/
 static int ID;
 
 
@@ -507,7 +509,7 @@ struct tt_node *tt_insert(struct tt_node *n, tt_value_t value)
                          * a leaf node.
                          */
                         /* Random sink. See NOTE */
-                        if (coin_fair(&Generator)) {
+                        if (coin_fair()) {
                                 return tt_insert(n->L, value);
                         } else {
                                 return tt_insert(n->R, value);
@@ -521,7 +523,7 @@ struct tt_node *tt_insert(struct tt_node *n, tt_value_t value)
                                  * When the tree is empty, the root node 
                                  * will appear like this. 
                                  */
-                                if (coin_fair(&Generator)) {
+                                if (coin_fair()) {
                                         return tt_add_left(n, value);
                                 } else {
                                         return tt_add_right(n, value);
@@ -705,7 +707,7 @@ struct tt_node *Random_node;
  */
 void __impl__tt_random_node(struct tt_node *n, int i) 
 {
-        if (dice_fair(&Generator, i) == 1) {
+        if (dice_roll(i) == 1) {
                 Random_node = n;
         }
 }
@@ -748,7 +750,7 @@ struct tt_node *tt_random_leaf(struct tt_node *n)
                 return n;
         }
 
-        if (coin_fair(&Generator)) {
+        if (coin_fair()) {
                 return tt_random_leaf(n->L);
         } else {
                 return tt_random_leaf(n->R);
@@ -1614,30 +1616,40 @@ int tt_tree_mutate(struct tt_t *tree)
 {
         struct tt_node *a;
         struct tt_node *b;
+        int r;
+        int m;
+        int i;
 
-        a = tt_random_leaf(tree->root);
-        b = tt_random_leaf(tree->root);
+        m = dice_roll(10);
 
-        tt_LEAF_INTERCHANGE(a, b);
+        for (i=0; i<m; i++) {
 
-        a = tt_random_node(tree->root);
-        b = tt_random_node(tree->root);
+                a = tt_random_leaf(tree->root);
+                b = tt_random_leaf(tree->root);
 
-        tt_SUBTREE_INTERCHANGE(a, b);
+                r = dice_roll(3);
 
-        a = tt_random_node(tree->root);
-        b = tt_random_node(tree->root);
+                switch (r) {
+                case 0:
+                        tt_LEAF_INTERCHANGE(a, b);
+                        break;
+                case 1:
+                        tt_SUBTREE_INTERCHANGE(a, b);
+                        break;
+                case 2:
+                        tt_SUBTREE_TRANSFER(a, b);
+                        break;
+                }
 
-        tt_SUBTREE_TRANSFER(a, b);
+                if (!tt_is_ternary(tree->root)) {
+                        fprintf(stderr, "Malformed tree.\n");
+                        exit(1);
+                }
 
-        if (!tt_is_ternary(tree->root)) {
-                fprintf(stderr, "Malformed tree.\n");
-                exit(1);
-        }
-
-        if (tree->num_leaves != tt_count_leaves(tree->root)) {
-                fprintf(stderr, "Malformed tree.\n");
-                exit(1);
+                if (tree->num_leaves != tt_count_leaves(tree->root)) {
+                        fprintf(stderr, "Malformed tree.\n");
+                        exit(1);
+                }
         }
 
         return 1;

@@ -114,7 +114,9 @@ int main(int argc, char *argv[])
 
         init_c = best_c = tt_tree_cost_scaled(best);
 
-        for (i=0; i<1000; i++) {
+        printf("%f\n", init_c);
+
+        for (i=0; i<100000; i++) {
                 if (tt_tree_mutate(tree)) {
                         /*float c = tt_tree_cost(tree);*/
                         float S = tt_tree_cost_scaled(tree);
@@ -122,8 +124,11 @@ int main(int argc, char *argv[])
                                 tt_tree_free(best);
                                 best   = tt_tree_copy(tree);
                                 best_c = S;
-                                printf("best:%f\n", S);
-                                tt_print(best->root, "%d");
+                                /*printf("best:%f\n", S);*/
+                                printf("%f\n", S);
+                                /*tt_print(best->root, "%d");*/
+                        } else {
+                                printf("%f\n", best_c);
                         }
                         /*printf("max:%f min:%f Ct:%f St:%f\n", tree->max_cost, tree->min_cost, c, S);*/
                         /*printf("%f\n", S);*/
@@ -133,7 +138,7 @@ int main(int argc, char *argv[])
                 }
         }
 
-        printf("best:%f init:%f\n", best_c, init_c);
+        /*printf("best:%f init:%f\n", best_c, init_c);*/
 
         /*tt_print(best->root, "%d");*/
 
