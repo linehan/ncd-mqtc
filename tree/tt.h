@@ -3,6 +3,7 @@
 
 #include <stdbool.h>
 #include <stdint.h>
+#include "../math/alias.h"
 
 #define TT_PRINT_DEBUG
 
@@ -59,13 +60,16 @@ typedef void (*tt_distance_cb)(struct tt_node *a, struct tt_node *b);
  * FUNCTION PROTOTYPES (on nodes)
  ******************************************************************************/
 
-struct tt_node *tt_create     (void);
-struct tt_node *tt_insert     (struct tt_node *n, tt_value_t value);
-struct tt_node *tt_node_copy  (struct tt_node *n);
+struct tt_node *tt_create(void);
+struct tt_node *tt_insert(struct tt_node *n, tt_value_t value);
+struct tt_node *tt_copy  (struct tt_node *n);
+void   tt_insert_on_path (struct tt_node *r, struct tt_node *n, char *path);
 
 
-char *tt_node_path    (struct tt_node *n);
-void tt_insert_on_path(struct tt_node *r, struct tt_node *n, char *path);
+char *tt_get_path    (struct tt_node *n);
+float tt_get_cost    (struct tt_node *n, float **distance);
+float tt_get_cost_max(struct tt_node *n, float **distance, int length);
+float tt_get_cost_min(struct tt_node *n, float **distance, int length);
 
 
 struct tt_node *tt_random_leaf(struct tt_node *n);
@@ -103,7 +107,7 @@ int tt_is_ternary   (struct tt_node *a);
  * COSTS 
  ******************************************************************************/
 
-float tt_node_cost(struct tt_node *n, float **distance);
+
 
 
 /******************************************************************************
@@ -111,12 +115,14 @@ float tt_node_cost(struct tt_node *n, float **distance);
  ******************************************************************************/
 
 struct tt_t *tt_tree_create(int n, float **data);
-struct tt_t *tt_tree_copy(struct tt_t *tree);
-void tt_tree_free(struct tt_t *tree);
+struct tt_t *tt_tree_copy  (struct tt_t *tree);
+void         tt_tree_free  (struct tt_t *tree);
 
 float        tt_tree_cost       (struct tt_t *tree);
 float        tt_tree_cost_scaled(struct tt_t *tree);
-int          tt_tree_mutate     (struct tt_t *tree);
+
+int          tt_tree_mutate    (struct tt_t *tree, struct alias_t *alias);
+int          tt_tree_mutate_mmc(struct tt_t *tree, struct alias_t *alias);
 
 #endif
 

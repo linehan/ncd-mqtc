@@ -50,6 +50,7 @@ LD_FLAGS=-lm
 #########################
 
 SOURCES=main.c			\
+	util/bnfop.c		\
 	string/strings.c	\
 	string/mtf.c		\
 	string/rotate.c		\

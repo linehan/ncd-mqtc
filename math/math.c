@@ -88,9 +88,11 @@ float max_float(int n, ...)
         /* Requires the last positional parameter (to get the address) */
         va_start(arg_ptr, n); 
 
-        max = 0;
+        /* Provisionally set max to the first argument. */
+        max = va_arg(arg_ptr, double);
 
-        for (i=0; i<n; i++) {
+        /* Loop over the other arguments to find the true min. */
+        for (i=1; i<n; i++) {
                 /* 
                  * Requires the type to cast the argument into.
                  *
@@ -118,9 +120,11 @@ float min_float(int n, ...)
         /* Requires the last positional parameter (to get the address) */
         va_start(arg_ptr, n); 
 
-        min = 0;
+        /* Provisionally set min to the first argument. */
+        min = va_arg(arg_ptr, double);
 
-        for (i=0; i<n; i++) {
+        /* Loop over the other arguments to find the true min. */
+        for (i=1; i<n; i++) {
                 /* 
                  * Requires the type to cast the argument into.
                  *

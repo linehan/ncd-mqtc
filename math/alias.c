@@ -16,6 +16,7 @@
 struct alias_item { 
         struct list_t node; 
         double pr; 
+        int idx;
 };
 
 
@@ -95,8 +96,9 @@ void alias_setup(struct alias_t *alias, double *prob_array)
 
                 struct alias_item *item;
 
-		item     = calloc(1, sizeof(struct alias_item));
-		item->pr = prob_array[i] * (double)alias->n;
+		item      = calloc(1, sizeof(struct alias_item));
+		item->pr  = prob_array[i] * (double)alias->n;
+                item->idx = i;
 
 		if (item->pr<1.0) {
 			list_add(&small, item);
@@ -124,14 +126,15 @@ void alias_setup(struct alias_t *alias, double *prob_array)
 		list_remove_from(&small, sm);
 		list_remove_from(&large, lg);
 
-		alias->pr[i] = sm->pr;
-		alias->al[i] = lg->pr;
-		alias->al[i] = (alias->al[i] + alias->pr[i]) - 1.0;
+                alias->pr[sm->idx] = sm->pr;
+                alias->al[sm->idx] = lg->idx;
+                
+                lg->pr = (lg->pr + sm->pr) - 1.0;
 
-		if (alias->al[i]<1.0) {
-			list_add(&small, lg);
+                if (lg->pr<1.0) {
+                        list_add(&small, lg);
                 } else {
-			list_add(&large, lg);
+                        list_add(&large, lg);
                 }
 
                 free(sm);
@@ -141,10 +144,11 @@ void alias_setup(struct alias_t *alias, double *prob_array)
                 /*
                  * Large is not empty
                  */
-		alias->pr[i] = 1.0; 
-
 		lg = (struct alias_item *)list_head(&large);
 		list_remove_from(&large, lg);
+
+                alias->pr[lg->idx] = 1.0;
+
 		free(lg);
 	}
 
@@ -152,10 +156,11 @@ void alias_setup(struct alias_t *alias, double *prob_array)
                 /*
                  * Small is not empty
                  */
-		alias->pr[i] = 1.0;
-
 		sm = (struct alias_item *)list_head(&small);
 		list_remove_from(&small, sm);
+
+                alias->pr[sm->idx] = 1.0;
+
 		free(sm);
 	}
 

@@ -10,15 +10,14 @@
 #include "../math/math.h"
 #include "tt.h"
 
-/*static struct mt_t Generator = {0};*/
+extern int DATA_COUNT;
 static int ID;
 
-
-#define DATA_COUNT 10
+/*#define DATA_COUNT 10*/
 
 
 /******************************************************************************
- * PROPERTIES 
+ * NODE PROPERTIES 
  ******************************************************************************/
 
 /**
@@ -30,7 +29,7 @@ static int ID;
  * @b    : Node to be checked
  * Return: 1 (TRUE), or 0 (FALSE)
  */
-int tt_subtree_of(struct tt_node *a, struct tt_node *b)
+int tt_is_subtree_of(struct tt_node *a, struct tt_node *b)
 {
         if (a->P == NULL) {
                 /* The root is a subtree of nothing*/
@@ -63,7 +62,7 @@ int tt_subtree_of(struct tt_node *a, struct tt_node *b)
  */
 int tt_are_disjoint(struct tt_node *a, struct tt_node *b)
 {
-        return (!tt_subtree_of(a, b) && !tt_subtree_of(b, a));
+        return (!tt_is_subtree_of(a, b) && !tt_is_subtree_of(b, a));
 }
 
 
@@ -222,11 +221,10 @@ int tt_is_ternary(struct tt_node *n)
 
 
 /******************************************************************************
- * COUNTS 
+ * COUNT LEAVES 
  ******************************************************************************/
 
-/* Holds state for the counting operations as they recurse. */ 
-int Count = 0;
+int Leaf_count = 0; 
 
 /**
  * __impl__tt_count_leaves()
@@ -236,7 +234,7 @@ int Count = 0;
 void __impl__tt_count_leaves(struct tt_node *n, int i)
 {
         if (tt_is_leaf(n) && n->value != INTERNAL_NODE_LABEL) {
-                Count++;
+                Leaf_count++;
         }
 }
 
@@ -250,12 +248,55 @@ void __impl__tt_count_leaves(struct tt_node *n, int i)
  */
 int tt_count_leaves(struct tt_node *n)
 {
-        Count = 0;
-
+        Leaf_count = 0;
         tt_traverse_inorder(n, __impl__tt_count_leaves);
 
-        return Count;
+        return Leaf_count;
 }
+
+
+
+/* Node which roots excluded sub-tree during recursion. */
+struct tt_node *Exclude;
+
+/**
+ * __impl__tt_count_leaves_excluding()
+ * -----------------------------------
+ * Implements tt_count_leaves_excluding().
+ */
+void __impl__tt_count_leaves_excluding(struct tt_node *n, int i)
+{
+        if (tt_is_leaf(n) && n->value != INTERNAL_NODE_LABEL) {
+                if (!tt_is_subtree_of(n, Exclude)) {
+                        Leaf_count++;
+                }
+        }
+}
+
+/**
+ * tt_count_leaves_excluding()
+ * ---------------------------
+ * Count the number of leaf nodes in a tree, excluding some subtree.
+ * 
+ * @n    : Node from which to count (pseudo-root).
+ * @x    : Node whose subtree will be excluded.
+ * Return: number of leaf nodes
+ */
+int tt_count_leaves_excluding(struct tt_node *n, struct tt_node *x)
+{
+        Leaf_count = 0;
+        Exclude    = x;
+        tt_traverse_inorder(n, __impl__tt_count_leaves_excluding);
+
+        return Leaf_count;
+}
+
+
+/******************************************************************************
+ * COUNT INTERNAL 
+ ******************************************************************************/
+
+int Internal_count = 0; 
 
 /**
  * __impl__tt_count_internal()
@@ -265,7 +306,7 @@ int tt_count_leaves(struct tt_node *n)
 void __impl__tt_count_internal(struct tt_node *n, int i)
 {
         if (tt_is_internal(n)) {
-                Count++;
+                Internal_count++;
         }
 }
 
@@ -279,27 +320,26 @@ void __impl__tt_count_internal(struct tt_node *n, int i)
  */
 int tt_count_internal(struct tt_node *n)
 {
-        Count = 0;
-
+        Internal_count = 0;
         tt_traverse_inorder(n, __impl__tt_count_internal);
 
-        return Count;
+        return Internal_count;
 }
 
 
 /******************************************************************************
- * BUILDING THE TREE (INTERNAL) 
+ * NODE CREATE 
  ******************************************************************************/
 
 /**
- * tt_create_node()
+ * tt_node_create()
  * ----------------
  * Allocate a node structure and set its value. 
  *
  * @value: Value to create a node for.
  * Return: Pointer to created node, or NULL;
  */
-struct tt_node *tt_create_node(tt_value_t value)
+struct tt_node *tt_node_create(tt_value_t value)
 {
         struct tt_node *n;
 
@@ -313,20 +353,70 @@ struct tt_node *tt_create_node(tt_value_t value)
 
 
 /**
- * tt_destroy_node()
+ * tt_create()
+ * -----------
+ * Allocate a node structure without a value. (usually the root)
+ *
+ * Return: Pointer to created node, or NULL;
+ */
+struct tt_node *tt_create(void)
+{
+        struct tt_node *n;
+
+        n    = tt_node_create((tt_value_t)0);
+        n->P = NULL;
+
+        return n;
+}
+
+
+/**
+ * tt_copy()
+ * --------------
+ * Copy a tree node and its attributes, but not its relations.
+ *
+ * @n    : Pointer to tree node (will be copied).
+ * Return: Pointer to tree node (note that relations will be NULL).
+ */
+struct tt_node *tt_copy(struct tt_node *n)
+{
+        struct tt_node *copy;
+
+        copy = tt_node_create(n->value);
+
+        copy->id = n->id;
+
+        copy->L = NULL;
+        copy->R = NULL;
+        copy->P = NULL;
+
+        return copy;
+}
+
+/******************************************************************************
+ * NODE DESTROY 
+ ******************************************************************************/
+
+/**
+ * tt_node_destroy()
  * -----------------
  * Free memory associated with a node.
  * 
  * @n    : Pointer to tree node.
  * Return: nothing
  */
-void tt_destroy_node(struct tt_node *n)
+void tt_node_destroy(struct tt_node *n)
 {
         if (n != NULL) {
                 free(n);        
         }
         return;
 }
+
+
+/******************************************************************************
+ * NODE INSERTION HELPERS
+ ******************************************************************************/
 
 
 /**
@@ -344,7 +434,7 @@ void tt_destroy_node(struct tt_node *n)
  */
 struct tt_node *tt_add_left(struct tt_node *n, tt_value_t value)
 {
-        n->L    = tt_create_node(value);
+        n->L    = tt_node_create(value);
         n->L->P = n;
 
         return n->L;
@@ -366,7 +456,7 @@ struct tt_node *tt_add_left(struct tt_node *n, tt_value_t value)
  */
 struct tt_node *tt_add_right(struct tt_node *n, tt_value_t value)
 {
-        n->R    = tt_create_node(value);
+        n->R    = tt_node_create(value);
         n->R->P = n;
 
         return n->R;
@@ -390,8 +480,8 @@ struct tt_node *tt_add_right(struct tt_node *n, tt_value_t value)
  */
 struct tt_node *tt_add_left_level(struct tt_node *n, tt_value_t value)
 {
-        n->L     = tt_create_node(value);
-        n->R     = tt_create_node(n->value);
+        n->L     = tt_node_create(value);
+        n->R     = tt_node_create(n->value);
         n->value = '.';
 
         n->R->P = n;
@@ -418,8 +508,8 @@ struct tt_node *tt_add_left_level(struct tt_node *n, tt_value_t value)
  */
 struct tt_node *tt_add_right_level(struct tt_node *n, tt_value_t value)
 {
-        n->R     = tt_create_node(value);
-        n->L     = tt_create_node(n->value);
+        n->R     = tt_node_create(value);
+        n->L     = tt_node_create(n->value);
         n->value = '.';
 
         n->R->P = n;
@@ -447,7 +537,7 @@ struct tt_node *tt_add_before(struct tt_node *a, tt_value_t value)
         par = a->P;
 
         /* Insert the new node between a and parent(a). */
-        new = tt_create_node(value);
+        new = tt_node_create(value);
 
         a->P   = new;
         new->P = par;
@@ -465,6 +555,10 @@ struct tt_node *tt_add_before(struct tt_node *a, tt_value_t value)
         return new;
 }
 
+
+/******************************************************************************
+ * NODE INSERT 
+ ******************************************************************************/
 
 /**
  * tt_insert()
@@ -553,43 +647,52 @@ struct tt_node *tt_insert(struct tt_node *n, tt_value_t value)
 
 
 /******************************************************************************
- * ALLOCATION 
+ * NODE INSERT ON PATH 
  ******************************************************************************/
 
-struct tt_node *tt_create(void)
+/**
+ * tt_insert_on_path()
+ * -------------------
+ * Insert a node according to a path string.
+ *
+ * @r    : Pointer to root node of tree to insert into.
+ * @a    : Pointer to tree node (will be inserted) 
+ * @path : Path string {L,R}+ for @a to follow.
+ * Return: Nothing. 
+ *
+ * NOTE
+ * For creating a path from a node, see tt_get_path().
+ */
+void tt_insert_on_path(struct tt_node *r, struct tt_node *a, char *path)
 {
-        struct tt_node *n;
+        int l = strlen(path);
+        int i;
 
-        n = tt_create_node((tt_value_t)0);
+        struct tt_node *node = r;
 
-        n->P = NULL;
+        for (i=0; i<l-1; i++) {
+                if (path[i] == 'L') {
+                        node = node->L;
+                } else {
+                        node = node->R;
+                }
+        }
 
-        return n;
+        if (path[l-1] == 'L') {
+                node->L = a;
+        } else {
+                node->R = a;
+        }
+
+        a->P = node;
 }
 
 
-/*struct tt_node *tt_node_copy(struct tt_node *a)*/
-/*{*/
-        /*struct tt_node *n;*/
-
-        /*n = tt_create_node(a->value);*/
-
-        /*n->L  = a->L; */
-        /*n->R  = a->R;*/
-        /*n->P  = a->P;*/
-        /*n->id = a->id;*/
-
-        /*return n;*/
-/*}*/
-
-
-
 /******************************************************************************
- * TRAVERSAL 
+ * INORDER TRAVERSAL 
  ******************************************************************************/
 
-/* Tracks the index of the traversal during recursion */
-static int Traversal_index = 1;
+static int Index_inorder = 1; 
 
 /**
  * __impl__tt_traverse_inorder()
@@ -600,7 +703,7 @@ void __impl__tt_traverse_inorder(struct tt_node *n, tt_traverse_cb visit)
 {
         if (n != NULL) {
                 __impl__tt_traverse_inorder(n->L, visit);
-                visit(n, Traversal_index++);
+                visit(n, Index_inorder++);
                 __impl__tt_traverse_inorder(n->R, visit);
         }
         return;
@@ -617,12 +720,18 @@ void __impl__tt_traverse_inorder(struct tt_node *n, tt_traverse_cb visit)
  */
 void tt_traverse_inorder(struct tt_node *n, tt_traverse_cb visit)
 {
-        Traversal_index = 1; // prevent division by 0
+        Index_inorder = 1; /* prevent division by 0 */
         if (n != NULL) {
                 __impl__tt_traverse_inorder(n, visit);
         }
 }
 
+
+/******************************************************************************
+ * PREORDER TRAVERSAL 
+ ******************************************************************************/
+
+static int Index_preorder = 1; 
 
 /**
  * __impl__tt_traverse_preorder()
@@ -632,7 +741,7 @@ void tt_traverse_inorder(struct tt_node *n, tt_traverse_cb visit)
 void __impl__tt_traverse_preorder(struct tt_node *n, tt_traverse_cb visit)
 {
         if (n != NULL) {
-                visit(n, Traversal_index++);
+                visit(n, Index_preorder++);
                 __impl__tt_traverse_preorder(n->L, visit);
                 __impl__tt_traverse_preorder(n->R, visit);
         }
@@ -650,13 +759,19 @@ void __impl__tt_traverse_preorder(struct tt_node *n, tt_traverse_cb visit)
  */
 void tt_traverse_preorder(struct tt_node *n, tt_traverse_cb visit)
 {
-        Traversal_index = 1;
+        Index_preorder = 1;
         if (n != NULL) {
                 __impl__tt_traverse_preorder(n, visit);
         }
         return;
 }
 
+
+/******************************************************************************
+ * POSTORDER TRAVERSAL 
+ ******************************************************************************/
+
+static int Index_postorder = 1; 
 
 /**
  * __impl__tt_traverse_postorder()
@@ -666,7 +781,7 @@ void tt_traverse_preorder(struct tt_node *n, tt_traverse_cb visit)
 void __impl__tt_traverse_postorder(struct tt_node *n, tt_traverse_cb visit)
 {
         if (n != NULL) {
-                visit(n, Traversal_index++);
+                visit(n, Index_postorder++);
                 __impl__tt_traverse_postorder(n->L, visit);
                 __impl__tt_traverse_postorder(n->R, visit);
         }
@@ -684,7 +799,7 @@ void __impl__tt_traverse_postorder(struct tt_node *n, tt_traverse_cb visit)
  */
 void tt_traverse_postorder(struct tt_node *n, tt_traverse_cb visit)
 {
-        Traversal_index = 1;
+        Index_postorder = 1;
         if (n != NULL) {
                 __impl__tt_traverse_postorder(n, visit);
         }
@@ -693,10 +808,9 @@ void tt_traverse_postorder(struct tt_node *n, tt_traverse_cb visit)
         
 
 /******************************************************************************
- * SELECTION 
+ * RANDOM NODE 
  ******************************************************************************/
 
-/* Holds the random node during recursion. */
 struct tt_node *Random_node;
 
 
@@ -707,7 +821,11 @@ struct tt_node *Random_node;
  */
 void __impl__tt_random_node(struct tt_node *n, int i) 
 {
-        if (dice_roll(i) == 1) {
+        /*
+         * The i-th node examined will be the 
+         * chosen node with probability 1/i. 
+         */
+        if (coin_flip(1/i, HEADS) == HEADS) {
                 Random_node = n;
         }
 }
@@ -731,6 +849,10 @@ struct tt_node *tt_random_node(struct tt_node *n)
         return Random_node;
 }
 
+
+/******************************************************************************
+ * RANDOM LEAF 
+ ******************************************************************************/
 
 /**
  * tt_random_leaf()
@@ -758,6 +880,10 @@ struct tt_node *tt_random_leaf(struct tt_node *n)
 }
 
 
+/******************************************************************************
+ * SIBLING OF 
+ ******************************************************************************/
+
 /**
  * tt_sibling_of()
  * ---------------
@@ -781,6 +907,158 @@ struct tt_node *tt_sibling_of(struct tt_node *n)
                 }
         }
         return NULL;
+}
+
+
+/******************************************************************************
+ * ROOT OF 
+ ******************************************************************************/
+
+/**
+ * tt_root_of()
+ * ------------
+ * Select the root of a given node.
+ *
+ * @n    : Pointer to a node 
+ * Return: Pointer to the sibling of @n, or NULL.
+ */
+struct tt_node *tt_root_of(struct tt_node *n)
+{
+        if (n == NULL) {
+                return NULL;
+        } else {
+                while (n->P != NULL) {
+                        n = n->P;
+                }
+        }
+        return n;
+}
+
+
+
+/******************************************************************************
+ * GET PATH
+ ******************************************************************************/
+
+/**
+ * tt_get_path()
+ * ------------------
+ * Create a path string for a given node.
+ *
+ * @n    : Pointer to tree node.
+ * Return: {L,R}+ string representing path (position) in tree.
+ */
+char *tt_get_path(struct tt_node *a)
+{
+        struct tt_node *ptr;
+        char *path;
+        int length = 0;
+        int i;
+
+        ptr = a;
+
+        /* Distance to root will be the length of the path. */
+        while (ptr->P != NULL) {
+                length++;
+                ptr = ptr->P;
+        }
+
+        path         = calloc(length+1, sizeof(char));
+        path[length] = '\0'; 
+
+        ptr = a;
+        i   = length;
+
+        while (ptr->P != NULL) {
+                if (i > 0) {
+                        i--;
+                }
+                if (tt_is_left(ptr)) {
+                        path[i] = 'L';
+                } else {
+                        path[i] = 'R';
+                }
+                ptr = ptr->P;
+        }
+
+        return path;
+}
+
+
+/******************************************************************************
+ * GET LEAF VALUES 
+ ******************************************************************************/
+
+tt_value_t *Leaf_array;         
+int Leaf_array_length;  
+
+/**
+ * __impl__tt_get_leaf_values()
+ * ---------------------------------
+ * Implements tt_node_get_leaf_values().
+ */
+void __impl__tt_get_leaf_values(struct tt_node *n, int i)
+{
+        if (tt_is_leaf(n)) {
+                Leaf_array[Leaf_array_length++] = n->value;
+        }
+        return;
+}
+
+/**
+ * tt_get_leaf_values()
+ * -------------------------
+ * Retreive an array of leaf values below the given node.
+ *
+ * @n    : Pointer to a node in the tree.
+ * Return: Array of leaf values.
+ */
+tt_value_t *tt_get_leaf_values(struct tt_node *n)
+{
+        Leaf_array_length = 0;
+        Leaf_array        = calloc(DATA_COUNT, sizeof(tt_value_t));
+
+        tt_traverse_inorder(n, __impl__tt_get_leaf_values);
+
+        /* Caller is responsible for freeing this. */
+        return Leaf_array;
+}
+
+
+struct tt_node *Excluding;
+
+/**
+ * __impl__tt_get_leaf_values_excluding()
+ * --------------------------------------
+ * Implements tt_node_get_leaf_values().
+ */
+void __impl__tt_get_leaf_values_excluding(struct tt_node *n, int i)
+{
+        if (tt_is_leaf(n) && !tt_is_subtree_of(n, Excluding)) {
+                Leaf_array[Leaf_array_length++] = n->value;
+        }
+        return;
+}
+
+/**
+ * tt_get_leaf_values_excluding()
+ * ------------------------------
+ * Retreive an array of leaf values below the given node, excluding subtree.
+ *
+ * @n    : Pointer to a node in the tree.
+ * @x    : Pointer to a node in the tree (subtree to exclude).
+ * Return: Array of leaf values.
+ */
+tt_value_t *tt_get_leaf_values_excluding(struct tt_node *n, struct tt_node *x)
+{
+        Leaf_array_length = 0;
+        Leaf_array        = calloc(DATA_COUNT, sizeof(tt_value_t));
+        Excluding         = x;
+
+        tt_traverse_inorder(n, __impl__tt_get_leaf_values_excluding);
+
+        /* Caller is responsible for freeing this. */
+        return Leaf_array;
 }
 
 
@@ -1090,7 +1368,7 @@ void tt_SUBTREE_TRANSFER(struct tt_node *a, struct tt_node *b)
                                         par->R = sib->R;
                                         par->L->P = par;
                                         par->R->P = par;
-                                        tt_destroy_node(sib);
+                                        tt_node_destroy(sib);
                                 }
                         } else {
                                 /*
@@ -1098,7 +1376,7 @@ void tt_SUBTREE_TRANSFER(struct tt_node *a, struct tt_node *b)
                                  * parent node is not the root node. 
                                  */
                                 del = tt_promote(sib);
-                                tt_destroy_node(del);
+                                tt_node_destroy(del);
                         }
 
                 }
@@ -1106,36 +1384,23 @@ void tt_SUBTREE_TRANSFER(struct tt_node *a, struct tt_node *b)
 }
 
 
-
 /******************************************************************************
- * COST 
+ * NODE GET COST  
  ******************************************************************************/
-tt_value_t *Leaf_array;
-int  Leaf_array_length;
 
-void __impl__tt_get_leaves(struct tt_node *n, int i)
+/**
+ * tt_get_cost()
+ * -------------
+ * Determine the cost value of a particular node.
+ *
+ * @n       : Pointer to node.
+ * @distance: Distance matrix from which to compute the cost.
+ * Return   : Cost value of @n.
+ */
+float tt_get_cost(struct tt_node *n, float **distance)
 {
-        if (tt_is_leaf(n)) {
-                Leaf_array[Leaf_array_length++] = n->value;
-        }
-        return;
-}
+        struct tt_node *root;
 
-tt_value_t *tt_get_leaf_values(struct tt_node *n)
-{
-        Leaf_array_length = 0;
-        Leaf_array        = calloc(DATA_COUNT, sizeof(tt_value_t));
-
-        tt_traverse_inorder(n, __impl__tt_get_leaves);
-
-        /* Caller is responsible for freeing this. */
-        return Leaf_array;
-}
-        
-
-
-float tt_node_cost(struct tt_node *n, float **distance)
-{
         tt_value_t *value_L; 
         tt_value_t *value_R;
         tt_value_t *value_P;
@@ -1165,9 +1430,11 @@ float tt_node_cost(struct tt_node *n, float **distance)
                 return -1.0;
         }
 
+        root = tt_root_of(n);
+
         count_L = tt_count_leaves(n->L);
         count_R = tt_count_leaves(n->R);
-        count_P = tt_count_leaves(n->P);
+        count_P = tt_count_leaves_excluding(root, n);
 
         combi_L = binomial(count_L, 2);
         combi_R = binomial(count_R, 2);
@@ -1175,11 +1442,15 @@ float tt_node_cost(struct tt_node *n, float **distance)
 
         value_L = tt_get_leaf_values(n->L);
         value_R = tt_get_leaf_values(n->R);
-        value_P = tt_get_leaf_values(n->P);
+        value_P = tt_get_leaf_values_excluding(root, n);
 
         for (i=0; i<count_L; i++) {
                 for (j=0; j<count_R; j++) {
-                        if (value_L[i]<DATA_COUNT && value_R[j]<DATA_COUNT) {
+                        if (value_L[i] == value_R[j]) {
+                                printf("CHAOS REIGNS\n");
+                                abort();
+                        }
+                        if (value_L[i]<=DATA_COUNT && value_R[j]<=DATA_COUNT) {
                                 distance_LR += distance[value_L[i]][value_R[j]];
                         }
                 }
@@ -1187,7 +1458,11 @@ float tt_node_cost(struct tt_node *n, float **distance)
 
         for (i=0; i<count_P; i++) {
                 for (j=0; j<count_L; j++) {
-                        if (value_P[i]<DATA_COUNT && value_L[j]<DATA_COUNT) {
+                        if (value_P[i] == value_L[j]) {
+                                printf("CHAOS REIGNS\n");
+                                abort();
+                        }
+                        if (value_P[i]<=DATA_COUNT && value_L[j]<=DATA_COUNT) {
                                 distance_PL += distance[value_P[i]][value_L[j]];
                         }
                 }
@@ -1195,7 +1470,11 @@ float tt_node_cost(struct tt_node *n, float **distance)
 
         for (i=0; i<count_P; i++) {
                 for (j=0; j<count_R; j++) {
-                        if (value_P[i]<DATA_COUNT && value_R[j]<DATA_COUNT) {
+                        if (value_P[i] == value_R[j]) {
+                                printf("CHAOS REIGNS\n");
+                                abort();
+                        }
+                        if (value_P[i]<=DATA_COUNT && value_R[j]<=DATA_COUNT) {
                                 distance_PR += distance[value_P[i]][value_R[j]];
                         }
                 }
@@ -1204,10 +1483,6 @@ float tt_node_cost(struct tt_node *n, float **distance)
         cost_LR = (float)combi_P * distance_LR;
         cost_PL = (float)combi_R * distance_PL;
         cost_PR = (float)combi_L * distance_PR;
-
-        cost_LR = distance_LR;
-        cost_PL = distance_PL;
-        cost_PR = distance_PR;
 
         cost = cost_LR + cost_PL + cost_PR;
 
@@ -1225,7 +1500,17 @@ float tt_node_cost(struct tt_node *n, float **distance)
 }
 
 
-float tt_max_cost(struct tt_node *a, float **d, int n)
+/**
+ * tt_get_cost_max()
+ * -----------------
+ * Determine the maximum cost value of a particular node.
+ *
+ * @a    : Pointer to node.
+ * @d    : Distance matrix from which to compute the cost.
+ * @n    : Number of items, i.e. @d is an @nx@n matrix.
+ * Return: Maximum cost value of @n.
+ */
+float tt_get_cost_max(struct tt_node *a, float **d, int n)
 {
         int i;
         int j;
@@ -1253,7 +1538,9 @@ float tt_max_cost(struct tt_node *a, float **d, int n)
                                         ikjl = d[i][k] + d[j][l];
                                         iljk = d[i][l] + d[j][k];
 
-                                        cost += max_float(ijkl, ikjl, iljk);
+                                        /*printf("max(%f, %f, %f) := %f\n", ijkl, ikjl, iljk, max_float(3, ijkl, ikjl, iljk));*/
+
+                                        cost += max_float(3, ijkl, ikjl, iljk);
 
                                         count++;
                                 }
@@ -1272,7 +1559,17 @@ float tt_max_cost(struct tt_node *a, float **d, int n)
 }
 
 
-float tt_min_cost(struct tt_node *a, float **d, int n)
+/**
+ * tt_get_cost_min()
+ * -----------------
+ * Determine the minimum cost value of a particular node.
+ *
+ * @a    : Pointer to node.
+ * @d    : Distance matrix from which to compute the cost.
+ * @n    : Number of items, i.e. @d is an @nx@n matrix.
+ * Return: Minimum cost value of @n.
+ */
+float tt_get_cost_min(struct tt_node *a, float **d, int n)
 {
         int i;
         int j;
@@ -1300,7 +1597,9 @@ float tt_min_cost(struct tt_node *a, float **d, int n)
                                         ikjl = d[i][k] + d[j][l];
                                         iljk = d[i][l] + d[j][k];
 
-                                        cost += min_float(ijkl, ikjl, iljk);
+                                        /*printf("min(%f, %f, %f) := %f\n", ijkl, ikjl, iljk, min_float(3, ijkl, ikjl, iljk));*/
+
+                                        cost += min_float(3, ijkl, ikjl, iljk);
 
                                         count++;
                                 }
@@ -1319,8 +1618,17 @@ float tt_min_cost(struct tt_node *a, float **d, int n)
 }
 
 
-
-float tt_node_cost_scaled(float c, float M, float m)
+/**
+ * tt_get_cost_scaled()
+ * --------------------
+ * Scale the measured cost using the max/min cost. 
+ *
+ * @c    : Measured (unscaled) cost
+ * @M    : Maximum possible cost
+ * @m    : Minimum possible cost
+ * Return: Normalized value on interval (0,1).
+ */
+float tt_get_cost_scaled(float c, float M, float m)
 {
         return (M - c) / (M - m);
 }
@@ -1329,14 +1637,8 @@ float tt_node_cost_scaled(float c, float M, float m)
 
 
 
-
-
-
-
-
-
 /******************************************************************************
- * WHOLE-TREE MANIPULATION 
+ * TREE CREATE 
  ******************************************************************************/
 
 /**
@@ -1369,129 +1671,74 @@ struct tt_t *tt_tree_create(int n, float **data)
         tree->count        = n;
         tree->num_leaves   = tt_count_leaves(tree->root); 
         tree->num_internal = tt_count_internal(tree->root); 
-        tree->max_cost     = tt_max_cost(tree->root, tree->data, n); 
-        tree->min_cost     = tt_min_cost(tree->root, tree->data, n); 
+        tree->max_cost     = tt_get_cost_max(tree->root, tree->data, n); 
+        tree->min_cost     = tt_get_cost_min(tree->root, tree->data, n); 
 
         return tree;
 }
 
 
-/**
- * tt_node_copy()
- * --------------
- * Copy a tree node and its attributes, but not its relations.
+
+/******************************************************************************
+ * TREE FREE 
+ ******************************************************************************/
+
+/* 
+ * Used to collect the nodes of the tree, which
+ * will be free'd.
  *
- * @n    : Pointer to tree node (will be copied).
- * Return: Pointer to tree node (note that relations will be NULL).
+ * This could be done much more efficiently, so
+ * do that at some point.
  */
-struct tt_node *tt_node_copy(struct tt_node *n)
+struct tt_node **Mem;
+int Mem_index;
+int Mem_max;
+
+/**
+ * __impl__tt_tree_free()
+ * ----------------------
+ * Implements tt_tree_free()
+ */
+void __impl__tt_tree_free(struct tt_node *n, int i)
 {
-        struct tt_node *copy;
-
-        copy = tt_create_node(n->value);
-
-        copy->id = n->id;
-
-        copy->L = NULL;
-        copy->R = NULL;
-        copy->P = NULL;
-
-        return copy;
+        if (n != NULL && Mem_index < Mem_max) {
+                Mem[Mem_index++] = n;
+        }
 }
 
-
 /**
- * tt_node_path()
+ * tt_tree_free()
  * --------------
- * Create a path string for a given node.
+ * Remove a tree from memory.
  *
- * @n    : Pointer to tree node.
- * Return: {L,R}+ string representing path (position) in tree.
- */
-char *tt_node_path(struct tt_node *a)
-{
-        int n = 0;
-
-        struct tt_node *ptr;
-
-        ptr = a;
-
-        while (ptr->P != NULL) {
-                n++;
-                ptr = ptr->P;
-        }
-
-        char *path = calloc(n+1, sizeof(char));
-
-        /*printf("n:%d\n", n);*/
-
-        path[n] = '\0'; 
-
-        ptr = a;
-
-        while (ptr->P != NULL) {
-                if (n > 0) {
-                        n--;
-                }
-                if (tt_is_left(ptr)) {
-                        path[n] = 'L';
-                } else {
-                        path[n] = 'R';
-                }
-                ptr = ptr->P;
-        }
-
-        /*printf("path:%s\n", path);*/
-
-        return path;
-}
-
-
-/**
- * tt_insert_on_path()
- * -------------------
- * Insert a node according to a path string.
- *
- * @r    : Pointer to root node of tree to insert into.
- * @a    : Pointer to tree node (will be inserted) 
- * @path : Path string {L,R}+ for @a to follow.
+ * @tree : Pointer to tree structure.
  * Return: Nothing.
  */
-void tt_insert_on_path(struct tt_node *r, struct tt_node *a, char *path)
+void tt_tree_free(struct tt_t *tree)
 {
-        int l = strlen(path);
         int i;
 
-        /*printf("len:%d path:%s\n", l, path);*/
+        Mem_max = tree->count + (tree->count-2);
 
-        struct tt_node *node = r;
+        Mem       = calloc(Mem_max, sizeof(struct tt_node *));
+        Mem_index = 0;
 
-        for (i=0; i<l-1; i++) {
-                if (path[i] == 'L') {
-                        node = node->L;
-                } else {
-                        node = node->R;
-                }
+        tt_traverse_preorder(tree->root, __impl__tt_tree_free);
+
+        for (i=0; i<Mem_index; i++) {
+                tt_node_destroy(Mem[i]);
         }
 
-        /*printf("path:%s path[l-1]:%s\n", path, &path[l-1]);*/
-
-        if (path[l-1] == 'L') {
-                node->L = a;
-        } else {
-                node->R = a;
-        }
-
-        a->P = node;
+        free(Mem);
+        free(tree);
 }
 
 
+/******************************************************************************
+ * TREE COPY 
+ ******************************************************************************/
 
-
-
-/* Stores the root for inserting along a path */
 struct tt_node *This_root;
-
 
 /**
  * __impl__tt_tree_copy()
@@ -1503,9 +1750,9 @@ void __impl__tt_tree_copy(struct tt_node *a, int i)
         struct tt_node *copy;
 
         if (a != NULL && !tt_is_root(a)) {
-                copy = tt_node_copy(a); 
+                copy = tt_copy(a); 
 
-                char *path = tt_node_path(a);
+                char *path = tt_get_path(a);
 
                 tt_insert_on_path(This_root, copy, path);
 
@@ -1537,7 +1784,7 @@ struct tt_t *tt_tree_copy(struct tt_t *tree)
         copy->max_cost     = tree->max_cost;
         copy->min_cost     = tree->min_cost;
 
-        copy->root = tt_node_copy(tree->root);
+        copy->root = tt_copy(tree->root);
 
         This_root = copy->root;
 
@@ -1548,21 +1795,23 @@ struct tt_t *tt_tree_copy(struct tt_t *tree)
 
 
 
-
-
-
 /******************************************************************************
  * TREE COST 
  ******************************************************************************/
 
-float **Cost_data; /* used for distance lookup */
-float   Tree_cost; /* running cost total */
+float **Cost_data; 
+float   Tree_cost; 
 
 
+/**
+ * __impl__tt_tree_cost()
+ * ----------------------
+ * Implements tt_tree_cost(). 
+ */
 void __impl__tt_tree_cost(struct tt_node *n, int i)
 {
         if (tt_is_internal(n)) {
-                Tree_cost += tt_node_cost(n, Cost_data);
+                Tree_cost += tt_get_cost(n, Cost_data);
         }
         return;
 }
@@ -1587,7 +1836,6 @@ float tt_tree_cost(struct tt_t *tree)
 }
 
 
-
 /**
  * tt_tree_cost_scaled()
  * ---------------------
@@ -1604,15 +1852,20 @@ float tt_tree_cost_scaled(struct tt_t *tree)
 
 
 
+
+/******************************************************************************
+ * TREE MUTATE 
+ ******************************************************************************/
+
 /**
  * tt_tree_mutate()
  * ----------------
  * Perform various mutations on a tree structure, preserving shape invariants.
  *
  * @tree : Pointer to a tree structure.
- * Return: 1 (SUCCESS), 0 (FAILURE). 
+ * Return: Number of mutations made
  */
-int tt_tree_mutate(struct tt_t *tree)
+int tt_tree_mutate(struct tt_t *tree, struct alias_t *alias)
 {
         struct tt_node *a;
         struct tt_node *b;
@@ -1620,23 +1873,26 @@ int tt_tree_mutate(struct tt_t *tree)
         int m;
         int i;
 
-        m = dice_roll(10);
+        m = alias_sample(alias);
 
         for (i=0; i<m; i++) {
-
-                a = tt_random_leaf(tree->root);
-                b = tt_random_leaf(tree->root);
 
                 r = dice_roll(3);
 
                 switch (r) {
                 case 0:
+                        a = tt_random_leaf(tree->root);
+                        b = tt_random_leaf(tree->root);
                         tt_LEAF_INTERCHANGE(a, b);
                         break;
                 case 1:
+                        a = tt_random_node(tree->root);
+                        b = tt_random_node(tree->root);
                         tt_SUBTREE_INTERCHANGE(a, b);
                         break;
                 case 2:
+                        a = tt_random_node(tree->root);
+                        b = tt_random_node(tree->root);
                         tt_SUBTREE_TRANSFER(a, b);
                         break;
                 }
@@ -1652,46 +1908,95 @@ int tt_tree_mutate(struct tt_t *tree)
                 }
         }
 
-        return 1;
-}
-        
-
-
-struct tt_node **Mem;
-int Mem_index;
-int Mem_max;
-
-void __impl__tt_tree_free(struct tt_node *n, int i)
-{
-        if (n != NULL && Mem_index < Mem_max) {
-                Mem[Mem_index++] = n;
-        }
+        return m;
 }
 
-void tt_tree_free(struct tt_t *tree)
+
+/**
+ * tt_tree_mutate_mmc()
+ * --------------------
+ * Perform various mutations on a tree structure, preserving shape invariants.
+ *
+ * @tree : Pointer to a tree structure.
+ * Return: Number of mutations made
+ */
+int tt_tree_mutate_mmc(struct tt_t *tree, struct alias_t *alias)
 {
+        struct tt_node *a;
+        struct tt_node *b;
+        float cost;
+        float best;
+        int r;
+        int m;
         int i;
 
-        Mem_max = tree->count + (tree->count-2);
+        m = alias_sample(alias);
 
-        Mem       = calloc(Mem_max, sizeof(struct tt_node *));
-        Mem_index = 0;
+        best = tt_tree_cost(tree);
 
-        tt_traverse_preorder(tree->root, __impl__tt_tree_free);
+        for (i=0; i<m; i++) {
 
-        for (i=0; i<Mem_index; i++) {
-                tt_destroy_node(Mem[i]);
+                r = dice_roll(3);
+
+                switch (r) {
+                case 0:
+                        a = tt_random_leaf(tree->root);
+                        b = tt_random_leaf(tree->root);
+                        tt_LEAF_INTERCHANGE(a, b);
+
+                        /* Check cost and undo if bad step */
+                        cost = tt_tree_cost(tree);
+                        if (cost > best) {
+                                best = cost;
+                        } else {
+                                /* Undo mutation */
+                                tt_LEAF_INTERCHANGE(b, a);
+                        }
+                        break;
+                case 1:
+                        a = tt_random_node(tree->root);
+                        b = tt_random_node(tree->root);
+                        tt_SUBTREE_INTERCHANGE(a, b);
+
+                        /* Check cost and undo if bad step */
+                        cost = tt_tree_cost(tree);
+                        if (cost > best) {
+                                best = cost;
+                        } else {
+                                /* Undo mutation */
+                                tt_SUBTREE_INTERCHANGE(b, a);
+                        }
+                        break;
+                case 2:
+                        a = tt_random_node(tree->root);
+                        b = tt_random_node(tree->root);
+                        tt_SUBTREE_TRANSFER(a, b);
+
+                        /* Check cost and undo if bad step */
+                        cost = tt_tree_cost(tree);
+                        if (cost > best) {
+                                best = cost;
+                        } else {
+                                /* Undo mutation */
+                                tt_SUBTREE_INTERCHANGE(b, a);
+                        }
+                        break;
+                }
+
+                if (!tt_is_ternary(tree->root)) {
+                        fprintf(stderr, "Malformed tree.\n");
+                        exit(1);
+                }
+
+                if (tree->num_leaves != tt_count_leaves(tree->root)) {
+                        fprintf(stderr, "Malformed tree.\n");
+                        exit(1);
+                }
         }
 
-        free(Mem);
-        free(tree);
+        return m;
 }
-
-
-
-
-
-
+        
 
 
 
