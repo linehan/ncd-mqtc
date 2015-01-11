@@ -65,3 +65,8 @@ int coin_tails(double bias)
 }
 
 
+
+float uniform_random(void)
+{
+        return mt_random_real_0(&Generator);
+}

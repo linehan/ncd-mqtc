@@ -8,6 +8,9 @@ int coin_flip (double bias, int side);
 int coin_heads(double bias);
 int coin_tails(double bias);
 
+
+float uniform_random(void);
+
 /**
  * coin_flip_value()
  * -----------------

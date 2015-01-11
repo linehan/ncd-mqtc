@@ -28,7 +28,7 @@ Auxiliary routines..
 #include <stdio.h>
 #include <string.h>
 #include <limits.h>
-#include "tt_print.h"
+#include "print.h"
 
 
 struct asciinode_t {
@@ -98,7 +98,7 @@ int print_next;
  * @fmt  : Format specifier for printing each value.
  * Return: ASCII tree 
  */
-struct asciinode_t *build_ascii_tree_recursive(struct tt_node *n, const char *fmt) 
+struct asciinode_t *build_ascii_tree_recursive(struct pnode_t *n, const char *fmt) 
 {
         struct asciinode_t *node;
 
@@ -134,7 +134,7 @@ struct asciinode_t *build_ascii_tree_recursive(struct tt_node *n, const char *fm
  * @fmt  : Format specifier for printing each value.
  * Return: ASCII tree 
  */
-struct asciinode_t *build_ascii_tree(struct tt_node *n, const char *fmt) 
+struct asciinode_t *build_ascii_tree(struct pnode_t *n, const char *fmt) 
 {
         struct asciinode_t *node;
 
@@ -388,7 +388,7 @@ void compute_edge_lengths(struct asciinode_t *node)
  ******************************************************************************/
 
 
-void tt_print(struct tt_node *n, const char *fmt)
+void pnode_print(struct pnode_t *n, const char *fmt)
 {
         struct asciinode_t *proot;
         int xmin;

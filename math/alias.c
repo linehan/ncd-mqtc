@@ -15,7 +15,7 @@
 
 struct alias_item { 
         struct list_t node; 
-        double pr; 
+        float pr; 
         int idx;
 };
 
@@ -29,14 +29,14 @@ struct alias_item {
  * @prob_array: Discrete probability distribution.
  * Return     : Pointer to alias structure.
  */
-struct alias_t *alias_create(int prob_count, double *prob_array) 
+struct alias_t *alias_create(int prob_count, float *prob_array) 
 {
         struct alias_t *alias;
 
         alias     = calloc(1, sizeof(struct alias_t));
-        alias->n  = prob_count;
-        alias->pr = calloc(prob_count, sizeof(double));
-        alias->al = calloc(prob_count, sizeof(double));
+        alias->n  = (float)prob_count;
+        alias->pr = calloc(prob_count, sizeof(float));
+        alias->al = calloc(prob_count, sizeof(float));
 
         alias_setup(alias, prob_array);
 
@@ -76,7 +76,7 @@ void alias_destroy(struct alias_t *alias)
  * @prob_array: Discrete probability distribution.
  * Return     : Nothing.
  */
-void alias_setup(struct alias_t *alias, double *prob_array)
+void alias_setup(struct alias_t *alias, float *prob_array)
 {
         struct list_t      small; /* Small values worklist */
         struct list_t      large; /* Large values worklist */
@@ -97,7 +97,7 @@ void alias_setup(struct alias_t *alias, double *prob_array)
                 struct alias_item *item;
 
 		item      = calloc(1, sizeof(struct alias_item));
-		item->pr  = prob_array[i] * (double)alias->n;
+		item->pr  = prob_array[i] * (float)alias->n;  /* SCALED */
                 item->idx = i;
 
 		if (item->pr<1.0) {

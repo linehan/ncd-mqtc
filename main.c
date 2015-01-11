@@ -7,14 +7,15 @@
 #include "string/strings.h"
 #include "string/mtf.h"
 #include "string/rotate.h"
-#include "tree/tt.h"
-#include "tree/tt_print.h"
-#include "test.h"
+#include "tree/ptree.h"
+#include "tree/pnode.h"
+#include "tree/print.h"
 
 #include "util/bnfop.h"
 
 int   DATA_COUNT = 0;
 
+FILE *F_cost;
 FILE *F_fitness;
 FILE *F_alias;
 FILE *F_mutate;
@@ -24,10 +25,12 @@ void open_logs(void)
         F_alias   = fopen("./_log/alias.log", "w+");
         F_mutate  = fopen("./_log/mutate.log", "w+");
         F_fitness = fopen("./_log/fitness.log", "w+");
+        F_cost    = fopen("./_log/cost.log", "w+");
 }
 
 void close_logs(void)
 {
+        fclose(F_cost);
         fclose(F_alias);
         fclose(F_mutate);
         fclose(F_fitness);
@@ -36,7 +39,7 @@ void close_logs(void)
 
 /**
  * read_square_matrix()
- * --------------------
+ * -------------------- 
  * Read a (possibly un-seekable) input stream into memory.
  *
  * @input: Input file stream
@@ -146,45 +149,86 @@ float **read_square_matrix(FILE *input)
 }
 
 
-double *build_pmf(int limit)
+/**
+ * build_pmf()
+ * ----------- 
+ * Construct the probability mass function for the alias.
+ *
+ * @limit: Maximum value to sample in the distribution 
+ * Return: Array of probability values, suitable for building an alias.
+ *
+ * NOTE
+ * The actual distribution being used is from [1], namely,
+ *
+ *      p(k) = 1 / ( (k+2) * (log(k+2)^2) ).
+ *
+ * This is a shifted version of the more general equation
+ *
+ *      p(k) = c / ( (k) * (log(k)^2) ),
+ *
+ * with c ~= 2.1. 
+ *
+ * Among the family of smooth analytic functions that can be expressed
+ * as a series of fractional powers and logarithms, this equation lies 
+ * on the exact edge of the convergence zone.
+ *
+ * SUM(1/k)                      
+ * SUM(1/(k*log(k))                     ----\    divergent 
+ * SUM(1/(k*log(k)*log(log(k)))         ----/    functions  
+ *
+ * SUM(1/k^2)
+ * SUM(1/(k*(log(k)^2)))                ----\    convergent
+ * SUM(1/(k*(log(k)*(log(k)^2))))       ----/    functions
+ *
+ * The probabilities of a discrete probability distribution must sum to 1, 
+ * so any function used to describe the distribution must converge as k goes
+ * to infinity. 
+ *
+ * 1/(k*(log(k)^2)) is thus one of the maximal "fat tail" distributions that 
+ * exists. This will concentrate probability on larger values of k, which is
+ * what we want for constructing k-mutations. 
+ */
+float *build_pmf(int limit)
 {
-        double *value;
-        int    k;
+        float *value;   /* value array */
+        float  k;       /* index */
+        float  p;       /* sum of probabilities */
 
-        value = calloc(limit, sizeof(double));
+        value = calloc(limit, sizeof(float));
 
-        for (k=0; k<limit; k++) {
-                value[k] = (double)(1/((k+2.0)*(pow(log(k+2.0), 2.0))));
+        p = 0.0;
+
+        for (k=1; k<limit; k+=1.0) {
+                value[(int)k] = 1.0/((k+2.0)*powf(log2f(k+2.0), 2.0));
+                p += value[(int)k];
         }
+
+        /* Ensure the probabilities sum to 1. */
+        value[0] = 1.0 - p;
 
         return value;
 }
 
 
+/**
+ * run_mutations()
+ * --------------- 
+ */
 void run_mutations(int gens, FILE *input)
 {
-        struct tt_t    *tree;
-        struct tt_t    *best;
+        #define N_TREES 3 
+        struct ptree_t *tree[N_TREES];
+        struct ptree_t *best_tree;
+        struct ptree_t *champion;
         struct alias_t *alias;
-        double         *prob;
+        float          *prob;
         float         **data;
-        float           best_cost;
-        float           init_cost;
-        float           this_cost;
+        float          best_cost = 0.0;
+        float          init_cost[N_TREES];
+        float          this_cost[N_TREES];
         int             i;
+        int             j;
         int             m;
-
-        /*
-         * Build the alias used to compute the
-         * probability of a k-mutation.
-         */
-
-        prob  = build_pmf(100);
-        alias = alias_create(100, prob);
-
-        for (i=0; i<100; i++) {
-                fprintf(F_alias, "%f\n", prob[i]);
-        }
 
         /* 
          * Read the input matrix and build the
@@ -192,15 +236,45 @@ void run_mutations(int gens, FILE *input)
          */
 
         data = read_square_matrix(input);
-        tree = tt_tree_create(DATA_COUNT, data);
+
+        for (i=0; i<N_TREES; i++) {
+                tree[i] = ptree_create(DATA_COUNT, data);
+        }
+
+        /*
+         * Once we know DATA_COUNT (set in read_square_matrix()), 
+         * we can use that as our N to build the alias with a 
+         * 'sufficient' number of possibilities to transform any 
+         * tree into any other tree.
+         *
+         * That sufficiency is given by f(n) = 5n-16 [Cilibrasi 2011] 
+         *
+         * We use the alias to sample from the non-uniform 
+         * probability mass function and obtain the k for
+         * which we apply a k-mutation.
+         */
+
+        prob  = build_pmf(sufficient_k(DATA_COUNT));
+        alias = alias_create(sufficient_k(DATA_COUNT), prob);
+
+        for (i=0; i<sufficient_k(DATA_COUNT); i++) {
+                fprintf(F_alias, "%f\n", prob[i]);
+        }
 
         /*
          * Initialize the best tree and the best
          * cost of the tree.
          */
 
-        best = tt_tree_copy(tree);
-        init_cost = best_cost = tt_tree_cost_scaled(best);
+        for (i=0; i<N_TREES; i++) {
+                init_cost[i] = ptree_cost_scaled(tree[i]);
+                if (init_cost[i] > best_cost || i == 0) {
+                        best_cost = init_cost[i];
+                        best_tree = tree[i];
+                }
+        }
+
+        champion = ptree_copy(best_tree);
 
         /*
          * Hill-climb for the optimal cost by 
@@ -210,28 +284,45 @@ void run_mutations(int gens, FILE *input)
          */
 
         for (i=0; i<gens; i++) {
-                m = tt_tree_mutate(tree, alias);
-                
-                fprintf(F_mutate, "%d\n", m);
+                for (j=0; j<N_TREES; j++) {
+                        tree[j] = ptree_mutate_mmc2(tree[j], alias, &m);
+                        
+                        fprintf(F_mutate, "%d\n", m);
 
-                this_cost = tt_tree_cost_scaled(tree);
+                        this_cost[j] = ptree_cost_scaled(tree[j]);
 
-                if (this_cost > best_cost) {
-                        tt_tree_free(best);
-                        best      = tt_tree_copy(tree);
-                        best_cost = this_cost;
-                        fprintf(F_fitness, "%f\n", this_cost);
-                        if (this_cost == 1.0) {
-                                /* Halt */
-                                break;
+                        fprintf(F_cost, "%f\n", this_cost[j]);
+
+                        if (this_cost[j] > best_cost) {
+                                best_cost = this_cost[j];
+                                best_tree = tree[j];
+                                 
+                                /*best_cost = this_cost;*/
+                                fprintf(F_fitness, "%f\n", best_cost);
+
+                        } else {
+                                fprintf(F_fitness, "%f\n", best_cost);
                         }
-                } else {
-                        fprintf(F_fitness, "%f\n", best_cost);
+                }
+
+                if (best_tree != NULL) {
+                        ptree_free(champion);
+                        champion = ptree_copy(best_tree);
+                        best_tree = NULL;
+                }
+
+                if (best_cost == 1.0) {
+                        /* Halt */
+                        break;
                 }
         }
 
-        tt_print(best->root, "%d");
-        printf("best:%f init:%f\n", best_cost, init_cost);
+        pnode_print(champion->root, "%d");
+        printf("best:%f init:", best_cost);
+        for (i=0; i<N_TREES; i++) {
+                printf("%f ", init_cost[i]);
+        }
+        printf("\n");
 }
 
 

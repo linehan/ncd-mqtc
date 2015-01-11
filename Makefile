@@ -54,8 +54,9 @@ SOURCES=main.c			\
 	string/strings.c	\
 	string/mtf.c		\
 	string/rotate.c		\
-	tree/tt.c		\
-	tree/tt_print.c		\
+	tree/pnode.c		\
+	tree/ptree.c		\
+	tree/print.c		\
 	list/list.c		\
 	math/mersenne.c		\
 	math/coin.c		\

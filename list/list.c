@@ -11,8 +11,8 @@
 
 
 /**
- * list_entry 
- * ``````````
+ * list_entry()
+ * ````````````
  * Convert a list_node back into the structure containing it.
  *
  * @n     : the list_node
@@ -22,10 +22,9 @@
 #define list_entry(n, type, member) container_of(n, type, member)
 
 
-
 /**
- * list_alloc
- * ``````````
+ * list_alloc()
+ * ````````````
  * Dynamically allocate and initialize a list object.
  *
  * Return: A new list object.
@@ -42,8 +41,8 @@ struct list_t *list_alloc(void)
 
 
 /**
- * list_init 
- * `````````
+ * list_init()
+ * ```````````
  * Initialize a dynamically-allocated list object. 
  *
  * @h    : Address of the list object to be initialized. 
@@ -61,11 +60,11 @@ void list_init(struct list_t *head)
  ******************************************************************************/
 
 /**
- * list_empty 
- * ``````````
+ * list_empty() 
+ * ````````````
  * Is a list empty?
  *
- * @h    : the list_t
+ * @head : pointer to the list head 
  * Return: true if list is empty, else false.
  */
 bool list_empty(const struct list_t *head)
@@ -74,6 +73,14 @@ bool list_empty(const struct list_t *head)
 }
 
 
+/**
+ * list_length()
+ * `````````````
+ * Compute the length of a given list.
+ *
+ * @head : pointer to the list head 
+ * Return: length of the list
+ */
 int list_length(const struct list_t *head)
 {
         int count;
@@ -95,12 +102,12 @@ int list_length(const struct list_t *head)
  ******************************************************************************/
 
 /**
- * list_add 
- * ````````
+ * list_add()
+ * ``````````
  * Add a new node to the start of a linked list.
  *
- * @h: the list_t to add the node to
- * @n: the list_node to add to the list.
+ * @head     : address of the list to be operated on 
+ * @structure: address of the list_node to add to the list at @head.
  *
  * NOTE
  * The list_node does not need to be initialized; it will be overwritten.
@@ -116,14 +123,13 @@ void list_add(struct list_t *head, void *structure)
 }
 
 
-
 /**
- * list_append
- * ```````````
+ * list_append()
+ * `````````````
  * Add an entry at the end of a linked list.
  *
- * @h: the list_t to add the node to
- * @n: the list_node to add to the list.
+ * @list     : address of the list to be operated on 
+ * @structure: address of the list_node to add to the list at @list.
  *
  * NOTE
  * The list_node does not need to be initialized; it will be overwritten.
@@ -145,14 +151,15 @@ void list_append(struct list_t *head, void *structure)
  ******************************************************************************/
 
 /**
- * list_remove
- * ```````````
+ * list_remove()
+ * `````````````
  * Remove an entry from the linked list it is associated with.
  *
- * @n: the list_node to delete from the (unknown) list.
+ * @structure: address of the list_node to remove from the (unknown) list.
+ * Return    : Nothing
  *
  * NOTE
- * This leaves @n in an undefined state; it can be added to
+ * This leaves @structure in an undefined state; it can be added to
  * another list, but not deleted again.
  */
 void list_remove(void *structure)
@@ -161,23 +168,24 @@ void list_remove(void *structure)
 
 	node->next->prev = node->prev;
 	node->prev->next = node->next;
+
+        return;
 }
 
 
-
 /**
- * list_remove_from 
- * ````````````````
+ * list_remove_from()
+ * ``````````````````
  * Remove an entry from a specific linked list.
  *
- * @h: the list_t the node is in.
- * @n: the list_node to delete from the list.
+ * @list     : address of the list holding @structure
+ * @structure: address of the list_node to remove from @head
  *
  * NOTE
  * This explicitly indicates which list a node is expected to be in,
  * which is better documentation and can catch more bugs.
  */
-void list_remove_from(struct list_t *head, void *structure)
+void list_remove_from(struct list_t *list, void *structure)
 {
         struct list_node *node = (struct list_node *)structure;
 
@@ -185,14 +193,14 @@ void list_remove_from(struct list_t *head, void *structure)
 	{
 		/* Thorough check: make sure it was in list! */
 		struct list_node *i;
-		for (i = head->n.next; i != node; i = i->next) {
-			assert(i != &head->n);
+		for (i = list->n.next; i != node; i = i->next) {
+			assert(i != &list->n);
                 }
 	}
         #endif 
 
 	/* Quick test that catches a surprising number of bugs. */
-	assert(!list_empty(head));
+	assert(!list_empty(list));
 	list_remove(node);
 }
 
@@ -207,17 +215,16 @@ void list_remove_from(struct list_t *head, void *structure)
  * ```````````
  * Get the first entry in a list.
  *
- * @h     : the list_t
- * @type  : the type of the entry
+ * @head  : address of the list head 
  * Return : Address of first entry in list, NULL if list is empty.
  */
-const void *list_head(struct list_t *head)
+const void *list_head(struct list_t *list)
 {
-	if (list_empty(head)) {
+	if (list_empty(list)) {
 		return NULL;
         }
 
-	return (const char *)head->n.next;
+	return (const char *)list->n.next;
 }
 
 
@@ -227,18 +234,16 @@ const void *list_head(struct list_t *head)
  * ```````````
  * Get the last entry in a list
  *
- * @h     : the list_t
- * @type  : the type of the entry
- *
- * If the list is empty, returns NULL.
+ * @head : address of the list head 
+ * Return: list item at the end of the list, NULL if list is empty. 
  */
-const void *list_tail(struct list_t *head)
+const void *list_tail(struct list_t *list)
 {
-        if (list_empty(head)) {
+        if (list_empty(list)) {
                 return NULL;
         }
 
-        return (const char *)head->n.prev;
+        return (const char *)list->n.prev;
 }
 
 
@@ -248,7 +253,7 @@ const void *list_tail(struct list_t *head)
  * `````````````````````
  * Append the current head to the tail, then return the new head.
  *
- * @list : the list_t
+ * @list : address of the list 
  * Return: the new list head (after rotation)
  */
 const void *list_rotate_forward(struct list_t *list)
