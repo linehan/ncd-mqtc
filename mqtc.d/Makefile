@@ -1,4 +1,11 @@
 #########################
+# Configure project     
+#########################
+PROGRAM=mqtc
+INCLUDE=
+
+
+#########################
 # Configure build      
 #########################
 
@@ -8,9 +15,9 @@ COMPILER=gcc
 #  level 3    warnings	  paths     see note 
 #         \    |           |         /
 CC_FLAGS=-O3 -Wall $(INCLUDE) #-ffast-math 
-LD_FLAGS=-lm -lz -lbz2
-#	  /    |    \
-#      math   zlib   bzlib
+LD_FLAGS=-lm		
+#	  /		
+#      math	 
 #
 #
 # NOTE on -ffast-math
@@ -42,40 +49,28 @@ LD_FLAGS=-lm -lz -lbz2
 # Configure files 
 #########################
 
-MQTC_SOURCES=mqtc.d/main.c	\
-	mqtc.d/util/bnfop.c	\
-	mqtc.d/util/list.c	\
-	mqtc.d/util/math.c 	\
-	mqtc.d/prng/mersenne.c	\
-	mqtc.d/prng/prng.c	\
-	mqtc.d/prng/coin.c	\
-	mqtc.d/prng/dice.c	\
-	mqtc.d/prng/alias.c	\
-	mqtc.d/tree/pnode.c	\
-	mqtc.d/tree/ptree.c	\
-	mqtc.d/tree/print.c		
+SOURCES=main.c			\
+	util/bnfop.c		\
+	util/list.c		\
+	util/math.c 		\
+	prng/mersenne.c		\
+	prng/prng.c		\
+	prng/coin.c		\
+	prng/dice.c		\
+	prng/alias.c		\
+	tree/pnode.c		\
+	tree/ptree.c		\
+	tree/print.c		
 
-MQTC_OBJECTS=$(MQTC_SOURCES:.c=.o)
-
-
-NCD_SOURCES=ncd.d/main.c 	\
-	ncd.d/filesystem.c 	\
-	ncd.d/module/mod_zlib.c \
-	ncd.d/module/mod_bzlib.c
-
-NCD_OBJECTS=$(NCD_SOURCES:.c=.o)
+STATICS=
+OBJECTS=$(SOURCES:.c=.o)
 
 
 #########################
 # Configure rules 
 #########################
-all: mqtc ncd
-
-mqtc: $(MQTC_SOURCES)
-	$(COMPILER) $(CC_FLAGS) $(MQTC_SOURCES) -o mqtc $(LD_FLAGS)
-
-ncd: $(NCD_SOURCES)
-	$(COMPILER) $(CC_FLAGS) $(NCD_SOURCES) -o ncd $(LD_FLAGS)
+all: $(SOURCES)
+	$(COMPILER) $(CC_FLAGS) $(SOURCES) $(STATICS) -o $(PROGRAM) $(LD_FLAGS)
 
 clean:
-	rm -f $(MQTC_OBJECTS) $(NCD_OBJECTS) mqtc ncd gmon.out 
+	rm -f $(OBJECTS) $(PROGRAM) gmon.out 
