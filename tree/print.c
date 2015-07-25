@@ -1,29 +1,9 @@
 /*
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-!!!Code originally from /http://www.openasthra.com/c-tidbits/printing-binary-trees-in-ascii/
-!!! Just saved it, cause the website is down.
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-Printing Binary Trees in Ascii
-
-Here we are not going to discuss what binary trees are (please refer this, if you are looking for binary search trees), or their operations but printing them in ascii.
-
-The below routine prints tree in ascii for a given Tree representation which contains list of nodes, and node structure is this
-
-    struct Tree 
-    {
-      Tree * left, * right;
-      int element;
-    };
-
-This pic illustrates what the below routine does on canvas..
-ascii tree
-
-Here is the printing routine..
-
-    b5855d39a6b8a2735ddcaa04a404c125001 
-
-Auxiliary routines..
-*/
+ * Based on an original from:
+ *      http://www.openasthra.com/c-tidbits/printing-binary-trees-in-ascii/
+ *
+ * which appears to be down, although still in the Internet Archive.
+ */
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
