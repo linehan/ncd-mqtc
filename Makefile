@@ -1,7 +1,7 @@
 #########################
 # Configure project     
 #########################
-PROGRAM=r
+PROGRAM=mqtc
 INCLUDE=
 
 
