@@ -1,16 +1,8 @@
 #include <stdlib.h>
 #include <math.h>
-#include "mersenne.h"
+#include "prng.h"
 #include "dice.h"
 #include "alias.h"
-
-/*
- * Generator structure to generate random 
- * values via the Mersenne Twister 
- * algorithm.
- */
-static struct mt_t Generator = {0};
-
 
 /** 
  * dice_roll()
@@ -22,7 +14,7 @@ static struct mt_t Generator = {0};
  */
 int dice_roll(int sides)                                                          
 {
-        return (int)(floor(mt_random_real_0(&Generator)*(double)sides))%sides;
+        return (int)(floor(prng_uniform_random()*(double)sides))%sides;
 }
 
 

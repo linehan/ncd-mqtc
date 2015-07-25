@@ -1,15 +1,6 @@
 #include <stdlib.h>
-#include <math.h>
-#include "mersenne.h"
+#include "prng.h"
 #include "coin.h"
-
-/*
- * Generator structure to generate random 
- * values via the Mersenne Twister 
- * algorithm.
- */
-static struct mt_t Generator = {0};
-
 
 /** 
  * coin_flip()
@@ -27,9 +18,9 @@ static struct mt_t Generator = {0};
 int coin_flip(double bias, int side)
 {
         if (side == HEADS) {
-                return (mt_random_real_0(&Generator)<bias) ? HEADS : TAILS;
+                return (prng_uniform_random()<bias) ? HEADS : TAILS;
         } else if (side == TAILS) {
-                return (mt_random_real_0(&Generator)<bias) ? TAILS : HEADS;
+                return (prng_uniform_random()<bias) ? TAILS : HEADS;
         } else {
                 /* Error-ish */
                 return side;
@@ -47,7 +38,7 @@ int coin_flip(double bias, int side)
  */
 int coin_heads(double bias)
 {
-        return (mt_random_real_0(&Generator)<bias) ? HEADS : TAILS;
+        return (prng_uniform_random()<bias) ? HEADS : TAILS;
 }
 
 
@@ -61,12 +52,6 @@ int coin_heads(double bias)
  */
 int coin_tails(double bias)
 {
-        return (mt_random_real_0(&Generator)<bias) ? TAILS : HEADS;
+        return (prng_uniform_random()<bias) ? TAILS : HEADS;
 }
 
-
-
-float uniform_random(void)
-{
-        return mt_random_real_0(&Generator);
-}

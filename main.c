@@ -4,9 +4,9 @@
 #include <string.h>
 #include <time.h>
 #include <math.h>
-#include "string/strings.h"
-#include "string/mtf.h"
-#include "string/rotate.h"
+/*#include "string/strings.h"*/
+/*#include "string/mtf.h"*/
+/*#include "string/rotate.h"*/
 #include "tree/ptree.h"
 #include "tree/pnode.h"
 #include "tree/print.h"
@@ -223,9 +223,9 @@ void run_mutations(int gens, FILE *input)
         struct alias_t *alias;
         float          *prob;
         float         **data;
-        float          best_cost = 0.0;
-        float          init_cost[N_TREES];
-        float          this_cost[N_TREES];
+        float           best_cost = 0.0;
+        float           init_cost[N_TREES];
+        float           this_cost[N_TREES];
         int             i;
         int             j;
         int             m;

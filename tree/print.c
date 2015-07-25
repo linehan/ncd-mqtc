@@ -118,7 +118,12 @@ struct asciinode_t *build_ascii_tree_recursive(struct pnode_t *n, const char *fm
                 node->R->parent_dir = 1;
         }
 
-        sprintf(node->label, fmt, n->id);
+        if (n->value == '.') {
+                sprintf(node->label, ".");
+        } else {
+                sprintf(node->label, fmt, n->key);
+        }
+
         node->label_length = strlen(node->label);
 
         return node;

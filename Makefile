@@ -51,18 +51,16 @@ LD_FLAGS=-lm
 
 SOURCES=main.c			\
 	util/bnfop.c		\
-	string/strings.c	\
-	string/mtf.c		\
-	string/rotate.c		\
-	tree/pnode.c		\
-	tree/ptree.c		\
-	tree/print.c		\
-	list/list.c		\
+	util/list.c		\
 	math/mersenne.c		\
+	math/prng.c		\
 	math/coin.c		\
 	math/dice.c		\
 	math/alias.c		\
-	math/math.c 
+	math/math.c 		\
+	tree/pnode.c		\
+	tree/ptree.c		\
+	tree/print.c		
 
 STATICS=
 OBJECTS=$(SOURCES:.c=.o)

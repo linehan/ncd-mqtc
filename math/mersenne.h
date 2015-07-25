@@ -20,5 +20,4 @@ double        mt_random_real_0(struct mt_t *mt); /* [0,1] */
 double        mt_random_real_1(struct mt_t *mt); /* [0,1) */
 double        mt_random_real_2(struct mt_t *mt); /* (0,1) */
 
-
 #endif

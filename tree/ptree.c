@@ -4,7 +4,7 @@
 #include <string.h>
 #include <math.h>
 #include <stdbool.h>
-#include "../math/mersenne.h"
+#include "../math/prng.h"
 #include "../math/coin.h"
 #include "../math/dice.h"
 #include "../math/math.h"
@@ -35,7 +35,7 @@ struct ptree_t *ptree_create(int n, float **data)
         tree->data = data;
 
         for (i=0; i<n; i++) {
-                pnode_insert(tree->root, i);
+                pnode_insert(tree->root, i, i);
                 if (!pnode_is_ternary(tree->root)) {
                         fprintf(stderr, "Malformed tree.\n");
                         exit(1);
@@ -313,7 +313,7 @@ int ptree_mutate_mmc(struct ptree_t *tree, struct alias_t *alias)
                         /* Check cost and undo if bad step */
                         cost = ptree_cost(tree);
 
-                        if (uniform_random() < min_float(2, 1.0, cost/best)) {
+                        if (prng_uniform_random() < min_float(2, 1.0, cost/best)) {
                         /*if (cost > best) {*/
                                 best = cost;
                         } else {
@@ -329,7 +329,7 @@ int ptree_mutate_mmc(struct ptree_t *tree, struct alias_t *alias)
                         /* Check cost and undo if bad step */
                         cost = ptree_cost(tree);
                         /*if (cost > best) {*/
-                        if (uniform_random() < min_float(2, 1.0, cost/best)) {
+                        if (prng_uniform_random() < min_float(2, 1.0, cost/best)) {
                                 best = cost;
                         } else {
                                 /* Undo mutation */
@@ -344,7 +344,7 @@ int ptree_mutate_mmc(struct ptree_t *tree, struct alias_t *alias)
                         /* Check cost and undo if bad step */
                         cost = ptree_cost(tree);
                         /*if (cost > best) {*/
-                        if (uniform_random() < min_float(2, 1.0, cost/best)) {
+                        if (prng_uniform_random() < min_float(2, 1.0, cost/best)) {
                                 best = cost;
                         } else {
                                 /* Undo mutation */
@@ -474,7 +474,7 @@ struct ptree_t *ptree_mutate_mmc2(struct ptree_t *tree, struct alias_t *alias, i
         /*if (cost > init) {*/
                 /*ptree_free(tree);*/
                 /*return test;*/
-        if (uniform_random() < 1.0 - (cost/init)) {
+        if (prng_uniform_random() < 1.0 - (cost/init)) {
         /*if (uniform_random() < 1.0-(cost/init)) {*/
                 ptree_free(tree);
                 return test;

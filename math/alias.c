@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <math.h>
-#include "../list/list.h"
+#include "../util/list.h"
 #include "dice.h"
 #include "coin.h"
 #include "alias.h"

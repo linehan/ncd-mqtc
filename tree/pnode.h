@@ -71,7 +71,7 @@ int             pnode_count_internal     (struct pnode_t *a);
  * CREATION AND DELETION 
  ******************************************************************************/
 
-struct pnode_t *pnode_create             (pnode_value_t value);
+struct pnode_t *pnode_create             (pnode_value_t value, pnode_value_t key);
 struct pnode_t *pnode_create_root        (void);
 struct pnode_t *pnode_copy               (struct pnode_t *a);
 void            pnode_destroy            (struct pnode_t *a);
@@ -80,13 +80,13 @@ void            pnode_destroy            (struct pnode_t *a);
  * INSERTION 
  ******************************************************************************/
 
-struct pnode_t *pnode_add_left           (struct pnode_t *a, pnode_value_t value);
-struct pnode_t *pnode_add_right          (struct pnode_t *a, pnode_value_t value);
-struct pnode_t *pnode_add_left_level     (struct pnode_t *a, pnode_value_t value);
-struct pnode_t *pnode_add_right_level    (struct pnode_t *a, pnode_value_t value);
-struct pnode_t *pnode_add_before         (struct pnode_t *a, pnode_value_t value);
+struct pnode_t *pnode_add_left           (struct pnode_t *a, pnode_value_t value, pnode_value_t key);
+struct pnode_t *pnode_add_right          (struct pnode_t *a, pnode_value_t value, pnode_value_t key);
+struct pnode_t *pnode_add_left_level     (struct pnode_t *a, pnode_value_t value, pnode_value_t key);
+struct pnode_t *pnode_add_right_level    (struct pnode_t *a, pnode_value_t value, pnode_value_t key);
+struct pnode_t *pnode_add_before         (struct pnode_t *a, pnode_value_t value, pnode_value_t key);
 
-struct pnode_t *pnode_insert             (struct pnode_t *a, pnode_value_t value);
+struct pnode_t *pnode_insert             (struct pnode_t *a, pnode_value_t value, pnode_value_t key);
 void            pnode_insert_on_path     (struct pnode_t *r, struct pnode_t *a, char *path);
 
 /******************************************************************************

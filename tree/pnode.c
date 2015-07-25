@@ -312,7 +312,7 @@ int pnode_count_internal(struct pnode_t *n)
  * @value: Value to create a node for.
  * Return: Pointer to created node, or NULL;
  */
-struct pnode_t *pnode_create(pnode_value_t value)
+struct pnode_t *pnode_create(pnode_value_t value, pnode_value_t key)
 {
         struct pnode_t *n;
 
@@ -320,6 +320,7 @@ struct pnode_t *pnode_create(pnode_value_t value)
 
         n->value = value;
         n->id    = ID++;
+        n->key   = key;
 
         return n;
 }
@@ -336,7 +337,7 @@ struct pnode_t *pnode_create_root(void)
 {
         struct pnode_t *n;
 
-        n    = pnode_create((pnode_value_t)0);
+        n    = pnode_create((pnode_value_t)0, 0);
         n->P = NULL;
 
         return n;
@@ -355,7 +356,7 @@ struct pnode_t *pnode_copy(struct pnode_t *n)
 {
         struct pnode_t *copy;
 
-        copy = pnode_create(n->value);
+        copy = pnode_create(n->value, n->key);
 
         copy->id = n->id;
 
@@ -402,9 +403,9 @@ void pnode_destroy(struct pnode_t *n)
  *       \    INSERT(1)    / \
  *        2               1   2   
  */
-struct pnode_t *pnode_add_left(struct pnode_t *n, pnode_value_t value)
+struct pnode_t *pnode_add_left(struct pnode_t *n, pnode_value_t value, pnode_value_t key)
 {
-        n->L    = pnode_create(value);
+        n->L    = pnode_create(value, key);
         n->L->P = n;
 
         return n->L;
@@ -424,9 +425,9 @@ struct pnode_t *pnode_add_left(struct pnode_t *n, pnode_value_t value)
  *     /     INSERT(2)    / \
  *    1                  1   2   
  */
-struct pnode_t *pnode_add_right(struct pnode_t *n, pnode_value_t value)
+struct pnode_t *pnode_add_right(struct pnode_t *n, pnode_value_t value, pnode_value_t key)
 {
-        n->R    = pnode_create(value);
+        n->R    = pnode_create(value, key);
         n->R->P = n;
 
         return n->R;
@@ -448,10 +449,10 @@ struct pnode_t *pnode_add_right(struct pnode_t *n, pnode_value_t value)
  *                       / \
  *                      1   2
  */
-struct pnode_t *pnode_add_left_level(struct pnode_t *n, pnode_value_t value)
+struct pnode_t *pnode_add_left_level(struct pnode_t *n, pnode_value_t value, pnode_value_t key)
 {
-        n->L     = pnode_create(value);
-        n->R     = pnode_create(n->value);
+        n->L     = pnode_create(value, key);
+        n->R     = pnode_create(n->value, n->key);
         n->value = '.';
 
         n->R->P = n;
@@ -476,10 +477,10 @@ struct pnode_t *pnode_add_left_level(struct pnode_t *n, pnode_value_t value)
  *                       / \
  *                      1   2
  */
-struct pnode_t *pnode_add_right_level(struct pnode_t *n, pnode_value_t value)
+struct pnode_t *pnode_add_right_level(struct pnode_t *n, pnode_value_t value, pnode_value_t key)
 {
-        n->R     = pnode_create(value);
-        n->L     = pnode_create(n->value);
+        n->R     = pnode_create(value, key);
+        n->L     = pnode_create(n->value, n->key);
         n->value = '.';
 
         n->R->P = n;
@@ -498,7 +499,7 @@ struct pnode_t *pnode_add_right_level(struct pnode_t *n, pnode_value_t value)
  * @value: Value to place at the new node. 
  * Return: Pointer to the created node, or NULL.
  */
-struct pnode_t *pnode_add_before(struct pnode_t *a, pnode_value_t value)
+struct pnode_t *pnode_add_before(struct pnode_t *a, pnode_value_t value, pnode_value_t key)
 {
         struct pnode_t *par;
         struct pnode_t *new;
@@ -507,7 +508,7 @@ struct pnode_t *pnode_add_before(struct pnode_t *a, pnode_value_t value)
         par = a->P;
 
         /* Insert the new node between a and parent(a). */
-        new = pnode_create(value);
+        new = pnode_create(value, key);
 
         a->P   = new;
         new->P = par;
@@ -559,7 +560,7 @@ struct pnode_t *pnode_add_before(struct pnode_t *a, pnode_value_t value)
  *
  * The solution is to randomly choose a path.
  */
-struct pnode_t *pnode_insert(struct pnode_t *n, pnode_value_t value) 
+struct pnode_t *pnode_insert(struct pnode_t *n, pnode_value_t value, pnode_value_t key) 
 {
         if (n == NULL) {
                 return NULL;
@@ -574,9 +575,9 @@ struct pnode_t *pnode_insert(struct pnode_t *n, pnode_value_t value)
                          */
                         /* Random sink. See NOTE */
                         if (coin_fair()) {
-                                return pnode_insert(n->L, value);
+                                return pnode_insert(n->L, value, key);
                         } else {
-                                return pnode_insert(n->R, value);
+                                return pnode_insert(n->R, value, key);
                         }
                 } else {
                         if (n->L == NULL && n->R == NULL) {
@@ -588,16 +589,16 @@ struct pnode_t *pnode_insert(struct pnode_t *n, pnode_value_t value)
                                  * will appear like this. 
                                  */
                                 if (coin_fair()) {
-                                        return pnode_add_left(n, value);
+                                        return pnode_add_left(n, value, key);
                                 } else {
-                                        return pnode_add_right(n, value);
+                                        return pnode_add_right(n, value, key);
                                 }
                         } else if (n->L == NULL && n->R != NULL) {
                                 /* Left leaf open */
-                                return pnode_add_left(n, value);
+                                return pnode_add_left(n, value, key);
                         } else if (n->L != NULL && n->R == NULL) {
                                 /* Right leaf open */
-                                return pnode_add_right(n, value);
+                                return pnode_add_right(n, value, key);
                         }
                 }
         } else {
@@ -607,9 +608,9 @@ struct pnode_t *pnode_insert(struct pnode_t *n, pnode_value_t value)
                  */
                 /*if (value < n->value) {*/
                 if (coin_fair()) {
-                        return pnode_add_left_level(n, value);        
+                        return pnode_add_left_level(n, value, key);
                 } else {
-                        return pnode_add_right_level(n, value);        
+                        return pnode_add_right_level(n, value, key);
                 }
         }
 
@@ -1285,7 +1286,7 @@ void pnode_SUBTREE_TRANSFER(struct pnode_t *a, struct pnode_t *b)
                                 return;
                         }
 
-                        new  = pnode_add_before(b, '.');
+                        new  = pnode_add_before(b, '.', '.');
                         sib  = pnode_get_sibling(a);
                         par  = a->P;
                         a->P = new;
