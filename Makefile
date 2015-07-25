@@ -52,12 +52,12 @@ LD_FLAGS=-lm
 SOURCES=main.c			\
 	util/bnfop.c		\
 	util/list.c		\
-	math/mersenne.c		\
-	math/prng.c		\
-	math/coin.c		\
-	math/dice.c		\
-	math/alias.c		\
-	math/math.c 		\
+	util/math.c 		\
+	prng/mersenne.c		\
+	prng/prng.c		\
+	prng/coin.c		\
+	prng/dice.c		\
+	prng/alias.c		\
 	tree/pnode.c		\
 	tree/ptree.c		\
 	tree/print.c		

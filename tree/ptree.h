@@ -3,7 +3,7 @@
 
 #include <stdbool.h>
 #include <stdint.h>
-#include "../math/alias.h"
+#include "../prng/alias.h"
 #include "pnode.h"
 
 /******************************************************************************

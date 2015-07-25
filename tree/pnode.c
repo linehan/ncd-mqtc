@@ -4,10 +4,10 @@
 #include <string.h>
 #include <math.h>
 #include <stdbool.h>
-#include "../math/mersenne.h"
-#include "../math/coin.h"
-#include "../math/dice.h"
-#include "../math/math.h"
+#include "../prng/mersenne.h"
+#include "../prng/coin.h"
+#include "../prng/dice.h"
+#include "../util/math.h"
 #include "ptree.h"
 
 extern int DATA_COUNT;

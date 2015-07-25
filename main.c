@@ -4,13 +4,9 @@
 #include <string.h>
 #include <time.h>
 #include <math.h>
-/*#include "string/strings.h"*/
-/*#include "string/mtf.h"*/
-/*#include "string/rotate.h"*/
 #include "tree/ptree.h"
 #include "tree/pnode.h"
 #include "tree/print.h"
-
 #include "util/bnfop.h"
 
 int   DATA_COUNT = 0;
@@ -22,10 +18,10 @@ FILE *F_mutate;
 
 void open_logs(void)
 {
-        F_alias   = fopen("./_log/alias.log", "w+");
-        F_mutate  = fopen("./_log/mutate.log", "w+");
+        F_alias   = fopen("./_log/alias.log",   "w+");
+        F_mutate  = fopen("./_log/mutate.log",  "w+");
         F_fitness = fopen("./_log/fitness.log", "w+");
-        F_cost    = fopen("./_log/cost.log", "w+");
+        F_cost    = fopen("./_log/cost.log",    "w+");
 }
 
 void close_logs(void)
@@ -330,7 +326,7 @@ int main(int argc, char *argv[])
 {
         char *generations = NULL;
 
-        if (bnf("./r <generations> $", &generations)) {
+        if (bnf("./mqtc <generations> $", &generations)) {
                 open_logs();
 
                 run_mutations(atoi(generations), stdin);
@@ -339,7 +335,7 @@ int main(int argc, char *argv[])
                 return 1;
         }
 
-        if (bnf("./r $")) {
+        if (bnf("./mqtc $")) {
                 printf("Hey, I need more than that.\n");
                 return 0;
         }
