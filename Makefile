@@ -42,26 +42,36 @@ LD_FLAGS=-lm -lz -lbz2
 # Configure files 
 #########################
 
-MQTC_SOURCES=mqtc.d/main.c	\
-	mqtc.d/util/bnfop.c	\
-	mqtc.d/util/list.c	\
-	mqtc.d/util/math.c 	\
-	mqtc.d/prng/mersenne.c	\
-	mqtc.d/prng/prng.c	\
-	mqtc.d/prng/coin.c	\
-	mqtc.d/prng/dice.c	\
-	mqtc.d/prng/alias.c	\
-	mqtc.d/tree/pnode.c	\
-	mqtc.d/tree/ptree.c	\
-	mqtc.d/tree/print.c		
+MQTC_SOURCES=src/cluster/main.c		\
+	src/cluster/input.c		\
+	src/cluster/logs.c		\
+	src/cluster/util/list.c		\
+	src/cluster/util/math.c 	\
+	src/cluster/prng/mersenne.c	\
+	src/cluster/prng/prng.c		\
+	src/cluster/prng/coin.c		\
+	src/cluster/prng/dice.c		\
+	src/cluster/prng/alias.c	\
+	src/cluster/tree/node_alloc.c	\
+	src/cluster/tree/node_check.c	\
+	src/cluster/tree/node_cost.c	\
+	src/cluster/tree/node_traverse.c\
+	src/cluster/tree/node_count.c	\
+	src/cluster/tree/node_get.c	\
+	src/cluster/tree/node_insert.c	\
+	src/cluster/tree/node_mutate.c	\
+	src/cluster/tree/node_print.c	\
+	src/cluster/tree/tree_alloc.c	\
+	src/cluster/tree/tree_cost.c	\
+	src/cluster/tree/tree_mutate.c	\
 
 MQTC_OBJECTS=$(MQTC_SOURCES:.c=.o)
 
 
-NCD_SOURCES=ncd.d/main.c 	\
-	ncd.d/filesystem.c 	\
-	ncd.d/module/mod_zlib.c \
-	ncd.d/module/mod_bzlib.c
+NCD_SOURCES=src/compress/main.c 	\
+	src/compress/filesystem.c 	\
+	src/compress/module/mod_zlib.c 	\
+	src/compress/module/mod_bzlib.c
 
 NCD_OBJECTS=$(NCD_SOURCES:.c=.o)
 
@@ -69,13 +79,13 @@ NCD_OBJECTS=$(NCD_SOURCES:.c=.o)
 #########################
 # Configure rules 
 #########################
-all: mqtc ncd
+all: cluster compress 
 
-mqtc: $(MQTC_SOURCES)
-	$(COMPILER) $(CC_FLAGS) $(MQTC_SOURCES) -o mqtc $(LD_FLAGS)
+cluster: $(MQTC_SOURCES)
+	$(COMPILER) $(CC_FLAGS) $(MQTC_SOURCES) -o cluster $(LD_FLAGS)
 
-ncd: $(NCD_SOURCES)
-	$(COMPILER) $(CC_FLAGS) $(NCD_SOURCES) -o ncd $(LD_FLAGS)
+compress: $(NCD_SOURCES)
+	$(COMPILER) $(CC_FLAGS) $(NCD_SOURCES) -o compress $(LD_FLAGS)
 
 clean:
-	rm -f $(MQTC_OBJECTS) $(NCD_OBJECTS) mqtc ncd gmon.out 
+	rm -f $(MQTC_OBJECTS) $(NCD_OBJECTS) cluster compress gmon.out 
