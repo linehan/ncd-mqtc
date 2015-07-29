@@ -43,7 +43,7 @@ struct ynode_t *ynode_get_random(struct ynode_t *n)
         Random_node = NULL;
 
         if (n != NULL) {
-                ynode_traverse_inorder(n, __impl__ynode_random);
+                ynode_traverse_inorder(n, __impl__ynode_get_random);
         }
 
         return Random_node;
@@ -62,7 +62,7 @@ struct ynode_t *ynode_get_random_internal(struct ynode_t *n)
         Random_node = NULL;
 
         if (n != NULL) {
-                ynode_traverse_inorder(n, __impl__ynode_random_internal);
+                ynode_traverse_inorder(n, __impl__ynode_get_random_internal);
         }
 
         return Random_node;

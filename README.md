@@ -3,15 +3,24 @@ Tools for normalized compression distance and clustering
 
 Instructions:
 
-        `make all` - Make `mqtc` and `ncd` programs
-        `make ncd` - Make just `ncd` program
-        `make mqtc` - Make just `mqtc` program
+Make everything:
 
-Instructions for `ncd`:
+        make all
+
+Make just the `compress` program:
+
+        make compress 
+
+Make just the `cluster` program:
+
+        make cluster
+
+
+Instructions for `compress`:
 
         Run `./ncd` for usage.
 
-Instructions for `mqtc`:
+Instructions for `cluster`:
 
-        Usage: `./mqtc < 1000 _data/10x10.txt`
+        ./mqtc < 1000 _data/10x10.txt
         

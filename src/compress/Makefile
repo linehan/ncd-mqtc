@@ -49,7 +49,7 @@ LD_FLAGS=-lm -lz -lbz2
 # Configure files 
 #########################
 
-SOURCES=main.c filesystem.c module/mod_zlib.c module/mod_bzlib.c
+SOURCES=main.c filesystem.c ncd.c module/mod_zlib.c module/mod_bzlib.c
 
 STATICS=
 OBJECTS=$(SOURCES:.c=.o)

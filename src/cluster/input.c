@@ -43,6 +43,14 @@ float **read_square_matrix(FILE *input, int *count)
                 ptr = linebuffer;
                 for (i=0, j=0; ptr[i]!='\n'; i++) {
                         if (ptr[i] == ' ') {
+                                /* 
+                                 * WARNING:
+                                 * If there is trailing whitespace
+                                 * before a newline symbol in the
+                                 * input, it will cause an "extra"
+                                 * field to be scanned, and blow this
+                                 * thing up.
+                                 */
                                 /*
                                  * Scan the field to the databuffer.
                                  */

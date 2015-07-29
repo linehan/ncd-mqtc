@@ -1,0 +1,3540 @@
+﻿The Project Gutenberg Etext of Appendicitis:  The Etiology, Hygenic and Dietetic Treatment
+by John H. Tilden, M.D.
+
+Copyright laws are changing all over the world. Be sure to check the
+copyright laws for your country before distributing this or any other
+Project Gutenberg file.
+
+We encourage you to keep this file, exactly as it is, on your
+own disk, thereby keeping an electronic path open for future
+readers.  Please do not remove this.
+
+This header should be the first thing seen when anyone starts to
+view the etext. Do not change or edit it without written permission.
+The words are carefully chosen to provide users with the
+information they need to understand what they may and may not
+do with the etext.
+
+
+**Welcome To The World of Free Plain Vanilla Electronic Texts**
+
+**Etexts Readable By Both Humans and By Computers, Since 1971**
+
+*****These Etexts Are Prepared By Thousands of Volunteers!*****
+
+Information on contacting Project Gutenberg to get etexts, and
+further information, is included below.  We need your donations.
+
+The Project Gutenberg Literary Archive Foundation is a 501(c)(3)
+organization with EIN [Employee Identification Number] 64-6221541
+
+
+
+Title: Appendicitis:  The Etiology, Hygenic and Dietetic Treatment
+
+Author: John H. Tilden, M.D.
+
+Release Date: August, 2003  [Etext #4314]
+[Yes, we are more than one year ahead of schedule]
+[This file was first posted on January 4, 2002]
+
+Edition: 10
+
+Language: English
+
+
+The Project Gutenberg Etext of Appendicitis:  The Etiology, Hygenic and Dietetic Treatment
+by John H. Tilden, M.D.
+******This file should be named 4314.txt or 4314.zip******
+
+Created by Steve Solomon (ssolomon@soilandhealth.com)
+
+Project Gutenberg Etexts are often created from several printed
+editions, all of which are confirmed as Public Domain in the US
+unless a copyright notice is included.  Thus, we usually do not
+keep etexts in compliance with any particular paper edition.
+
+We are now trying to release all our etexts one year in advance
+of the official release dates, leaving time for better editing.
+Please be encouraged to tell us about any error or corrections,
+even years after the official publication date.
+
+Please note neither this listing nor its contents are final til
+midnight of the last day of the month of any such announcement.
+The official release date of all Project Gutenberg Etexts is at
+Midnight, Central Time, of the last day of the stated month.  A
+preliminary version may often be posted for suggestion, comment
+and editing by those who wish to do so.
+
+Most people start at our sites at:
+http://gutenberg.net or
+http://promo.net/pg
+
+These Web sites include award-winning information about Project
+Gutenberg, including how to donate, how to help produce our new
+etexts, and how to subscribe to our email newsletter (free!).
+
+
+Those of you who want to download any Etext before announcement
+can get to them as follows, and just download by date.  This is
+also a good way to get them instantly upon announcement, as the
+indexes our cataloguers produce obviously take a while after an
+announcement goes out in the Project Gutenberg Newsletter.
+
+http://www.ibiblio.org/gutenberg/etext03 or
+ftp://ftp.ibiblio.org/pub/docs/books/gutenberg/etext03
+
+Or /etext02, 01, 00, 99, 98, 97, 96, 95, 94, 93, 92, 92, 91 or 90
+
+Just search by the first five letters of the filename you want,
+as it appears in our Newsletters.
+
+
+Information about Project Gutenberg (one page)
+
+We produce about two million dollars for each hour we work.  The
+time it takes us, a rather conservative estimate, is fifty hours
+to get any etext selected, entered, proofread, edited, copyright
+searched and analyzed, the copyright letters written, etc.   Our
+projected audience is one hundred million readers.  If the value
+per text is nominally estimated at one dollar then we produce $2
+million dollars per hour in 2001 as we release over 50 new Etext
+files per month, or 500 more Etexts in 2000 for a total of 4000+
+If they reach just 1-2% of the world's population then the total
+should reach over 300 billion Etexts given away by year's end.
+
+The Goal of Project Gutenberg is to Give Away One Trillion Etext
+Files by December 31, 2001.  [10,000 x 100,000,000 = 1 Trillion]
+This is ten thousand titles each to one hundred million readers,
+which is only about 4% of the present number of computer users.
+
+At our revised rates of production, we will reach only one-third
+of that goal by the end of 2001, or about 4,000 Etexts.  We need
+funding, as well as continued efforts by volunteers, to maintain
+or increase our production and reach our goals.
+
+The Project Gutenberg Literary Archive Foundation has been created
+to secure a future for Project Gutenberg into the next millennium.
+
+We need your donations more than ever!
+
+As of November, 2001, contributions are being solicited from people
+and organizations in: Alabama, Arkansas, Connecticut, Delaware,
+Florida, Georgia, Idaho, Illinois, Indiana, Iowa, Kansas, Kentucky,
+Louisiana, Maine, Michigan, Missouri, Montana, Nebraska, Nevada, New
+Jersey, New Mexico, New York, North Carolina, Oklahoma, Oregon,
+Pennsylvania, Rhode Island, South Carolina, South Dakota, Tennessee,
+Texas, Utah, Vermont, Virginia, Washington, West Virginia, Wisconsin,
+and Wyoming.
+
+*In Progress
+
+We have filed in about 45 states now, but these are the only ones
+that have responded.
+
+As the requirements for other states are met, additions to this list
+will be made and fund raising will begin in the additional states.
+Please feel free to ask to check the status of your state.
+
+In answer to various questions we have received on this:
+
+We are constantly working on finishing the paperwork to legally
+request donations in all 50 states.  If your state is not listed and
+you would like to know if we have added it since the list you have,
+just ask.
+
+While we cannot solicit donations from people in states where we are
+not yet registered, we know of no prohibition against accepting
+donations from donors in these states who approach us with an offer to
+donate.
+
+International donations are accepted, but we don't know ANYTHING about
+how to make them tax-deductible, or even if they CAN be made
+deductible, and don't have the staff to handle it even if there are
+ways.
+
+All donations should be made to:
+
+Project Gutenberg Literary Archive Foundation
+PMB 113
+1739 University Ave.
+Oxford, MS 38655-4109
+
+Contact us if you want to arrange for a wire transfer or payment
+method other than by check or money order.
+
+
+The Project Gutenberg Literary Archive Foundation has been approved by
+the US Internal Revenue Service as a 501(c)(3) organization with EIN
+[Employee Identification Number] 64-622154.  Donations are
+tax-deductible to the maximum extent permitted by law.  As fundraising
+requirements for other states are met, additions to this list will be
+made and fundraising will begin in the additional states.
+
+We need your donations more than ever!
+
+You can get up to date donation information at:
+
+http://www.gutenberg.net/donation.html
+
+
+***
+
+If you can't reach Project Gutenberg,
+you can always email directly to:
+
+Michael S. Hart <hart@pobox.com>
+
+Prof. Hart will answer or forward your message.
+
+We would prefer to send you information by email.
+
+
+**The Legal Small Print**
+
+
+(Three Pages)
+
+***START**THE SMALL PRINT!**FOR PUBLIC DOMAIN ETEXTS**START***
+Why is this "Small Print!" statement here? You know: lawyers.
+They tell us you might sue us if there is something wrong with
+your copy of this etext, even if you got it for free from
+someone other than us, and even if what's wrong is not our
+fault. So, among other things, this "Small Print!" statement
+disclaims most of our liability to you. It also tells you how
+you may distribute copies of this etext if you want to.
+
+*BEFORE!* YOU USE OR READ THIS ETEXT
+By using or reading any part of this PROJECT GUTENBERG-tm
+etext, you indicate that you understand, agree to and accept
+this "Small Print!" statement. If you do not, you can receive
+a refund of the money (if any) you paid for this etext by
+sending a request within 30 days of receiving it to the person
+you got it from. If you received this etext on a physical
+medium (such as a disk), you must return it with your request.
+
+ABOUT PROJECT GUTENBERG-TM ETEXTS
+This PROJECT GUTENBERG-tm etext, like most PROJECT GUTENBERG-tm etexts,
+is a "public domain" work distributed by Professor Michael S. Hart
+through the Project Gutenberg Association (the "Project").
+Among other things, this means that no one owns a United States copyright
+on or for this work, so the Project (and you!) can copy and
+distribute it in the United States without permission and
+without paying copyright royalties. Special rules, set forth
+below, apply if you wish to copy and distribute this etext
+under the "PROJECT GUTENBERG" trademark.
+
+Please do not use the "PROJECT GUTENBERG" trademark to market
+any commercial products without permission.
+
+To create these etexts, the Project expends considerable
+efforts to identify, transcribe and proofread public domain
+works. Despite these efforts, the Project's etexts and any
+medium they may be on may contain "Defects". Among other
+things, Defects may take the form of incomplete, inaccurate or
+corrupt data, transcription errors, a copyright or other
+intellectual property infringement, a defective or damaged
+disk or other etext medium, a computer virus, or computer
+codes that damage or cannot be read by your equipment.
+
+LIMITED WARRANTY; DISCLAIMER OF DAMAGES
+But for the "Right of Replacement or Refund" described below,
+[1] Michael Hart and the Foundation (and any other party you may
+receive this etext from as a PROJECT GUTENBERG-tm etext) disclaims
+all liability to you for damages, costs and expenses, including
+legal fees, and [2] YOU HAVE NO REMEDIES FOR NEGLIGENCE OR
+UNDER STRICT LIABILITY, OR FOR BREACH OF WARRANTY OR CONTRACT,
+INCLUDING BUT NOT LIMITED TO INDIRECT, CONSEQUENTIAL, PUNITIVE
+OR INCIDENTAL DAMAGES, EVEN IF YOU GIVE NOTICE OF THE
+POSSIBILITY OF SUCH DAMAGES.
+
+If you discover a Defect in this etext within 90 days of
+receiving it, you can receive a refund of the money (if any)
+you paid for it by sending an explanatory note within that
+time to the person you received it from. If you received it
+on a physical medium, you must return it with your note, and
+such person may choose to alternatively give you a replacement
+copy. If you received it electronically, such person may
+choose to alternatively give you a second opportunity to
+receive it electronically.
+
+THIS ETEXT IS OTHERWISE PROVIDED TO YOU "AS-IS". NO OTHER
+WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, ARE MADE TO YOU AS
+TO THE ETEXT OR ANY MEDIUM IT MAY BE ON, INCLUDING BUT NOT
+LIMITED TO WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A
+PARTICULAR PURPOSE.
+
+Some states do not allow disclaimers of implied warranties or
+the exclusion or limitation of consequential damages, so the
+above disclaimers and exclusions may not apply to you, and you
+may have other legal rights.
+
+INDEMNITY
+You will indemnify and hold Michael Hart, the Foundation,
+and its trustees and agents, and any volunteers associated
+with the production and distribution of Project Gutenberg-tm
+texts harmless, from all liability, cost and expense, including
+legal fees, that arise directly or indirectly from any of the
+following that you do or cause:  [1] distribution of this etext,
+[2] alteration, modification, or addition to the etext,
+or [3] any Defect.
+
+DISTRIBUTION UNDER "PROJECT GUTENBERG-tm"
+You may distribute copies of this etext electronically, or by
+disk, book or any other medium if you either delete this
+"Small Print!" and all other references to Project Gutenberg,
+or:
+
+[1]  Only give exact copies of it.  Among other things, this
+     requires that you do not remove, alter or modify the
+     etext or this "small print!" statement.  You may however,
+     if you wish, distribute this etext in machine readable
+     binary, compressed, mark-up, or proprietary form,
+     including any form resulting from conversion by word
+     processing or hypertext software, but only so long as
+     *EITHER*:
+
+     [*]  The etext, when displayed, is clearly readable, and
+          does *not* contain characters other than those
+          intended by the author of the work, although tilde
+          (~), asterisk (*) and underline (_) characters may
+          be used to convey punctuation intended by the
+          author, and additional characters may be used to
+          indicate hypertext links; OR
+
+     [*]  The etext may be readily converted by the reader at
+          no expense into plain ASCII, EBCDIC or equivalent
+          form by the program that displays the etext (as is
+          the case, for instance, with most word processors);
+          OR
+
+     [*]  You provide, or agree to also provide on request at
+          no additional cost, fee or expense, a copy of the
+          etext in its original plain ASCII form (or in EBCDIC
+          or other equivalent proprietary form).
+
+[2]  Honor the etext refund and replacement provisions of this
+     "Small Print!" statement.
+
+[3]  Pay a trademark license fee to the Foundation of 20% of the
+     gross profits you derive calculated using the method you
+     already use to calculate your applicable taxes.  If you
+     don't derive profits, no royalty is due.  Royalties are
+     payable to "Project Gutenberg Literary Archive Foundation"
+     the 60 days following each date you prepare (or were
+     legally required to prepare) your annual (or equivalent
+     periodic) tax return.  Please contact us beforehand to
+     let us know your plans and to work out the details.
+
+WHAT IF YOU *WANT* TO SEND MONEY EVEN IF YOU DON'T HAVE TO?
+Project Gutenberg is dedicated to increasing the number of
+public domain and licensed works that can be freely distributed
+in machine readable form.
+
+The Project gratefully accepts contributions of money, time,
+public domain materials, or royalty free copyright licenses.
+Money should be paid to the:
+"Project Gutenberg Literary Archive Foundation."
+
+If you are interested in contributing scanning equipment or
+software or other items, please contact Michael Hart at:
+hart@pobox.com
+
+[Portions of this header are copyright (C) 2001 by Michael S. Hart
+and may be reprinted only when these Etexts are free of all fees.]
+[Project Gutenberg is a TradeMark and may not be used in any sales
+of Project Gutenberg Etexts or other materials be they hardware or
+software or any other related product without express permission.]
+
+*END THE SMALL PRINT! FOR PUBLIC DOMAIN ETEXTS*Ver.10/04/01*END*
+
+
+
+
+Created by Steve Solomon (ssolomon@soilandhealth.com)
+
+APPENDICITIS
+
+THE ETIOLOGY, HYGIENIC AND DIETETIC TREATMENT
+
+BY JOHN H. TILDEN, M.D.
+
+Author of
+
+"Impaired Health," 2 Vol.; "Cholera Infantum," "Typhoid Fever,"
+"Diseases of Women and Easy Childbirth," "Venereal Diseases,"
+"Appendicitis," "Care of Children," "Food," 2 Vol.; "Pocket
+Dietitian."
+
+=====================NOTICE*===================
+
+You have recently purchased some of my earlier writings, hence the
+following suggestion:
+
+As my regular readers know, I do not favor the use of _protein_ and
+starchy foods in the same meal. The only exceptions that I ever made
+to this combination was the use of potatoes with meat in the same
+meal and the serving of milk with starch. I still allow the
+occasional use of potatoes with meat for well people, for the potash
+content of the potato helps with the digestion of these two foods.
+_But the combination of milk with starch I discontinued some years
+ago._
+
+In some of my former writings this correction has not yet been made,
+therefore we are asking our readers to keep this in mind when
+studying those particular works. Where you find milk in combination
+with starch, change the milk to teakettle tea, which means hot water
+with a little cream (which is fat, not protein) and a small amount
+of sugar.
+
+In some of my former writings this correction has not yet been made,
+therefore we are asking our readers to keep this in mind when
+studying those particular works. Where you find milk in combination
+with starch, change the milk to teakettle tea, which means hot water
+with a little cream (which is fat, not protein) and a small amount
+of sugar.
+
+*(This notice was slipped inside the book, printed on a small,
+glossy sheet. Editor)
+
+
+
+
+
+THE ROAD OF ILL HEALTH
+
+
+
+
+To understand the cause of appendicitis we must go back to the
+beginning, and when we do we find that it starts just where all
+diseases start, namely, _where health leaves off! _When the laws of
+health are broken for the first time, it can be said that the
+individual has started on the road of ill health. How fast he will
+travel and just what will be the character of the disease he meets
+with will depend upon his constitution, inheritance, environment and
+education.
+
+
+
+
+
+APPENDICITIS
+
+
+
+
+
+CHAPTER I.
+
+
+
+
+This cut represents the back view of the cecum, the appendix, a part
+of the ascending colon, and the lower part of the ileum, with the
+arterial supply to these parts.
+
+"A, ileo-colic artery; B and F, posterior cecal artery; C,
+appendicular artery; E, appendicular artery for free end; H, artery
+for basal end of appendix; 1, ascending or right colon; 2, external
+sacculus of the cecum; 3, appendix; 6, ileum; D, arteries on the
+dorsal surface of the ileum."--Byron Robinson.
+
+The reader will see how very much like a blind pouch the cecum is,
+2. The ileum, 6, opens into the cecum, all of the bowel below the
+opening being cecum, the opening of the appendix, 3, is in the lower
+part of the cecum.
+
+The arterial supply to these parts is great enough to get them into
+trouble in those people who are imprudent eaters, and it is also
+great enough to save the parts when diseased if the patient has the
+proper treatment.
+
+For the benefit of the lay reader I will say that the blood-vessels
+represented in the cut are the arteries; there are also veins,
+nerves, and lymphatics imbedded in the folds of the peritoneum,
+accompanying and paralleling the arteries, but they are not shown in
+the cut.
+
+The peritoneum is the lining membrane of the peritoneal cavity. It
+is well to remember that there is nothing in the peritoneal cavity
+except a little serum. The layman will say that the bowels are in
+this cavity, but they are not; they project into the cavity, and
+their outside covering is the lining membrane of the peritoneal
+cavity, but they are truly on the outside of the cavity, and to
+enable the layman to understand the anatomy so that he can apply it
+when reading of the disease, I shall describe the course of an
+ulcer: If an ulcer starts in the bowel it first eats through the
+mucous coat which is the lining membrane of the bowel then through
+the submucous coat, which is the second layer or coat of the bowel,
+then through the muscular coat, which is the third layer of the
+bowel; this brings the ulcer to the serous coat or peritoneum. When
+the peritoneum is eaten through it is called perforation, for it
+means that there is an opening into the peritoneal cavity, and,
+unless the cavity is cut into, cleaned and properly drained death
+will take place in a very short time. I say death is inevitable
+without surgical treatment. In this I appear to be more radical than
+the most radical, for the best authors have much to say about
+perforation, diffuse peritonitis, and of patients who live after
+perforation, as though it were a common occurrence; I say they are
+mistaken.
+
+
+
+
+
+CHAPTER II
+
+
+
+
+_History: _Appendicitis did not become popularly known until about
+twenty years ago--not till it was christened and baptized in the
+blood of the surgical art. Of course the appendix has always been
+subject to inflammation, just as it is now, but in former years the
+disease we call appendicitis bore various names, depending upon the
+diagnostic skill of the attending physician. Typhlitis and
+perityphlitis were the names used to designate the disease now
+covered by the word appendicitis.
+
+The diseases that appendicitis may be confounded with and must be
+differentiated from are obstruction, renal colic, hepatic colic,
+gastritis, enteritis, salpingitis, peritonitis due to gastric or
+intestinal ulcer, enterolith, obstipation, invagination or
+intussusception, hernia, external or internal, volvulus, stricture
+and typhoid fever.
+
+The old text-book description of typhlitis and perityphlitis is so
+similar to the description of the present day appendicitis that it
+is not necessary to reproduce it. The symptoms given show
+conclusively that they are really one and the same.
+
+In the surgical treatment of appendicitis the American profession
+has taken the lead, and the mention of this disease brings to mind
+such names as McBurney, whose name is given to an anatomical
+point--McBurney's Point--midway between the right anterior superior
+spine of the ileum and the umbilicus, Deaver of Philadelphia, and
+Ochsner and Murphy of Chicago. Those who are interested in the
+surgical treatment of the disease can look into the methods of these
+men, and many others. The medical literature of the day abounds in
+exhaustive treatises on the subject of appendicitis and its surgical
+treatment.
+
+We are living in an age that will not be properly recorded unless it
+be entered as _The Age of Fads._
+
+Following immediately on the announcement of Lord Lister's
+antiseptic surgical dressing which rendered the invasion of the
+peritoneal cavity comparatively safe, came the laparotomy or
+celiotomy mania. When it was discovered that opening the abdomen was
+really a minor operation, it was soon legitimatized by professional
+opinion, and rapidly became standardized as a necessary procedure in
+all questionable cases--in all obscure cases of abdominal
+disease--where the diagnosis was in doubt. The result of
+popularizing and legitimatizing the exploratory incision, was to
+cause those who failed to resort to it, in doubtful eases, to be in
+contempt of the court of higher medical opinion, and to license
+those of a reckless, selfish, savage nature to play with human life
+in a manner and with a freedom that would make a barbarian envious.
+
+The wave of abdominal operations that swept the country in the last
+quarter of the nineteenth century was appalling. The slightest pain
+during menstruation, or in the lower abdomen, in fact every pain
+that a woman had from head to toes was put under arrest and forced
+to bear false witness against the ovaries. It was a very easy matter
+to trump up testimony, when real evidence was embarrassing, to
+foregone conclusions; hence pains in obscure and foreign parts took
+on great importance when analyzed by minds drilled in the science of
+nervous reflexes, sympathies and metastases.
+
+Normal ovariotomy (removing normal ovaries for a supposed reflex
+disease) swept the whole country during the eighties and threatened
+the unsexing of the entire female population. The ovaries had the
+reputation of causing all the trouble that the flesh of woman was
+heir to. Oophorectomy was the entering wedge, since then everything
+contained in the abdomen has become liable to extirpation on the
+slightest suspicion.
+
+Those surgeons of greater dexterity or savagery, I can't tell which,
+prided themselves in operating on the more difficult cases. Taking
+the ovaries out was a very tame affair compared to removing the
+uterus, tubes and ovaries; hence the surgical adept embraced every
+opportunity for an excuse to remove everything that is femininely
+distinctive.
+
+About 1890 appendicitis began to attract the attention of those
+surgically ambitious. The ovariotomy or celiotomy expert began to
+feel the sting of envy and jealousy aroused by those who were making
+history in the new surgical fad--appendectomy--and they got busy,
+and, as disease is not exempt from the economic law of "supply
+always equals demand," the disease accommodatingly sprang up
+everywhere; it was no time before a surgeon who had not a hundred
+appendectomies to his credit was not respected by the rank and file,
+and an aspirant for entrance to the circle of the upper four hundred
+could not be initiated with a record of fewer than one thousand
+operations.
+
+Thanks to the law of supply and demand the ovaries retired and gave
+women a much needed rest. If they had continued to misbehave as they
+had been doing before the appendix got on the rampage, the demand
+for surgical work would have exceeded the supply of surgeons.
+Diseases of all kinds are very accommodating; as soon as a
+successful rival is well introduced they retire without the least
+show of jealousy, showing that they are not strangers to the highest
+ethics, their associations to the contrary notwithstanding.
+
+There are many well written articles on appendicitis, but I believe
+the monograph by A. J. Ochsner, M. D., is decidedly the best, and
+when I refer to the best professional ideas on etiology, pathology,
+symptomatology and treatment I have in mind the opinions set down by
+Ochsner, for he has taken more advanced grounds in the medical
+treatment of this disease than any other physician I know anything
+about in this or any other country. If his "A Handbook on
+Appendicitis" brought out in 1902, had come out three years before,
+I should give him credit for being the first man on record to
+proscribe the taking of food in appendicitis, but as my first
+written advice on the subject was in the July, 1900, number of A
+Stuffed Club,* two years before his book, I shall give myself the
+credit for being the first physician to announce to the world _the
+only correct plan of treating the disease and suggesting the
+probable cause _which the intervening time has proven to be correct
+The only reason I have for making this announcement is that in all
+probability no one else will ever do so, and, as it is just and
+right that I should have the credit, I do myself the honor. The
+general rule is that if a new method of treatment comes out, or a
+discovery of importance is made other than in the regular
+professional channels, it will either be ignored or adopted (cribbed
+is more expressive) and no credit given. This is a small matter, and
+of no special consequence, yet it carries a meaning.
+
+*(Editor's note: "A Stuffed Club" was the newsletter or journal
+published by Dr. Tilden for many years.)
+
+Previous to 1890 the most popular treatment was probably the giving
+of opium; although this was far from ideal, "it had the advantage of
+taking away the patient's appetite, relieving pain, and putting the
+bowels to rest."--Ochsner. If there were any way to prove it, we
+should find that next to surgery opium is still the most popular way
+of treating the disease.
+
+To-day there is no other disease which brings surgery so quickly to
+mind as does appendicitis, especially if the victim can stand for a
+good, large fee. It is only human I presume, for surgeons to defend
+the operation. They believe in it, and are not willing to
+investigate, for they are satisfied. They know or should know that
+ninety per cent of all the surgery practiced to-day has no excuse
+for its existence--no more right to be protected by the laws that
+weld society together than has any other graft that exists by the
+grace of public ignorance and credulity. This operation has for some
+time been the largest single item of revenue for the profession.
+
+Thirty-four years ago I was called in consultation to see my first
+case of what was then generally recognized as perityphlitis or
+typhlitis--inflammation of the connective tissue about the cecum. It
+was a typical case of what is today called appendicitis. I advised
+the doctor to cease his fruitless endeavors at securing relief by
+giving drugs, and give the patient nothing but water. As I remember
+now, it took about four weeks for this patient to recover. This
+plan--positively nothing but water--has since been a part of my
+treatment in all such diseases.
+
+
+
+
+
+CHAPTER III
+
+
+
+
+_Etiology: _To understand the cause of appendicitis we must go back
+to the beginning, and when we do we find that it starts just where
+all diseases start, namely, _where health leaves off! _When the laws
+of health are broken for the first time, it can be said that the
+individual has started on the road of ill health. How fast he will
+travel and just what will be the character of the disease he meets
+with will depend upon his constitution, inheritance, environment and
+education. I do not mean by education, school or book education; I
+mean intuition--that knowledge which evolves from home life and
+habits. I mean, has he any self-discipline? Does he know anything
+about self-denial? Has he any conception of a control higher than
+impulse? Has he been brought up to know that there is a limit to the
+gratifying of wants and desires beyond which, if he goes, he must
+make good with laws that are as exacting as they are invariable?
+Does he know that nature shows no favoritism? Does he know that
+there are laws regulating his intercourse with men--with
+everything--that exact absolute justice from him? And that, if he
+takes advantage of weakness or ignorance because he can, or if he
+secures an advantage through credulity or trickery, he must settle
+for the crime before a judge who is absolutely just! If he has this
+education, which is a constitutional ingrafting from the mother's
+blood, fructified by a like potential father, he will be almost
+immune from all diseases. This is an education that can not be
+secured unless the individual has the prenatal and environing
+influences to differentiate these static attributes of his nature,
+and, if he has, the result will be that all these qualities will
+come to him because "like attracts like." In an atmosphere where
+others attract evil this individual attracts good. The same is true
+on the physical plane. Those who have diseased bodies always have
+disease making habits, hence they attract from a given environment
+all the disease making impulses, while those of healthy bodies have
+health imparting habits, and attract from the same environment the
+health impulses for which they have an affinity.
+
+The constitution, inheritance and education of all mankind will vary
+from the highest to the lowest types. As we go down the scale from
+those with ideal physical and mental health, we see man becoming
+more and more the victim of disease.
+
+It is no uncommon thing to find people of seeming intelligence who
+appear surprised when told that they have brought upon themselves
+such a vulnerable state of health from wrong eating and care of
+their bodies that they are in line for appendicitis, pneumonia,
+typhoid fever, bowel obstruction, or blood poisoning. In such types
+blood poisoning would surely follow a complicated fracture of a
+bone--a fracture where the ends of the bone cut through the flesh
+causing an open wound.
+
+Pregnant women belonging to this class go into confinement with
+their blood so heavily charged with the by-products of an imperfect
+metabolism that they are very liable to have septicemia.
+
+People who think they must have "three square meals a day" must
+have catarrh, rheumatism, tonsilitis, quinsy, pneumonia, typhoid
+fever, and all sorts of bowel trouble including appendicitis. Why!
+Because three meals a day consisting of bread, potatoes, eggs, meat,
+fish, butter, milk, cheese, beans, etc., overwork the metabolic
+function and as a consequence organic functioning is impaired, cell
+proliferation falls below the ideal, bodily resistance falls lower
+and lower, the intestinal secretions lose their immunizing power
+more and more, until at last the body becomes the victim of every
+adverse influence. At first fermentation--indigestion--shows
+occasionally; the intervals between these attacks of acid stomach,
+or fermentation, grow shorter and shorter until they are of daily
+occurrence; accompanying this fermentation there is gas distention
+of the bowels, and this inflation in time interferes with their
+motility and weakens them so that sluggishness is succeeded by
+obstinate constipation.
+
+Every step of this evolution shows an increasing toxic state of the
+fluids in the bowels. After constipation is established the efforts
+at securing evacuations are of such a nature as to irritate the
+cecum. Drugs to force movement cause painful distentions of this
+portion of the bowels. The drugs stimulate peristalsis of the small
+intestine; each wave from the small intestine breaks on the walls of
+the cecum, for the colon is loaded with fecal accumulations so that
+the onrushing contents of the small intestine can not be received by
+the colon; hence the force of the whole peristaltic impact is spent
+on the cecum, which must endanger the integrity of the mucosa as
+well as the musculature.
+
+This point of the bowels, the cecum is more endangered from diarrhea
+than any other. The toxic ptomaines are especially liable to create
+a local infection if nothing more.
+
+This state of the intestines--toxic state--is a constant menace to
+health; in fact the organism is heavily taxed to maintain its
+defense.
+
+The overcrowding of metabolism, as explained above, the chronic
+constipation and toxic bowel secretions, I recognize as the chief
+factors--the necessary and leading factors--in the building and
+maintaining of that constitutional state which I am pleased to
+denominate _Constitutional Catarrh. _When this state is established,
+it can be said that the individual is ready to develop any phase of
+disease that circumstance, accident, or caprice of fortune or
+environment may offer.
+
+The constant presence of gas in the bowels becomes more and more
+menacing to the cecum as the constipation increases. The filled-up
+condition of the bowels--the colon and rectum--prevents the easy
+passage of gas from the bowels, hence it accumulates in the
+ileo-cecal region and keeps the cecum distended.
+
+The constant dilating of the cecum from gas accumulations and the
+forced dilations from diarrheas made either from drugs or irritating
+foods, must not only damage the cecum but the appendix as well; for
+the appendix opens into this part of the intestine and it is
+reasonable to believe that it suffers distention from gas and that
+toxic secretions are driven into it. When its function is not
+interfered with by an unusual pressure as from constipation, no
+doubt it can empty itself and does do so.
+
+When it is understood first of all that appendicitis--the
+inflammation known as appendicitis--is a local manifestation of a
+general or constitutional derangement, the cause for this local
+manifestation may be taken up.
+
+In order to understand why the disease localizes we must refer the
+reader to the peculiar anatomical construction of the cecum and the
+appendix, and their relation to other parts. The cecum is a large,
+blind pouch, one of the shortest of the several divisions in the
+continuity of the intestinal canal, which begins where the small
+intestine ends, and ends where the large intestine begins. Its blind
+end or pouch is down; this dependent position makes it peculiarly
+liable to impaction and the injuries which are disposed to come from
+distention; for, as the colon ascends from its connection with the
+cecum, the force of gravity must be reckoned with.
+
+The colon is very liable to be more or less distended with
+accumulations, and especially is this true of those of sedentary
+habits, for a call to evacuate the bowels is frequently postponed.
+
+This postponing of duty to nature has evolved, in all these years of
+civilized life, a weakened functioning so that man is more subject
+to constipation than any other animal. The bowels are educated to
+tolerate a great accumulation and the pretty general habit of taking
+drugs to force action has grown a weakened state which is the
+natural sequence of overstimulation and as this has been going on
+generation after generation it has become more or less
+transmissible.
+
+The cecum, situated as it is, must bear the brunt of the evil
+effects of constipation. When the large intestine is full or
+distended, as it usually is in cases of chronic constipation, so
+that nothing can pass out of the cecum this organ becomes a jetty
+head, so to speak, against which the peristaltic waves from the
+small intestine break. The full force of the peristaltic waves from
+the small intestine with its onrush of fluid or semifluid contents
+subjects the cecum to great distention and strain.
+
+If there were any way to prove that so-called appendicitis is more
+common to-day than in former times, it is reasonable to believe that
+the irritating effect of the pretty general habit of taking
+cathartic medicine has had more to do with bringing it about than
+any other one thing.
+
+Distention, with the straining of the walls from peristaltic
+onrushes as described above, and the infection that this part of the
+alimentary canal is subjected to because of the decomposition of
+food that is going on to a greater or less extent in all victims of
+constipation, are the causes of inflammation in the cecum. If the
+inflammation involves the appendix or the cecal location of the
+appendix, it may be called appendicitis, but the appendix is
+involved the same as any other contiguous part. Any mind capable of
+reasoning should have no trouble in rightly assigning the
+responsibility of this disease, if sufficient attention be given to
+anatomism.
+
+There is not any very good reason for one capable of analyzing, to
+jump at the conclusion that the appendix is the cause of the disease
+because it is frequently found in the field of inflammation. The
+same reasoning would make Peyer's glands the cause of typhoid fever.
+
+The unwholesome condition of the intestinal tract which is the
+immediate or exciting cause of appendicitis and other diseases
+peculiar to this location, is brought on by improper life; not one
+cause, nor a dozen special causes, but anything and everything that
+break down the general health create this condition; then add the
+accidental eating of decomposition, or add decomposition,
+auto-generated, and we have the necessary data.
+
+The opening of the appendix is so very small that inflammation of
+the cecum soon closes it and then we have a mucous surface without
+drainage, which means obstruction--opposition to the requirements of
+nature--for one of the functions of the mucous membrane is to
+secrete and this secretion must have an outlet or the part becomes
+diseased.
+
+According to the theory of bacteriology a micro-organism is to blame
+for appendicitis. If this were true it would relieve humanity of all
+responsibility. There is a disposition on the part of man to shirk
+responsibility and the germ theory is not the first theory of
+vicarious atonement that he has spun. Those who wish to shirk all
+kinds of responsibility by adopting the germ theory and by making
+micro-organisms the scape-goat may do so, but I would advise all
+sensible people to keep in mind the following truth: _Violated
+hygienic laws predispose to disease; _then, when resistance is
+broken down, the immediate and exciting cause may be anything
+capable of laying on the "last straw."
+
+The micro-organisms are present wherever there is life and are as
+necessary to life as they are to death.
+
+Ochsner states that in nearly all instances the disease can be
+traced to the common colon bacillus, which is always present when
+the intestine is normal. The three pus cocci are sometimes blamed,
+and so are the bacilli of typhoid fever, tuberculosis and the ray
+fungus (so-called cause of lumpjaw).
+
+Other causes given are: Edema and congestion closing the lumen of
+the appendix, thus preventing drainage; constipation; digestive
+disturbances; traumatism; eating too freely while in an exhausted
+condition.
+
+"Whatever the predisposing causes may be in any given case, the
+exciting cause is always some infectious material. The colon
+bacillus is always present in the lumen of the alimentary canal and,
+although it is harmless under normal conditions, when these
+conditions arc changed and there is an abrasion, an abnormal
+condition of the circulation, or a lack of drainage, it becomes at
+once actively pathogenic. With a perfectly normal peritoneum a
+considerable quantity of a pure culture of colon bacilli may be
+injected into the abdominal cavity without causing any harmful
+effect, as has been shown by the experiments of Ziegler, but if
+there is any disturbance in the circulation or nutrition of the
+peritoneum, the same quantity taken from the same culture will give
+rise to a dangerous peritonitis."--Ochsner. [This goes back to the
+constitutional derangement. First of all low resistance, then any
+exciting cause is sufficient.]
+
+In studying the cause of organic disease, the first thing to
+consider is the organ itself. A knowledge of its structure and
+function will indicate what diseases it is liable to have--what the
+character of the disease must be.
+
+Reason would say that an organ can be deranged in two general ways,
+namely: structurally and functionally. In a structural way it may be
+impaired either by coming in violent contact with extraneous
+objects, or it may be crowded or pressed upon by enlarged or
+displaced associate organs. In a functional way the derangement may
+be brought about from overwork or underwork. A digestive organ may
+be overworked by being given too much food, or food of too
+stimulating a quality; or the over-stimulation may come from poisons
+coming into the food from without or developing in the food after
+its ingestion. The bowels may be injured by coming in violent
+contact with external objects. When this is the cause there will be
+the history of accident, etc.
+
+The functions of the bowels are to furnish a dissolving fluid which
+is secreted by glands situated in their structure and opening into
+their lumen; besides the secreting glands they are provided with
+power to excrete and absorb. The organs for the accomplishment of
+these purposes, like the secretory glands, are situated in the
+structure and open into the canal. Besides the functions of
+secretion, excretion and absorption, the bowels act as the great
+sewer of the body.
+
+The dissolving fluids, or digestive fluids, have the power to
+overcome fermentation when the general health standard is normal;
+when the tone of the general health is lowered these digestive
+juices are lacking in power; hence they are not able to control
+fermentation if food be ingested to the amount usually taken in
+health. The power to oppose fermentation by the digestive juices
+ranges all the way from nil to the resistance usual to a man of full
+health and vigor.
+
+It being the function of the bowels to digest food and overcome
+fermentation, it stands to reason that to accomplish this function
+they must be normal--they must have a proper supply of nerve force
+and the supply of nutrition must be normal or they can not furnish
+the proper amount and quality of secretions. To have all these needs
+supplied they must be reciprocally related to every other organ
+associated with them in the organic colonization which totals a
+human being.
+
+On account of the reciprocal relationship between the bowels and the
+rest of the colony of organs, the bowels must share alike; that is,
+in the matter of distribution of forces no organ of the body can be
+favored; all must go up and all must come down together. They must
+all share alike; hence the bowels have their share of the general
+tone and, if they are required to do more than a reciprocal amount
+of the work, it stands to reason that they can not do good work;
+and, if they can not do good work, the whole colony must suffer in a
+general way, while the bowels must also suffer in a special way. The
+function of drainage or sewerage is very important, and the
+perversion of it brings on much ill health. The principal perversion
+to the function of sewerage is that of constipation, the location of
+which is limited to the lower portion of the large intestine, a
+section of the canal least endowed with digestive and absorptive
+power.
+
+The result of overwork is depression--exhaustion--prostration; and
+what does that mean to an organ? Is it possible for an overworked
+organ--a depressed organ--an exhausted organ--a prostrated organ--to
+function normally? Is it reasonable to believe that an organ that is
+inflamed can function properly? Such questions are absurd, I
+acknowledge. Questions that carry foregone conclusions on the face
+of them write the questioner down an ass, which I also acknowledge.
+But I desire to rebut the inference these questions reflect on me by
+making a few requests which show that there is a lot of professional
+reasoning based on that sort of logic which justifies my childish,
+senseless questions.
+
+Show me a physician, or if you can not show me one, give me the name
+of a physician who does not feed children in cholera infantum. I
+want to know a few physicians who do not feed in typhoid fever. I
+should like to make the acquaintance of a few physicians who do not
+feed in appendicitis until the disease is made desperate, and who do
+not begin to feed long before it is safe to feed.
+
+In all diseases where there is fever, in all diseases where there is
+pain, _nutrition is suspended--_metabolism is stationary. I wish
+some one would be kind enough to inform me of an M. D. who does not
+feed patients suffering with pain and fever.
+
+If the inferences these requests carry are true, has the personnel
+of the profession any right to treat my questions with contempt and
+declare that they are childish!
+
+No! Diseased organs can not function properly and it is absurd, yes
+worse than that, it is criminal to feed under such circumstances.
+The result of feeding is the prolongation of disease by building it
+afresh with every spoonful of food.
+
+I say that every relapse and every complication that have ever
+occurred in any disease being treated by any physician from the top
+to the bottom of the profession' even if the treatment was the very
+best that could be furnished by the highest skill in any of the
+drug-systems, if said treatment consisted of drugging and feeding,
+were brought on by the treatment.
+
+All diseases of the alimentary canal, not of a traumatic origin or
+from the accidental or intentional swallowing of corroding chemicals
+or from the continuous use of drugs on the advice of physicians,
+come from infection or intoxication. Why not? This is the most
+reasonable cause, for the fecal matter in health is toxic and it
+only requires one step further to sufficiently intensify the
+putrefactive change to create irritation of the mucous membrane. Of
+course there is a degree of immunization taking place all the time.
+Many people have themselves inured to the constant saturation of
+fecal intoxication. It is true they are building a large toleration
+for that particular poison, but their general vital tone is being
+lowered continually and somewhere and in some way there is a
+deposition taking place. In women there may be an old cicatrix in
+the neck of the womb or a lump in the breast; the circulation has
+been impaired for several years and now because of the
+overstimulation that has been going on so long, there is a greatly
+enfeebled circulation and deposits are taking place. The tumor in
+the breast becomes cancerous; the scar in the womb takes on
+malignancy; the arteries harden; the circulation in the spinal cord
+becomes so impaired that induration is induced followed by ataxia;
+and other troubles of a like character could be mentioned. These are
+the most favorable results for, while these cases are winding their
+weary, sluggish course to the land of rest, there have been many
+taking the rapid transit.
+
+I wish to emphasize the fact that one of the constant symptoms
+peculiar to this class of inebriates is constipation. As a class
+these people carry very large quantities of fecal matter in their
+lower bowels. This constantly loaded condition of the lower bowels
+is relieved occasionally by a sharp, irritative diarrhea,
+accompanied by nausea and vomiting or not. The diarrhea is often
+preceded by a few hours of acute pain that causes some talk of
+appendicitis and operation but, much to the discomfiture of the
+doctor, the bowels start up and relieve all suffering.
+
+A few of these cases develop a chronic colitis. The bowel discharges
+are more or less coated with catarrhal secretion. Not all are
+constipated; obstinate diarrhea is the character of some; there are
+here and there a few cases that throw off a membrane two or three
+times a year, often in appearance like a cast of the lumen.
+
+Enteritis, entero-colitis and dysentery are different forms of bowel
+troubles that cause much uneasiness, for it is such a common matter
+to call everything appendicitis, and if the patient is credulous and
+gullible he may be operated upon even if his disease is a proctitis
+or a case of gas in the bowels.
+
+It is no uncommon thing for a case of obstinate constipation,
+accompanied by colic, to be operated upon for removal of the
+appendix if the pain is obstinate and hangs on long enough for the
+patient to be scared into an operation. The pressure from
+constipation and the constant strain on the cecum render this
+particular section of the bowels liable to take on local
+inflammations.
+
+The recognized literature of the day attributes all infectious
+disease to germs or micro-organisms. That all diseases originating
+in the alimentary canal are due to infection there can be no doubt,
+and all agree, but I do not agree with the prevailing opinion that
+germs or micro-organisms are the primary cause of infection, for
+that theory is not sufficient; it can not possibly cover the ground
+and account for everything that takes a part in the great array of
+causations that must be considered. To my mind it would be just as
+reasonable to say that germs cause health, and I defy any
+bacteriologist to prove that micro-organisms cause disease any more
+than they cause health; and if he can't prove that germs are more
+pathologic than they are physiologic, but does succeed in proving
+that they are equally important to health and to disease, we can
+agree to that equal importance and should be able to go on agreeing
+and declare that if germs are the cause of disease they must also
+cause health and it is our duty to spend at least a part of our
+professional time in cultivating health germs. In fact it would be
+much better to spend all our time in cultivating health germs and
+insisting on people being inoculated with the serum from these germs
+so that there will develop such a state of health that the disease
+germs will have no show.
+
+How can a sane man forgive himself for advocating inoculation by
+disease germs to cause immunization when by the use of health germs
+the health could be built so strong that the pathogenic germs would
+have no show. If this theory won't work both ways it is a false
+theory, and professional men, who should be logical if any set of
+men are logical, should be ashamed to advocate any theory that is
+based upon a half-truth.
+
+As I stated the structure and function of an organ point to its
+possible maladies. The cecum is the gate-way between the large and
+small intestines. Its function of passing the contents of the small
+intestine into the large is obstructed much of the time. It is
+constantly subjected to bruising, pressure, stretching, and
+obstruction, and is, therefore, more liable to be the seat of local
+inflammations than any other part of the bowels. Diseases of this
+part of the bowels are liable to come at any time of the year; but
+in hot weather the tendency to fermentation is much greater than at
+other times of the year, and bodily resistance is reduced because of
+the enervating influence of the heat, of too long working hours, and
+of too short nights for sleep, and of the ever-present, omnipotent
+and omnivorous appetite which is taking into the stomach and bowels
+food beyond the digestive capacity both in quantity and quality; all
+these join in intensifying the habitual toxcicity of the bowel
+contents to such a state of virulence that those parts of the bowels
+already weakened, because of the mechanical injuries before referred
+to, take on a local inflammation. Diarrhea may be the consequence
+and the bowels may have a thorough cleaning out and the whole
+trouble end in a few days. Or the constipation may be of a nature
+that evacuations, such as the patient has been having, have been
+passing through the center, leaving a coating on the lumen, but
+hollowed out in the center. When the inflammation starts causing
+increased bowel contractions--peristalsis--there is a breaking down
+of the walls of this fecal ring resulting in complete obstruction.
+The ineffectual bowel contractions then serve to irritate and
+inflame the affected part still more. The local inflammation is at
+first superficial but the increasing toxicity of the fluids that are
+held on these parts causes the inflammation to take on ulceration.
+
+The inflammation or ulceration may remain superficial, and be
+located in the lower portion of the small intestine, then the
+disease is enteritis. If the bowels are cleared out and the
+patient's blood freed from intoxication, the attack ends; if not the
+disease will be called enteritis or catarrh. If the infection is a
+little greater and extends a little deeper causes inflammation of
+Peyer's glands then the type of the disease will be typhoid fever.
+
+Children troubled with constipation will sometimes be taken with
+fever and pain in the right iliac fossa and, on examination, a
+fullness will be found; the sensitiveness will not be so great but
+that an examination can be made and a sausage shaped tumor may be
+outlined; of course, the disease will be named appendicitis and this
+is enough to scare a whole neighborhood, and the child will be
+carted off to a hospital and operated upon for appendicitis.
+
+If the child is left alone, given no food, and ice put on the
+sensitive parts if the temperature is 103 degree F., or hot
+applications if the temperature is less, the tenderness will
+probably go away in two or three days; if it does not, an abscess
+will form and empty into the cecum. If the child is fed, and the
+tumor manipulated--subjected to unnecessary examinations--the
+abscess may be made to burrow down toward the groin, which should be
+avoided for it is a very undesirable complication. The first abscess
+is typhlitic, the second is perityphlitic. The first may form
+without the aid of bruising in the manipulation of repeated
+examinations, but the second must be forced by bad management. The
+latter abscess, I have reason to believe, is the former abscess
+driven, by repeated manipulations, to burrow downwards instead of
+opening into the cocum.
+
+Fecal abscess, arising from ulceration of the colon, may be mistaken
+for appendicitis. There is a localized swelling, immovable in
+breathing or when pressed upon, and having a tympanitic sound on
+percussion over it with dull sound on pressure and heavy stroke.
+
+The symptoms of appendicitis are: Pain in the front, lower, right
+side of the abdomen. It is paroxysmal and caused in the main by
+peristalsis--the regular action characteristic of the sewer function
+of the bowels, which is for the purpose of forcing the contents of
+the intestines onward to the outlet, and which ordinarily is carried
+on without pain; but, in bowel obstructions of any kind, the onward
+flow of the bowel contents is cut off resulting in great pain where
+there is much irritability, for irritation of any kind always
+increases this expulsive movement. Food, taken in health, stimulates
+this contraction and if taken when there is inflammation--enteritis,
+colitis or inflammation of any part--the contraction is increased
+and necessarily painful. Think of the pain that the subject of
+diarrhea has, then imagine what that pain must be if there should be
+obstruction so that the fecal matter could not pass. That is as near
+as I can describe what the pain of appendicitis is. Anything that
+will stimulate these contractions will throw the patient into great
+distress. Food or drugs will cause pain, and water, the first few
+days of the illness, will do the same.
+
+In inflammation of the cecum, where the inflammatory process remains
+local and there is no obstruction more than constipation will make,
+the patient will be troubled with occasional attacks of pain which
+will pass as colic; or there may be a diarrhea, lasting for a day,
+every few weeks or months with constipation between the attacks.
+These cases may lead in time to ulceration, then to fecal abscesses
+and they are often diagnosed chronic appendicitis.
+
+When the inflammation is confined to that portion of the cecum that
+gives attachment to the appendix there may be no pain, or the pain
+may not be intense, and because of this lack of intensity, the
+patient tolerates abuse in the line of drugging and feeding until an
+abscess forms, the walls of which surround the appendix which is
+inflamed and often gangrenous. About this time, on account of the
+gradual increase in swelling, the pressure brings obstruction,
+partial or complete, causing the symptoms to become suddenly very
+dangerous; then if vigorous examinations are made to determine the
+exact status of the disease, don't be surprised if rupture of the
+pus sac takes place! This then demands an immediate operation which
+if performed will show a gangrenous appendix that had ruptured! This
+is quite common and is looked upon as proof positive that an
+operation was justified; in fact, the proper and only thing to be
+done, and it should have been done earlier!
+
+This is the opinion of the majority of the profession. It really
+appears that surgeons are innocent of the part they play in
+rupturing unsuspected abscesses and otherwise complicating this
+disease by much rough handling.
+
+The paroxysmal pain which is characteristic of the early stages of
+appendicitis may be accompanied by fever, sometimes low and
+sometimes high, nausea, vomiting and diarrhea. The vomiting may be
+severe and there may only be nausea. If there is much vomiting there
+will usually not be much diarrhea for the excessive vomiting is an
+indication that there is obstruction. In other cases there is both
+nausea and diarrhea; then the obstruction is either not established,
+for the trouble is as yet a local inflammation of the mucous
+membrane, or the diarrhea is from the bowels below the cut-off.
+
+It is safe to prognose obstruction when the vomiting is severe; but
+if the nausea continues longer than three days, it must be due to
+eating or to drugs, to taking too much water while there is nausea,
+or there is more obstruction than can be accounted for by such
+diseases as suppurative inflammation of the cecum or appendix.
+
+It will be well to remember that diseases of the cecum or appendix
+or both never cause complete obstruction, except in exceedingly rare
+cases where adhesive bands are formed, completing the cut-off. In
+this connection it will be well to also remember that in absolute
+obstruction the symptoms of nausea and vomiting, or retching, will
+continue, while those of appendicitis will stop in three days. In
+addition to the continued nausea of complete obstruction, the pulse
+grows weaker and more frequent and the patient shows great anxiety
+of expression, there is a sickness that can not be accounted for
+with a diagnosis of appendicitis or typhlitis, and the patient has
+the appearance of being desperately sick. The great pain at the
+beginning subsides, the temperature falls, the pulse grows rapid and
+weak, the skin becomes leaky, the mind becomes dull, drowsy and
+comatose, then a little wandering and death relieves the suffering
+in a short time.
+
+These symptoms are of collapse and they may come on in the course of
+a typhoid fever, or other diseases of the alimentary canal; they
+always mean a fatal toxemia either from obstruction or perforation,
+and occasionally the only forerunning symptom is sudden abdominal
+pain. Circumstances must guide in making a diagnosis. If, during a
+run of typhoid fever, there should be sudden abdominal pain followed
+with symptoms of collapse and nothing to account for it, it means
+perforation; an immediate operation may save the patient; nothing
+else will.
+
+A sudden pain in the abdomen of a woman during menstrual life, with
+positively no unusual menstrual symptoms and no trouble in the right
+ileo-cecal region, indicates perforation of the stomach or of the
+gall-bladder. If there have been a menstrual period or two gone over
+with a slight showing, and some uneasiness, perhaps nausea, perhaps
+a flow with pain somewhat simulating abortion, a sharp, severe
+abdominal pain followed with quickening of the pulse and an
+exceedingly anxious facial expression, ectopic pregnancy with
+rupture of the tube may be suspected. One must also keep in mind
+renal calculus in determining bowel diseases.
+
+Authors pretty generally unite in declaring that appendicitis is a
+dangerous disease. In his late book, "The Abdominal and Pelvic
+Brain," Dr. Byron Robinson of Chicago says, "Appendicitis is the
+most dangerous and treacherous of abdominal diseases--dangerous
+because it kills and treacherous because its capricious course can
+not be prognosed. . . . For years I have made it a rule to recommend
+appendectomy to patients having experienced two attacks. Fifty per
+cent of subjects who have had one attack experience no recurrence."
+
+In Keating's Cyclopedia of the Diseases of Children, Dr. John B.
+Deaver of Philadelphia makes the following statements:
+
+"Appendicitis, whether acute or chronic, _is essentially a surgical
+affection, _and should be placed at once under the care of a
+skillful surgeon. The truth of this statement is becoming recognized
+in direct proportion to the general knowledge of the course and
+uncertainties of the disease, and at the present time only those who
+have but a limited idea of the course of the affection and have seen
+but a few cases, attempt to treat appendicitis without the advice of
+a surgeon."
+
+"Operation is the only procedure by which we can be certain of
+curing our patient. It is true that some cases do recover from an
+attack of appendicitis without an operation, but the percentage of
+those that recover from the disease is almost nil."
+
+"The main reason, however, why the appendix should be removed as
+soon as possible is that no one can state positively what course the
+disease is taking."
+
+"Although a strong advocate of the removal of the appendix in almost
+every case of inflammation of that organ, yet there are a few
+conditions under which I prefer to delay operation. When we find a
+patient with persistent vomiting, a leaky skin, a rapid, running
+pulse, a diffuse peritonitis and signs of collapse, I believe that
+operative interference is contraindicated. Under these conditions an
+operation would invariably be followed by loss of life. Ice to the
+abdomen, calomel pushed to free purgation, a small fly-blister below
+the ensiform cartilage, nutritious enemata, with stimulants in the
+form of whiskey or champagne, and hypodermics of strychnine, give a
+more hopeful prospect than would operation. When the peritonitis has
+subsided and the constitutional condition warrants, operation may be
+performed with a much better prognosis."
+
+The symptoms described by Dr. Deaver are those of collapse,
+following perforation, diffuse peritonitis to be followed soon by
+death, or of narcotism--morphine paralysis, soon to be described _in
+extenso _when we come to treatment.
+
+If the doctor ever had a patient presenting those symptoms and the
+patient lived after being subjected to the treatment he recommends,
+it is safe to say that he was dealing with an artificial collapse--a
+drug collapse--and he did not have perforation and diffuse
+peritonitis.
+
+This statement of the eminent Philadelphia surgeon adds another very
+weighty proof to my oft-repeated assertion that it matters not how
+eminent the medical man may be, he cannot tell the difference
+between drug and pathological symptoms. Of course this is a
+humiliating statement, and it is not expected that those very
+eminent medical men whom I charge with inability to differentiate
+between drug collapse and the collapse due to disease, will
+acknowledge that I am right, for, if their mental horizons extended
+far enough for them to admit it, it would not be necessary for me to
+say it.
+
+In no other way can the atrocious mistakes that doctors make in
+prognosis be accounted for. _How many, many times _doctors have
+declared that a given case must end in death, and they are so
+cocksure that they are right that they leave the patient to die;
+some sort of a fake, mountebank or fanatic comes in, the drug
+disease wears off and in a few days the patient is well. That is
+exactly the sort of a case Dr. Deaver describes. The faker gets busy
+with drugs that antidote the morphine poisoning, and occasionally a
+patient gets well in spite of all.
+
+In regard to surgery for this disease I shall quote from Ochsner:
+
+"Personally, I can only second the statement made by one of the most
+experienced men in this country in the surgical treatment of
+appendicitis, that there are thousands of surgeons who are otherwise
+competent, i. e., competent to perform the ordinary surgical and
+gynecological operations, whom he would not think of permitting to
+open his abdomen in case he personally suffered from an attack of
+appendicitis. This condition is true not because it is an especially
+difficult or dangerous operation, but because it requires an
+appreciation of the conditions upon which success and failure
+depend, and this appreciation can be obtained only by observing good
+methods.
+
+"In many of the ordinary surgical operations it is not necessary to
+follow out the details with any great degree of accuracy, because
+failure to do this will at most result in confining the patient to
+bed a little longer than usual or necessary, while in the
+appendicitis operation it is likely to result in the death of the
+patient.
+
+"This position, when taken in the discussion of appendicitis in
+medical societies, has frequently given rise to severe criticism
+because upon its face it looks as though appendicitis operations
+should be performed only by the few who happen to have acquired
+especial skill in this class of surgery, possibly at the expense of
+the lives of a number of patients.
+
+"This, however, is not the case. The operation is simple enough if
+one will but take the pains to learn it, and every town of five
+thousand inhabitants should have at least one man perfectly
+competent to do such work. But if there is no such man available
+then I would say most emphatically that the patient's chances of
+recovery are many times greater with proper non-surgical treatment
+than with an operation. Of course, patients have occasionally
+recovered, by accident, in the hands of most incompetent surgeons,
+but the death rate after appendicitis operations in the hands of
+incompetent surgeons is absolutely frightful.
+
+"My experience and personal observation have taught me that
+physicians and surgeons, as a rule, are absolutely conscientious,
+and that when they perform this operation, notwithstanding the fact
+that they themselves know they are incompetent (and they alone must
+necessarily be their own judges as to their competency), they do it
+because they have been taught that this is the only right treatment,
+and that the patient is entitled to an effort on the part of the
+physician or surgeon to save the life which is in danger. I believe
+that this is extremely bad teaching, and that many hundreds of lives
+have been sacrificed unnecessarily on account of this. I say this
+because I am confident that with proper non-operative treatment
+almost all of the cases which are diagnosed reasonably early may be
+carried through any acute attack, no matter what its character may
+be.
+
+"I would then say, primarily, that no case of appendicitis should be
+operated upon unless a competent surgeon is available. This, of
+course, does not apply to cases in which a circumscribed abscess has
+formed which anyone can open with safety provided he has
+sufficiently good judgment not to do anything further."
+
+Here I must differ. If the case has not been complicated by overmuch
+handling, digging, punching, thumping and otherwise manipulating in
+the name of bimanual diagnosis, no one has any right to put a knife
+into the pus sac for it matters not how well it is done the drainage
+is bad and is in opposition to the natural outlet through the
+bowels. Of course if the unfortunate patient has fallen into the
+hands of some one who believes it the prerogative of a physician to
+manipulate in season and out of season, and who has converted a
+typhlitic abscess into a perityphlitic one, or forced the pus to
+burrow towards the groin, then a free opening with a let-alone after
+treatment, except thorough drainage, may be followed in time by
+restoration to health; however, if the patient fully recovers it
+will be more from luck than from the usual management.
+
+
+
+
+
+CHAPTER IV
+
+
+
+
+_Pathology: _Formerly very little was written about the pathology of
+the appendix, the writers describing more the lesions of the cecum
+and surrounding structures. After the birth of the surgical craze,
+the exciting cause was located, or supposed to be located in the
+appendix, and the abnormal condition of the cecum was and is
+considered to be secondary or due to the lesions found in the
+appendix. The profession must evolve beyond its present tendency to
+look for cause in the organ. First understand the general then the
+special will be apparent.
+
+The pathology of the appendix has now grown exceedingly voluminous,
+and if it were as valuable in quality as it is great in quantity the
+necessity for more investigation would be removed.
+
+Appendicitis means inflammation of the appendix. This inflammation
+may affect the whole structure or merely a part. Catarrhal
+appendicitis affects only the mucous membrane.
+
+The appendix may be gangrened, wholly or in part. At times only the
+mucous membrane is gangrenous. The mucous membrane may be ulcerated
+and the pus penned in because of a closure of the mouth from
+swelling.
+
+Concretions are found in the organ at times. These are evidently
+formed inside the appendix, for they arc often too large to enter in
+the form in which they are found.
+
+When there is perforation of the appendix the result is peritonitis
+according to some authors, and, according to others just as great,
+this is disputed I belong to the latter class in belief.
+
+The pathology of appendicitis is necessarily touched upon more or
+less in going over the etiology, symptoms, and treatment of the
+disease, and variation is the rule, for how could it be otherwise
+when subject and environment must always vary?
+
+As soon as an inflammation starts, the first thing that nature does
+is in the line of enforcing the _first law of cure, _namely: _rest.
+_To bring this about the musculature is set, rigidly contracted,
+thus fixing the parts. The contraction, of course, will be in
+keeping with the irritation of the parts; great pain means great
+rigidity, and _vice versa. _This being true, the harm that must come
+from keeping the stomach and bowels irritated by giving drugs and
+food should be plain to any mind capable of reasoning and willing to
+think.
+
+The more food given the more gas, pain and rigidity, and the more
+rigidity the more complete the obstruction, and the more complete
+the obstruction the more retention of gas. I need not enumerate the
+evils due to gas distention, for they should be apparent.
+
+If the obstruction caused by the swelling incidental to the
+hyperemia and inflammation is not already complete, the fixing or
+muscular rigidity completes it. After the obstruction is complete,
+if there is diarrhea, which is frequently one of the first symptoms,
+it comes from below the cut-off.
+
+The inflammation of the cecum and appendix is similar to
+inflammations elsewhere; the capillary blood vessels become
+engorged, the circulation becomes sluggish, and this causes
+swelling; the tissues then grow dark from the congestion. This
+condition is similar to tumefaction in general. which is favorable
+to abscess formation.
+
+When the local irritation and inflammation start with enough impetus
+to evolve an abscess the parts become fixed, as stated above, and
+the environing structures assume an attitude of alligated defense.
+There is a drawing together of neighboring tissue; the momentum,
+which should be recognized as the brood mother and care-taker of
+everything vital in the abdominal cavity, joins with contiguous
+structures and all become welded together by a friendly adhesive
+inflammation. When this defense is complete the abscess is walled in
+so completely and with such thoroughness that all possibility of
+intraperitoneal rupture rests with the blundering, heavy-handed,
+trouble-hunting profession; and if nature _ever fails to complete
+the building of this wall of defense it will be because she has been
+interfered with by officious meddling in the name of scientific
+healing._
+
+There is no question but that many of these patients are seriously
+handicapped and others positively killed by unskillful, overzealous,
+superfluous examinations. A heavy-handed attendant should never be
+allowed to manipulate swellings in the right iliac fossa, nor in any
+other suspected region, for fear of destroying nature's defenses,
+and possibly rupturing an abscess, the contents of which will be
+emptied into the peritoneal cavity, causing peritonitis and death.
+
+Seeds are seldom found in the appendix and the fear of swallowing
+them because they may lodge in it is not well founded. There is no
+question but that this organ has the power, when normal, of taking
+care of itself. It has a peristaltic action and can expel anything
+that is capable of gaining entrance.
+
+
+
+
+
+CHAPTER V
+
+
+
+
+_Symptoms: _An acute attack is ushered in with severe pain. At first
+this is felt over the entire abdomen, but it is more marked near the
+navel than elsewhere. After about twenty-four hours it becomes
+localized in the region of the cecum.
+
+The pain is colicky or spasmodic in character, showing that it is
+due to peristalsis; food of any kind increases the peristalsis;
+hence the pain becomes more severe after feeding. Do not make the
+mistake of thinking that liquid food, such as milk, can be given,
+for a teaspoonful is sometimes sufficient to make the patient
+miserable for a whole day.
+
+The abdomen is tender, especially over the cecum, and should
+therefore be manipulated as little as possible, for it causes the
+patient unnecessary pain, and if an abscess has formed there is
+danger of breaking the walls which nature has thrown up.
+
+Nature's tendency appears to be to fix the inflamed portion so as to
+secure rest and this is accomplished by the muscles of the abdominal
+wall becoming rigid, especially over the cecum. These muscles are
+contracted to such an extent that the right thigh is often drawn up
+in order to relieve the tension.
+
+When the cecum is inflamed it is common for the colon to be loaded;
+this colon obstruction prevents the onward passage of the contents
+of the small intestine, and when they cannot free themselves and the
+peristaltic movements meet with sufficient obstruction to force a
+halt, the pain and suffering become intense. When the peristaltic
+movement has met with a few disappointments it reverses and empties
+the contents of the small intestine into the stomach. The result is
+nausea and vomiting which at times are both severe and persistent.
+But when it lasts beyond three days it is an indication of a
+complication or mistake in diagnosis, providing the patient has been
+properly treated.
+
+The abdomen becomes distended with gas if drugs and food are given;
+as regards the pulse, there is nothing characteristic about the
+pulse rate and the temperature in this disease. Sometimes the
+temperature does not go over 100 degree F., but at times it reaches
+105 F. The pulse is sometimes so rapid that it is hard to count--due
+usually to drug influence--and again it may not go above 100 or 110
+beats per minute during the entire attack.
+
+As these patients are nearly always constipated, and suffering from
+indigestion, they generally have a coated tongue.
+
+The above symptoms are those relied upon in making a diagnosis, and
+especially the first four--pain, tenderness, rigidity, and nausea
+with vomiting--which are generally referred to as the four cardinal
+symptoms. Some authors give a "characteristic triad," namely: pain
+with tenderness of the abdominal wall, fever, and vomiting.
+
+A patient may have pain with tenderness, fever and vomiting, and be
+very far from having appendicitis. There is a world of difference in
+the importance of pain, the range being from no danger at all to
+absolutely no hope. Tympanites may mean a very simple state or an
+absolutely hopeless state. To be able to interpret the exact worth
+of symptoms means observation, study, reflection--labor and
+experience running over years--and a love of work that is not the
+good fortune of a very large percentage of mankind.
+
+Before we get through with this subject the reader will be shown how
+it is possible for highly educated men to be wholly unable to
+interpret the worth of symptoms.
+
+
+
+
+
+CHAPTER VI
+
+
+
+
+_Surgical Treatment: _Appendicitis is quite generally thought of as
+an exclusively surgical disease. Osler recommends that such cases be
+operated upon, and most of the prominent physicians agree with him.
+The surgeons are a unit for the operative treatment.
+
+Many surgeons are in accord with Prof. L. ID. Russell of Cincinnati,
+O., namely, that it is not a question of "when to operate, but how
+much to operate," meaning that all cases should be operated upon as
+soon as possible after the diagnosis has been made, but the extent
+of the operation is to be decided by the conditions found after the
+incision has been made. If the appendix is surrounded with pus and
+hard to get at, the indication is merely for drainage at this
+operation, but if the appendix is accessible, it should be removed.
+
+Ochsner recommends the withdrawal of all food by mouth, washing out
+the stomach, leeches to be applied on the abdomen over the
+inflammation to relieve pain, rectal feeding, and operation in every
+case after the acute attack is over. If a "competent surgeon" is
+available he thinks the proper thing to do is to operate during the
+acute attack, except in a class of very severe cases, which, he
+says, have a better chance to recover without the operation. I will
+quote a few paragraphs from his book, setting forth his views:
+
+"Taking into consideration the pathological conditions described,
+together with the clinical experience, the likelihood of a
+recurrence after an attack if no operation is performed, and the
+likelihood of a complete and permanent recovery if the diseased
+organ is removed under favorable circumstances, we can come to but
+one conclusion, namely, that if the desired condition can be
+obtained the diseased appendix should be removed."
+
+"Except in very rare cases in which the entire mucous membrane of
+the appendix is destroyed during the first attack, it is doubtful
+whether the patient ever completely recovers unless the appendix be
+removed. It is more likely, from an anatomical and pathological
+standpoint, and certainly more in accordance with my clinical
+observations, that the patient usually suffers from disturbance of
+his digestive apparatus after recovering from an acute attack of
+appendicitis."
+
+" Mynter does not deny the possibility of complete recovery from
+appendicitis without removing the organ, but considers it an
+exception or almost an impossibility, and I find that this view is
+shared by a majority of clinical observers of wide experience."
+
+"It is rare for an acute attack of appendicitis to subside
+unoperated without leaving one or more of the pathological
+conditions briefly described above, and it is plain that with these
+present the patient must be much more liable to a future attack than
+he was primarily. In fact, many of the best observers with the
+largest experience think that recurrence in these cases is the rule
+and complete recovery the rare exception."
+
+[The pathological conditions referred to are ulcerated or gangrened
+appendix, perforations, fecal concretions in the appendix, etc.]
+
+"It does not matter whether the patient suffers from catarrhal
+appendicitis, with or without a foreign body in the appendix, or
+whether the appendix be gangrenous or perforated, he will almost
+invariably recover if from the beginning of the disease absolutely
+no food is given by mouth."
+
+"Some years ago, before I had learned to appreciate the treatment
+which I now describe, I frequently operated upon patients in just
+this condition, [condition of patient described as having
+temperature of 104 degree F., pulse 140, abdomen very much
+distended, features pinched and patient delirious], as a last
+resort, thinking that this gave them the only possible chance of
+recovery. Since then I have learned that this case belonged to a
+class which practically never recovered after an operation, if it is
+done while the condition is that in which I found this patient, and
+of which a very large majority recover if the treatment is followed
+which I have described."
+
+[The treatment referred to is to let the patient alone except giving
+food by rectum.]
+
+"I have had an opportunity to observe a very large number of these
+patients under this form of treatment, and have operated upon many
+of them at various intervals after the acute attack through which
+they were treated in this manner, and have been able to demonstrate
+that the patient can recover, and practically always does recover,
+if this method of treatment is employed. Of course, one occasionally
+encounters a patient suffering from appendicitis who is in a dying
+condition, and then neither this nor any other method is of any
+value."
+
+"I find that many authors advise rectal feeding under certain
+conditions, but I am certain that the exclusive rectal alimentation
+is of greater importance in the treatment of appendicitis than any
+other single method, but I am equally certain that it must be
+carried out thoroughly, because even a small amount of food or the
+administration of a cathartic may suffice to bring about a fatal
+issue."
+
+[Why feed! There is no danger of starving!]
+
+"I am also certain that many patients are enormously benefited by
+the use of gastric ravage for the purpose of removing a quantity of
+decomposing material, the absorption of which would certainly do a
+great amount of harm. I am also certain that gastric lavage does
+permanent good only if no further food is placed into the stomach,
+which would result in further decomposition."
+
+[At the beginning of treatment--the first visit--wash the stomach
+and then feed no more.
+
+Although some physicians boast that this is an age of preventive
+medicine, the following paragraph is about all that is devoted to
+this phase of the subject. In one or two places people are cautioned
+not to eat too much and chew thoroughly, but what does this amount
+to? How many people know how much to eat or how thoroughly to chew?
+Very few physicians have a grasp of this subject.]
+
+"It is true that recurrences can usually be prevented by careful
+attention to diet, by securing daily free evacuations of the bowels,
+by avoiding over-work and above all things by abstaining from eating
+too freely, especially of indigestible food when tired.
+Notwithstanding these facts most patients will never be entirely
+well after recovering from an attack of appendicitis, and if this is
+the case I believe that the best treatment consists in the removal
+of the diseased appendix."
+
+"In conclusion I will say that the most important lesson my
+experience has taught me is the fact that more harm is done to the
+patient suffering from acute appendicitis by the administration of
+any kind of nourishment or cathartics by mouth than in any other
+way, and that more lives can be saved by prohibiting this and by
+removing any food which may be in the stomach at the beginning of
+the attack by gastric ravage than by all the other methods of
+medical and surgical treatment combined."
+
+[This is my belief and treatment and has been since I began to
+practice my profession.]
+
+The above extracts were taken from Dr. Ochsner's Monograph on
+Appendicitis.
+
+When a patient has completely recovered from appendicitis he should
+learn to live correctly. Learn to eat properly and to know how to
+take care of the body in every way.
+
+There is much to learn on the subject of what to eat, what not to
+eat, what foods to combine and what combinations to shun, when to
+eat, when not to eat, etc.
+
+Appendicitis is caused by wrong eating; those who go through the
+disease and recover, will have another attack unless they change
+their style of eating.
+
+
+
+
+
+CHAPTER VII
+
+
+
+
+_Treatment: _I believe that contrasting treatments is the very best
+way to teach; however, this plan is not so good when carried on in
+writing as it would be clinically.
+
+In order to contrast my treatment with the best just now available I
+shall quote from one of the latest authorities, _"Modern Clinical
+Medicine--Diseases of the Digestive System."_ Edited by Frank
+Billings, M. D., of Chicago. An authorized translation from "Die
+Deutsche Klinik" under the general editorial supervision of Julius
+L. Salinger, M. D. Published by D. Appleton and Company, 1906.
+
+It is reasonable to believe that when one of our leading American
+physicians thinks enough of a foreign author to translate his
+productions the material must be pretty well up to the top of
+medical literature, and that is my only reason for selecting this
+particular contribution on which to make my comments for the purpose
+of contrast.
+
+The case I select is strictly in line and parallels a case of my
+own. It is a case of Diffuse and Circumscribed Peritonitis, treated
+and reported by O. Vierordt, M. D., of Heidelberg.
+
+_"Acute, Diffuse Peritonitus:_ As an introduction to the discussion
+of our present views of acute peritonitis I will relate the
+following clinical history:
+
+"Case 1.--A previously healthy merchant, aged 31, was taken ill
+after a few days of vague, dull pain in the right side of the
+abdomen which he had disregarded, and upon the 20th of October,
+about midday, he was seized with very severe pain in the right lower
+abdominal region which compelled him to seek his bed; soon afterward
+he had chilly sensations which increased to marked chills; there was
+also nausea, eructation and vomiting, first of food and then of
+bilious mucus; a little later tenesmus appeared, the patient first
+voiding small, compact feces, followed by scant, thin dejecta.
+Within a few hours the abdomen had become tympanitic, the pains
+continued with exacerbations upon motion, after eruetations, and on
+talking; the entire abdomen was very sensitive. Strangury with the
+frequent discharge of scant urine was observed.
+
+"Toward evening the physician found the patient extremely ill,
+immovable in the active dorsal decubitus, with an anxious facial
+expression, reddened cheeks, cautious, superficial respiration with
+a low, hushed voice; he complained of continuous, also occasionally
+of marked tearing and contracting pains in the entire abdomen, most
+severe upon the right side low down; the temperature was 103.2
+degree F., the pulse was 112, full, somewhat tense, regular and
+even.
+
+"The lips were dry, the tongue markedly coated; _foetor ex ore _was
+present; painful eructations were frequent, also singultus, complete
+anorexia and extreme thirst. The respirations were superficial,
+quite rapid, and purely thoracic; the diaphragm was slightly raised;
+the pulmonary-liver border was, in the right mammillary line, at the
+lower border of the fifth rib; upon anterior examination the
+thoracic organs appeared normal; the examination of the back was not
+then undertaken.
+
+"The entire abdomen was uniformly tympanitic, everywhere very
+sensitive to the slightest pressure, but more so upon the right side
+than upon the left. There was also pain upon pressure in the lumbar
+region.
+
+"Signs of abdominal respiration were absent. Careful palpation
+showed a uniform, drum-like resistance, otherwise nothing abnormal.
+The percussion note over the abdomen upon light tapping (and only
+this could be borne) revealed no decided difference, and nowhere any
+dullness; upon prolonged continued auscultation, high-pitched
+intestinal murmurs were here and there heard.
+
+"Retraction of the thighs produced diffuse abdominal pain, more
+marked upon the right side than upon the left; careful examination
+of the hernial rings gave a negative result.
+
+"Upon careful digital exploration per rectum in the dorsal
+decubitus, nothing abnormal was noted except pain in the floor of
+the pelvis; the rectum was empty.
+
+"Since morning neither feces nor flatue had been passed; the patient
+complained of strangury which, however, he rarely attempted to
+relieve because he feared to aggravate the pain which shot downward
+and radiated into the urethra. The urine was of high color, clear,
+and contained a trace of albumin and large amounts of Indican.
+
+"The physician in charge of the case diagnosticated acute, diffuse
+peritonitis, the origin of which was not quite clear; very likely it
+was in the appendix. He ordered absolute rest, that the urine and
+feces be voided in the recumbent posture; that, for the present,
+only small quantities of ice be taken by the mouth;"
+
+[First mistake. Never use ice nor ice water to relieve thirst for it
+creates an unquenchable thirst and causes nervousness and general
+discomfort, not only in this disease but in all others.]
+
+"that two bags filled with ice be applied to the abdomen, and be
+suspended from a hook if they could not be borne directly upon the
+abdomen. Furthermore, at first every two hours, later somewhat less
+frequently, 0.03 of opium purum in powder form was to be taken in a
+little water."
+
+[Pure opium 0.03 or 6/13 grain every two hours at first, less
+frequently later, was the second mistake, for opium brings on
+general depression. It not only dulls sensation, but it inhibits
+combustion thereby lessening nerve supply, weakens the heart action,
+and masks the physiological as well as the pathological state. The
+disadvantages of such an influence should be apparent to even a
+medical novice. The influence of opium in inhibiting nerve supply
+reduces the normal irritability--muscular tone; this works a great
+disadvantage in bringing about a tympanites entirely out of keeping
+with the intensity of the disease and this is not the only
+artificial symptom induced by this drug as we shall see later.
+
+An opium tympanites causes many physicians to mistake it (a
+drug-action, or a symptom induced by drug-action) for the tympanites
+caused by peritonitis. The great disadvantage of thus masking and
+perverting symptoms, which should be natural so that the physician
+can know at any hour of the day just exactly where his patient is,
+must certainly present itself even to a lay mind.
+
+It surely is important to know that an opium-induced, phantom
+peritonitis causes pressure upon the diaphragm, which in turn crowds
+the lungs and heart, inducing precordial oppression--smothering
+sensations and simulating important symptoms which should be
+understood at once so that a proper remedy may be applied.]
+
+_"In the following forty-eight hours,_ with irregular variations and
+a slight tendency to rise, the temperature ranged between 102.2
+degree F., and 105.3 degree F. The pulse became more frequent but
+remained strong and uniform; the respirations were unaltered in
+character but increased in frequency to 48."
+
+[Unnatural and brought about by opium.]
+
+"The patient, unless under the influence of opium, was sleepless,
+his mind was clear, and he gave the impression of being extremely
+ill, although not in collapse."
+
+[This is peculiar to opium; it was too early for these symptoms to
+develop in this case; hence drugs brought them on.]
+
+"The pains, eructations and vomiting were decidedly relieved by the
+opium;"
+
+[A relief that was bought at a tremendous cost, for a time came in a
+very few days when it was hard to tell whether the vomiting was from
+the disease or from the drug. The increase in respirations was due
+to opium.]
+
+"but ice-bags for a time were not well borne and cold Priessnitz
+compresses were substituted. Vomiting was rare, was invariably
+bilious and coarse-grained; neither feces nor flatus were
+discharged; the urine was as before the diazo-reaction negative.
+
+"Distention of the abdomen and the area of diffuse resistance
+increased; sensitiveness to touch appeared to be dulled by the
+opium; in the ileo-cecal region, however, it was constantly severe
+and lancinating. The liver dullness below decreased;"
+
+[Why not? Extending tympanites caused it--insignificant at most.]
+
+"the pulmonary-liver border extended to the upper border of the
+fifth rib; on the right side of the abdomen between the navel and
+the anterior, superior spine of the ileum a circumscribed slight
+dullness was observed."
+
+[This could have been taken for granted without unnecessary
+palpation.]
+
+"There was great nausea and burning thirst."
+
+[Already the opium was getting in its work. Great nausea and burning
+thirst were not due to the disease, and the crowding upward of the
+liver border was caused by the gas distention.]
+
+_"Diagnosis:_ Acute diffuse appendicular peritonitis, probably
+also perforation; circumscribed perityphlitic abscess."
+
+[The diffuse peritonitis was apparent to the eye but not to the
+reason as the course of the disease proves before many days.]
+
+"Operation was considered but not performed. Removal to the hospital
+for the purpose of an operation was absolutely declined by the
+patient."
+
+"I saw him upon the following day, the fourth of the disease."
+
+[Undoubtedly this case had advanced to the seventh day when the
+description began.]
+
+"In general the severity of the clinical picture had increased,
+especially some of the individual symptoms: Severe, markedly febrile
+general condition; pulse 120 to 136, moderately full, regular."
+
+[Drugs and food caused the increase in the severity of the symptoms,
+for if the increase in pulse and temperature had been due to toxic
+infection, there would have been no amelioration of these symptoms,
+which we find takes place later.]
+
+"There was insomnia with occasional opium slumber; otherwise the
+mind was clear but anxious. The tongue was thickly coated, the lips
+were dry, there was tormenting thirst."
+
+[Ice and opium were getting in their work, increasing the
+nervousness and of course the fever.]
+
+"The cheeks were red. The patient maintained the dorsal decubitus
+with feebly flexed legs and hushed voice; the hands moved but
+slightly and trembled."
+
+[Narcotism.]
+
+"Occasionally there were spontaneous attacks of severe, tearing,
+abdominal pain, starting posteriorly in the lower right side."
+
+[Why not? Food was being given, stimulating peristalsis.]
+
+" The abdomen was very tympanitic and tense, and could scarcely be
+touched; nevertheless, it was possible to determine upon the right
+side low down an area of dullness about the size of a hand with
+increased resistance; otherwise the note was tympanitic upon
+percussion."
+
+[The reader will notice the frequency of the reports regarding the
+area of dullness and extension of tympanites. These frequent
+examinations are wearing on patients in this condition, and are of
+no consequence whatever; they start at nothing and end nowhere,
+except in the discomfort and often the death of the patient; they
+are practiced by too many physicians and should be discouraged for
+they represent a very bad habit and are harmful; they are pushed to
+a pernicious extent in some cases, for without doubt abscesses are
+ruptured by them. If the physicians were not satisfied by this time
+without the need of laying on of hands, observation and analysis
+were lacking.]
+
+"The diaphragm was raised; except for a small zone liver dullness
+was absent."
+
+[Of what possible benefit was this knowledge under the
+circumstances?]
+
+"Now and then there was grass-green vomitus which, the last time,
+contained a few brownish granules and had a fecal odor. Urine
+unchanged; micturition very painful; no feces."
+
+[Proof positive that there was no peritonitis yet, and the
+indicating symptoms were those of opium.]
+
+"Opium at first decidedly influenced the condition; the patient took
+daily 0.5 to 1.8, and since yesterday morphin subcutaneously 0.02 at
+a dose."
+
+[Of course, anyone acquainted with opium knows that it loses its
+effect, but it never fails to do its damage. The daily intake of
+7-3/4 grains to 27.5 grains must lead to trouble.]
+
+"Ice bags were not well borne, and Priesslitz compresses were used
+continuously. The intake of food was reduced to almost nothing."
+
+[Not one teaspoonful of food should have been given; under such
+treatment this case would have been very comfortable. Foods and
+drugs were the cause of the discomfort.]
+
+"With a sharply circumscribed perityphlitic abscess there could be
+no doubt of the diagnosis of diffuse peritonitis nor of the
+indication for operation on account of the long continuance of the
+severe symptoms. But neither this proposition nor that of an
+exploratory laparotomy, the result of which might have induced the
+patient to yield, was accepted."
+
+[It is an evidence of professional officiousness to say positively
+that there was a "sharply circumscribed perityphlitic abscess." How
+was it possible with meteorism as described, to say that there was a
+sharply circumscribed perityphlitic abscess? It was tacitly assuming
+a diagnostic skill that must test the strength of every American
+physician's credulity to the utmost. The long continuance of the
+severe symptoms was no fault of the disease. The worst case should
+be made comfortable in three days.
+
+Just why diagnosing a perityphlitic abscess should have cleared the
+diagnostic atmosphere to such an extent as to justify one in
+declaring that, _since the discovery of the abscess there could be
+no doubt of diffuse peritonitis, _is hard to understand. According
+to my training in the worth of differential diagnosis, I should look
+upon such a diagnosis as most excellent proof that the peritoneum
+was still intact, and, if the case were handled carefully, its
+_intestine sacredness _would remain free from the vandalizing
+influence of toxic infection.
+
+I am not inclined to accept the diagnosis, for within twenty-four
+hours the abscess broke into the cecum, and if the case had advanced
+to perityphlitic abscess, the pus would have burrowed downward
+towards the groin and would not have terminated as early as it did.
+My reason for so believing is that we always have a typhlitic or
+appendicular abscess at first; which naturally opens into the bowel,
+but if the abscess be interfered with--handled roughly enough to
+rupture the pyogenic membrane--the pus is forced into the
+subperitoneal tissue where it may gather and become encysted, but
+this is exceedingly doubtful. When the pyogenic cyst is once broken
+the pus becomes diffused, and as it has no retaining membrane it
+burrows in all directions, and more or less of it is absorbed,
+causing pyomia.
+
+The parts may be handled to such an extent that the abscess will be
+forced to develop low down toward the groin, so low that the natural
+outlet, through the intestine, will be impracticable; under such
+circumstances an outside opening with drainage is the only choice in
+the matter of treatment.
+
+That the reader may understand that I have a very good foundation
+for my strenuous objections to the usual _bimanual examinations
+practiced upon all appendicitis cases, _I shall quote a description
+of what one of America's recognized diagnosticians, Dr. G. M.
+Edebohls, considers a correct examination and he declares that
+anything short of such an examination is useless and untrustworthy:
+
+"The examiner, standing at the patient's right, begins the search
+for the appendix by applying two, three, or four fingers of his
+right hand, palm surface downward, almost flat upon the abdomen, at
+or near the umbilicus. While now he draws the examining fingers over
+the abdomen in a straight line from the umbilicus to the anterior
+superior spine of the right ileum, he notices successively the
+character of the various structures as they come beneath and escape
+from the fingers passing over them. _In doing this the pressure
+exerted must be deep enough to recognize distinctly, along the whole
+route traversed by the examining fingers, the resistant surfaces of
+the posterior abdominal wall and of the pelvic brim. _Only in this
+way can we positively feel the normal or the slightly enlarged
+appendix; pressure short of this must necessarily fail.
+
+"Palpation with pressure short of reaching the posterior wall fails
+to give us any information of value; the soft and yielding
+structures simply glide away from the approaching finger. When,
+however, these same structures are compressed between the posterior
+abdominal wall, and the examining fingers, they are recognized with
+a fair degree of distinctness. _Pressure deep enough to recognize
+distinctly the posterior abdominal wall, the pelvic brim and the
+structures lying between them and the examining finger forms the
+whole secret of success in the practice of palpation of the
+vermiform appendix."_
+
+Can there be any wonder that this disease is so fulminating in the
+hands of the average medical man or can there be any surprise at the
+death rate? If such an examination were given to a well man and
+repeated as frequently as in the average appendicitis case, I say
+that the well man would soon suffer from some severe disease induced
+by bruising.
+
+When appendicitis or typhlitis ends in an abscess, and the pus sac
+is ruptured by meddlesome, unskilled treatment, scientific or
+otherwise, causing the pus to burrow toward the groin, surgery is
+the only treatment; there is no hope of recovery in such a case
+without establishing thorough drainage, and this means skilled
+surgical treatment. It will positively be a miracle if such a
+patient recovers without an operation. I have seen these cases
+linger for two, three, and even five years. The type of cases that
+lingers so long is one that has an imperfect drainage, either into
+the bowels or through a fistulous outside opening.
+
+What per cent of cases is of this type? That is hard to tell for the
+world is full of unskilled, heavy-handed manipulators.
+
+I have seen quite a number of this type who had been brought into
+this unnecessary state by bungling doctors who were treating them
+for typhoid fever and its complications.
+
+I say without fear of successful contradiction that there never was
+and never will be such a case unless it is made so by the worst sort
+of malpractice.
+
+The fact that a diagnosis was made in spite of the tympanitic
+distention is proof that a dangerous force was used in doing so,
+converting a typhlitic abscess into a perityphlitic one, and
+doubtlessly causing premature rupture into the bowel. Any
+professional man, with the right regard for his patient's welfare,
+and the judicial understanding that qualifies him for taking the
+responsibility of directing the treatment of so important a case,
+would scarcely have laid the weight of his finger on an abdomen in
+such a dangerous condition. The symptoms and course of the malady up
+to that time should have told the real diagnostician that there was
+an abscess and that the abscess would rupture into the cecum if it
+were not meddled with.
+
+No one with a proper understanding of his responsibility in such a
+case would have thought of undertaking an operation with a patient
+in the physical condition that this man was reported to be in. "The
+long continuance of the severe symptoms" is proof positive that the
+"severe symptoms" were false or man-made.]
+
+"Morphine was ordered subcutaneously, Priessnitz compresses to the
+abdomen, pellets of ice and meat jelly by mouth; eventually gastric
+ravage."
+
+[Under the circumstances this was positively murderous.
+Acknowledging to such treatment forces me to declare that the
+witness is incompetent, on the ground that no one has a right to
+incriminate himself. Nothing but the most positive malpractice could
+have brought a case of this kind to need gastric ravage, at this age
+and stage of the disease.]
+
+_"Upon the sixth day of the disease the picture changed."_
+
+[It is impossible for any case to arrive at this state of maturation
+in six days, if allowed to take its own course.]
+
+"The complexion became sallow, the face elongated, the eyes hollow;
+the pulse was 140, small, but quite regular; the temperature was
+101.3 degree F.;"
+
+[The great discrepancy between the pulse and temperature was caused
+by the opium.]
+
+"there was clammy perspiration and a cool skin, the hands were cold;
+frequently slight eructations occurred and, now and then,
+ineffectual or mild paroxysms of vomiting of a greenish yellow
+material with a slight fecal odor."
+
+[All these symptoms were positively unnecessary. They were built by
+food end drugs.]
+
+"The mind was clear; there was little pain."
+
+[There was no reason why the mind should not be clear, and there
+should have been no pain after the third day.]
+
+"The abdomen became somewhat softer, much less painful, and was
+readily palpated and percussed; there was a distinct resistance
+about the size of a hand, quite firm, and not fluctuating, and
+accompanied by marked dullness, around McBurney's point and
+downward, and only in this region severe stabbing pain; in other
+areas no dullness."
+
+[The sallow complexion, elongated face, hollow eyes, pulse 140,
+temperature 101.3 degree F., clammy skin, cold extremities, greenish
+vomiting with fecal odor; all these symptoms would have been ominous
+of a fatal collapse had it not been that the symptoms were those of
+narcotism, and not the symptoms of peritonitis as they were supposed
+to be. The small, regular and frequent pulse, the clammy
+perspiration, cool skin, cold hands, the eructations and mild
+paroxysms of vomiting of greenish yellow material with fecal odor,
+were symptoms produced by opium, food and morphine, as should have
+been fully apparent to any medical mind.
+
+If the patient had been treated rationally from the start, at this
+stage of the disease he would have been as comfortable as at any
+time in his life, and after the opening of the abscess, forced
+though it was and followed by those symptoms, the patient still had
+a chance to get well if he had been left alone. See how he responded
+when given a little opportunity. Only twenty four hours after "the
+intake of food was reduced to almost nothing" the abdomen was softer
+and readily palpated and percussed. Just imagine, reader, what a
+difference there would have been in this case if the poor, miserable
+victim had been allowed the quiet he so much needed--if he had been
+left without daily bimanual examinations, food and drugs. The
+patient was kept in an abnormal state from the first hour that the
+doctoring began to the last hour of his life.]
+
+"The symptoms were those of moderately severe _peritoneal
+collapse;"_
+
+[In all the cases I have ever seen, I never knew of one showing any
+symptoms of collapse when the abscess ruptured.]
+
+"the prognosis was very grave although not positively hopeless."
+
+[If the symptoms had not been those of drug and food poisoning they
+were very grave.]
+
+"Treatment: Small quantities of alcohol, to be followed by camphor."
+
+[All the treatment necessary was absolute quiet--no drugs, no
+food--nothing until nature had time to react fully; then there would
+have been a full and speedy recovery. Alcohol and camphor were
+injurious to a body already suffering from opium paralysis, for all
+such drugs are heart depressants.
+
+As I have said for years: The physician who gives drugs can't
+possibly know where his patient is. "Peritoneal collapse!" If
+there had been no narcotism there would have been no appearance of
+collapse. Every symptom giving the appearance of collapse was due to
+opium and morphine. I have seen such collapses for I have made them,
+and I have suffered all the torments possible in this world of
+medical uncertainty. For fifteen years after starting to practice my
+profession I labored hard with symptoms of my own making. After drug
+action and symptoms were once developed, I knew nothing more about
+my patients; it is true I guessed, and theorized, and reasoned, but
+in truth I did not know positively just where my patients were. I
+consoled myself in those days with the thought that some day I
+should know; I believed that the fault was with me, that I was
+lacking in diagnostic ability, and that by hard work the time would
+come when I could read disease by its symptoms as well as the best,
+for I then thought the big men of the profession knew everything
+they pretended to know This was my ambition, but the ability to size
+up symptoms under given conditions and tell their true worth forever
+eluded me and kept me in a state of unrest and discontent that was
+next to ruining my life. If light had not come when it did I should
+have abandoned the profession, but it came accidentally; it could
+not come otherwise for I did not know how to look for it. In the
+course of time I stored in my memory many cases that from accident
+or caprice had recovered without drugs and food. The satisfactory
+advance made by sick people, suffering from different diseases, when
+they were left without food or drugs, occurred so often, and with
+such unvarying regularity that it ceased to be a coincident--it was
+absurd for me to continue to explain the results by the hackneyed
+word "coincident," a word that is usually loaded with a lot of
+dogmatism, idleness and selfishness.
+
+When I accepted the changes, taking place _without medical aid,
+interruption and interference, _as true cures, and so much a part of
+nature, and so intimately blended with the fixed laws of nature that
+like results could be looked for with the same degree of certainty
+that we look for the rising or setting of the sun, I busied myself
+in formulating a plan of cure as nearly in accordance with natural
+laws as I could. I am now, and have been for twenty years,
+developing in this line, and I have gone far enough to declare that
+I have watched symptoms start, mature, and decline, and in this way
+have learned, by contrasting the symptoms in a given ease that has
+not been medicated, with those of a similar case that has been
+medicated, to know the full value of symptoms under medication, as
+well as the full value of the symptoms when not under medication.
+This knowledge I am using in analyzing this medical classic and from
+my standpoint I can see how very easy it was for the author of the
+article under consideration to blunder along as he did. The doctor
+should not feel lonesome, however, for he has a world of company.]
+
+"This condition lasted nearly twenty-four hours; then a very large
+and hard stool, followed by a thin one of hemorrhagico-purulent
+character was discharged and simultaneously a decided change took
+place. The appearance and pulse improved; the abdomen became softer
+with the exception of the marked resistance upon the right side low
+down, and the fever slightly remittent, its maximum 101 degree F.
+Vomiting did not recur; the patient moved about somewhat in bed and
+slept several hours in a half-lateral posture. Meat jelly and cold
+beef tea were swallowed."
+
+[This feeding was the beginning of mistakes for the second round. If
+this patient had been left distressingly along until he could have
+thrown off his opium poison and become normal, and allowed the
+abscess to drain and close, all would have been well. This, I
+assume, would have been the ending if the vigorous examination that
+was given the patient the day before the collapse had not
+prematurely ruptured the abscess both into the gut and into the
+subperitoneal region converting an appendicular abscess into a
+perityphlitic one.]
+
+"Upon the next day there were several hemorrhagico-purulent stools,
+the urine was profuse and voided without pain. Nevertheless, firm,
+flat resistance was still felt in the lower right side and upon
+pressure there was lancinating pain no fever."
+
+[What was the need of this everlasting, eternal, never-ending
+manipulating to find how much induration there was? Nothing but harm
+could come from such senseless officiousness. The punching, feeling
+and manipulating of patients without a reasonable excuse is a very
+bad habit, one that is peculiar to young and inexperienced men.
+There is no reason, no object, no purpose in it; it is just a bad
+habit.]
+
+"There could be no doubt that the perityph abscess had ruptured into
+the intestine, and that in consequence of this the diffuse
+peritonitis had at once been relieved."
+
+[There was no peritonitis up to this time, except the small portion
+that represented the peritoneal covering of the organ or organs
+involved in the primary infection. The peritoneal cavity, or the
+peritoneum as an organ, was not involved in this disease; hence it
+is an error to say that there was diffuse peritonitis which was at
+once relieved by the rupturing of the abscess into the intestine. It
+is worth something to know the difference between a drug-created
+_phantom _peritonitis and a true peritonitis. It is not for the sake
+of controversy that I am taking exceptions to the opinions advanced
+in this case, neither is it because I delight in criticizing,
+differing from or finding fault with authority; I have a more
+laudable reason--one that I consider humane and justifiable--namely,
+to point out to the few who happen to read this book, a safe and
+life-preserving plan of treating one of the most talked about, and
+(because of bad--decidedly bad--treatment) one of the most fatal
+maladies of this age. To do this it is necessary to point out and
+teach these few how to reason on the subject, and how to weigh with
+something like exactness the various important symptoms that present
+themselves under varying styles of treatment.
+
+If a young physician is guided in his opinions by authority--if he
+believes that the last word has been said, because he has the last
+book from the leading authority, and if said authority has not yet
+learned that there is a true and a phantom diffuse peritonitis, said
+young man is not in line for saving life; on the contrary, he is
+liable to mismanage and meet with as great a failure, and be the
+cause of as unnecessary a death as was the good doctor from whom we
+are quoting and of whose _medical sophistry _I am trying to give the
+true qualitative and quantitative analysis.
+
+Rupture into the gut is exactly what will happen every time, in all
+cases, if left alone and no food nor drugs given.]
+
+_"Treatment: _Warm, followed by hot, flaxseed poultices; rest,
+freshly expressed meat juice or beef tea, in all 200 grams; thin
+gruel made with milk, 200 grams; wine, 100 grams in twenty-four
+hours, small portions to be taken every two hours; no drugs."
+
+[A little over six ounces of meat juice and six ounces of gruel made
+with milk! The starch contained in the gruel will always create gas
+in these cases and stimulate peristalsis; the gas inflates the cecum
+and drives the contents of the bowels into the abscess cavity; this
+sets up secondary inflammation. The meat juice and wine could have
+been left out to the patient's betterment. It is refreshing to know
+that no drugs were given, and if the case had been treated from the
+start on the no-drug plan the course and ending would have been very
+different. The poultices would have done as much good if they had
+been put on the leg of his bed, and much less harm.]
+
+"This improvement continued for several days and even became more
+marked The abdomen returned to the norm with the exception of the
+ileo-cecal region; there was a small stool daily without
+recognizable pus; no fever.
+
+"Upon the_ twelfth day of the disease vomiting _suddenly recurred
+with severe diffuse abdominal pain, marked meteorism, and fever to
+about 102.2 degree F.;"
+
+[True, diffuse peritonitis set in at this time.]
+
+"the symptoms increased in severity, and changed during the
+collapse, his temperature 97.3 degree F., pulse 160, thready,
+uneven; conspicuous facies hippocratica; no pain; a slight comatose
+condition, moderate meteorism, no movement of the bowels. Stimulants
+were without effect; subcutaneous saline infusion revived the
+patient but only for a short time? and death occurred the following
+morning upon the fourteenth day of the disease."
+
+[Meteorism! What at is it? A blown-up condition of tile bowels.
+Gruel caused gas to form the gas was driven into the abscess cavity,
+reinfection took place? which ended in diffuse peritonitis. The
+patient's resistance was used up and, being exhausted he died. He
+had made a brave fight a against all sorts of odds but the second
+round was too much for him.]
+
+_"Autopsy:_ Normal condition of the scrosa above the omentum: the
+appendix surrounded by adhesions embedded in fecal pus? gangrenous
+toward its terminal portion, and showing perforation; fecal calculus
+in the pus; appendix movable toward the cecum."
+
+[Just what may be expected in all cases! Nature is always busy
+reinforcing weak points, but the modern physician and surgeon is too
+wily and artful for her; she can't always anticipate his moves,
+hence she can't always fortify successfully.]
+
+"Agglutinated point of rupture at the median periphery of the cecum
+near the ileo-cecal valve. The perityphlitic pus appeared to be
+sacculated by adherent intestinal coils, but beyond the adhesions in
+the free abdominal cavity below the omentum there was diffuse,
+fresh, fibrinous peritonitis and distributed here and there small
+quantities of thin, putrid pus (many bacteria, large quantities of
+streptococci and cold bacilli). The peritoneum was injected. of a
+delicate rose-red color, here and there covered with fine,
+mucus-like pseudo-membranes. Heart flabby."
+
+[The autopsy showed nothing more than would be expected. The fresh
+peritonitis confirms what I say that a reinfection was forced
+because of the character of the food. The meteorism opposed
+relaxation and rest, two conditions positively necessary and without
+which healing can not take place. What was to hinder the heart from
+being flabby, Drugs and systemic infection are quite enough.
+
+In proper hands this young man would not have been very sick;
+possibly his trouble would have been thrown off and the inflammation
+passed off by resolution.
+
+The following should be of interest for it is a very _scientific
+explanation _of how the young man came to die:]
+
+"The clinical history is in every respect typical and instructive.
+
+"It shows us that the origin of peritonitis which is by far the most
+common, is in a diseased appendix. At the autopsy this was found
+necrotic and perforated. It is questionable whether the perforation
+existed from the onset of the disease; it is possible that at first
+an ulcer extending to the serosa caused an infection of the
+peritoneum; at all events this occurred acutely, and produced the
+sharply defined disease."
+
+[I agree. The perforation brought on the relapse and the collapse.]
+
+"The clinical abdominal symptoms in the first period of the malady
+pointed to the fact that at the onset there had been a diffuse
+inflammation of the peritoneum, and that later, by the adhesions to
+the appendix which were found at the autopsy an early encapsulation
+of pus had taken place in the ileo-cecal region; this produced a
+purulent softening in the wall of the cecum and led to the favorable
+rupture of pus into the intestine and to an immediate amelioration
+of the acute peritonitis. The point of rupture, however, then
+closed, and partly perhaps to the action of fresh infectious and
+toxic material, perhaps only to the perforation of the appendix, may
+be ascribed the exacerbation of the peritonitis, that is, a renewed
+attack which caused the death of the patient."
+
+[The symptoms were those of intestinal putrefaction with local
+inflammation of the cecum and, as the history of the ease has
+pointed out, was located in that part of the cecum giving attachment
+to the appendix, for the autopsy showed that the appendix was
+surrounded by adhesions and imbedded in fecal pus. Please note
+particularly: The appendix was found in a pus cavity--a
+perityphlitic abscess. Why shouldn't the appendix be necrosed?
+Located in a field of inflammation, blown up, distended beyond its
+vital integrity; why should it not become gangrenous, It doesn't
+matter when the perforation of the appendix took place for it is
+quite evident that there was not enough disease of the appendix to
+cause its perforation until after it had become encased in the
+abscess cavity, and if the young man could have been freed from the
+treatment he received and could have been given the necessary rest
+the abscess cavity would have emptied itself, necrosed appendix and
+all, into the bowel and he would have made a perfect recovery.
+
+"The point of rupture closed!" How could a rupture into a distended
+gut close, The distention was greater after the rupture than before.
+Fresh infection could not take place without a power to force the
+putrefaction greater than the force that existed before the abscess
+broke into the cecum. Let us reason together: Nature fought
+successfully against heavy odds before the rupture. There was gas
+distention of bowels interfering by pressure with the circulation
+and increasing the area of destruction of tissue; frequent retching
+and vomiting interfering by stretching and probably tearing,
+threatening disruption to the plastic process that was going on to
+close in the disorganizing and necrosing processes; the frequent
+examinations, and manipulations for diagnostic purposes, etc., but,
+in spite of all this opposition, fatal infection was successfully
+resisted; then, after the rupture and discharge, the relaxation, the
+calling off by nature of all her defenses, showed that the battle
+was won. All the defense yet left was the hard induration, "firm,
+flat resistance." This induration was quite sufficient to prevent
+reinfection, had there not been something out of the regular order
+to interfere. In this case there was a prostrated muscular system.
+The narcotic had left the patient without muscular power. The
+starchy food created gas, and the bowels, not having their natural
+tone, gave way to the gas until there was _"Meteorism,"_ not
+tympanites but meteorism which means to blow up or distend all that
+is possible.
+
+Such a state as that means mechanical interference with every organ
+in the thoracic, abdominal and pelvic cavities, and, besides the
+pressure and interference in drainage and the blowing into the
+abscess cavity and into the pyogenic membrane gas loaded with
+infection, there was an almost fatal interference with the action of
+the heart and lungs. The prostrating effect on the muscular system
+of the septic or putrefactive poison was nothing to be compared to
+the paralyzing effect of opium. I believe this man would have
+survived every interference if the milk gruel had been left out, but
+acting as it did, it proved to be the last straw.]
+
+"In regard to the fulminant symptoms at the onset of the disease,
+however, it is more likely that even then perforation had already
+occurred, and I that the final and fatal exacerbation was in
+consequence of adhesions formed in the first period which were
+powerless to resist the entrance of organisms producing
+inflammation. The pus finally broke through the adhesions, and
+produced diffuse peritonitis."
+
+[It is a technical point unnecessary to raise whether the adhesions
+formed in the first or the last period; they were formed without
+question; I and if they were formed in the beginning, as doubtless
+they were, they withstood the most severe and trying period of their
+existence, which was before the abscess broke into the bowels, and
+so far as being able to resist to the very last, there has been no
+evidence to prove that the last infection was because of any lack of
+power of resistance on their part for the autopsy showed them
+intact. It is doubtful if anything but sound tissue could have
+withstood the strain that was put upon this man's diseased cecum
+from gas distention. The infection-laden gas could find a way
+anywhere in diseased tissue and broken continuity. Why should the
+pus break through the adhesions and find its way into the peritoneum
+after they had been able to make an effectual resistance till the
+bulk of it had forced a passage into the bowel? Why should the
+adhesions have less power to resist when there is less strain upon
+them and also a patent outlet for the pus? I fear our German friend
+of "Die Deutsche Klinik" had "booze" in his logic when he was
+explaining how his patient came to die.]
+
+"Moreover, the bacterial finding of streptococci and cold bacilli in
+the perityphlitic abscess is typical, and the limitation of the
+diffuse peritonitis to areas below the omentum is also instructive.
+This simultaneously prevented the invasion of organisms producing
+inflammation into the serous surfaces above."
+
+[There is nothing strange about this for nature works for the
+purpose of preventing "serous surface" invasion, and it takes a
+deal of malpractice to force such an infection. If nature's
+provisions against peritoneal inflammation were not as great as they
+are, few people with intestinal putrefactive diseases, from cholera
+infantum in babyhood to proctitis in old age, would get well, for
+most of the treatment for one and all of these diseases is
+obstructive rather than conservative and helpful.]
+
+"This strong man, aged 31, had previously regarded himself as
+perfectly well. Nothing indicated the danger in which he found
+himself and which had existed since the appearance of the fecal
+calculus. the time when this had formed being impossible to
+determine. The disease appeared acutely with fulminant symptoms."
+
+[He was, indeed, unfortunate, but his greatest misfortune, as I see
+it, was his treatment. Every acute disease is fulminant, even
+indigestion is fulminant, but the force of the warring elements is
+soon expended and unless reinforced by fresh elements the
+fulmination must end.
+
+In diseases such as typhoid fever, appendicitis and typhlitis, we
+have first of all a constitutional derangement brought on by errors
+of life. The general resistance is lowered from nerve-exhausting
+habits; the general tone of digestion is below par and the bowel
+contents are maintaining a higher toxic state than usual; we have
+added to this condition an unusual tax in a long run of hot weather,
+business worries or unusual mental, physical or digestive strain,
+following which acute intestinal indigestion manifests with a sudden
+explosion; or there takes place a transformation of the contents of
+the bowels into an intense putrefaction which infects a portion of
+the mucosa that has been rendered susceptible by pressure from fecal
+impaction, concretions, or any cause capable of devitalizing. If the
+infection takes place in Peyer's patches, typhoid fever is the
+consequence; if the local trouble is of the cecum, typhlitis will
+result, and if the local devitalization is in the appendix, brought
+on from the irritating effects of a fecal calculus, appendicitis
+will result.
+
+These diseases may start in a fulminant manner as suggested--with an
+acute intestinal indigestion, which will die down as soon as all the
+elements that combine to set off this fulmination l eve expended
+their force and unless fresh material be added everything must
+settle down to a local trouble. Or if the primary irritation is
+subjected to a light form of toxic infection the development of the
+disease will be much more insidious and will require much more time
+to come to its maturity, or its fulminating stage.
+
+The reason for this is that each person has a cultivated immunity to
+a given toxic state of the intestinal contents, and when from
+pressure or the irritation caused by a calculus. there is a
+denudation of the mucosa the infection that takes place has not the
+power to arouse a systemic resistance' but can cause only a local
+inflammation; this inflammation may end in ulceration, or it may
+cause a thickening of the parts and interfere with drainage from
+mucous or glandular pockets; then the locked up secretions become
+intensely toxic, and this sets up a new infection much greater then
+l the first and powerful enough to cause the system to call out its
+militia to put down the rebellion. Now we have fulmination, but if
+food and drugs are withheld it ends soon.]
+
+"Severe abdominal pain with tense abdominal walls, fever and
+vomiting form the characteristic triad in the first phase of the
+disease; less rapidly does meteorism appear. This depends upon
+whether the inflammation of the serosa quickly spreads or remains
+local. Peritoneal meteorism is peculiar. The abdomen is uniformly
+distended, balloon-like; the muscles as well as the rest of the
+abdominal walls are tense. It must be added, how ever, that in spite
+of the excruciating pain upon touch there is no sign of contraction
+of the abdominal muscles, of the "muscular resistance" _(defense
+musculaire) _which is so common on pressure in other forms of
+abdominal pain, particularly when circumscribed."
+
+[Distention from any cause--or stretching of muscular fiber--causes
+paralysis for the time being.]
+
+"The same is true of the diaphragm; it is forced upward, the muscles
+are therefore elongated and tense; but there is no evidence of
+active contractions. Abdominal respiration ceases; gradually then,
+as may be recognized by the limits of percussion, increasing loss
+of _muscle tonus_ is added. In this case the autopsy showed that the
+peritonitis had not advanced up to the serosa of the diaphragm."
+
+[The muscle tonus when a patient is under the influence of opiates
+cannot be reckoned with, for that drug paralyzes the muscles, and
+the bowels fill with gas as was seen in this case up to the day
+before the abscess ruptured; on that day feeding had been suspended,
+resulting in a decrease of gas and an amelioration of all the
+symptoms.]
+
+"Among these signs pain, either spontaneous or upon touch, a rise in
+temperature, increased frequency of the pulse and, in general, the
+signs of severe illness, are to be looked upon as the local and
+general symptoms of a severe septic inflammation; vomiting, at least
+in the first stages of peritonitis, was due to decided reflex
+irritation of the numerous branches of the peritoneal nerves; the
+fecal discharges at the onset may be explained, but by no means
+invariably, as due to peristalsis acting reflexively. The
+constipation which followed this, however, as well as the meteorism,
+must be attributed to a hypotonia and paralysis of the musculature
+of the intestine by collateral edema."
+
+[Beautiful sophistry. Words well woven together are captivating and
+frequently dethrone reason. If I didn't happen to know better I
+might really believe the author of this contribution to medical
+science knew exactly what he was talking about.
+
+The constipation in such diseases as this is caused by the fixing,
+or natural resistance to motion, which is always to be found in
+diseases of tile bowels and is one of nature's conservative
+measures. The hypotonia or paralysis of the musculature was brought
+about by the opium; and it is certainly strange that educated men
+can build a symptom or condition by the administration of drugs and
+yet remain absolutely unconscious of the part they are playing, and
+proceed to build a beautiful theory explanatory of results.]
+
+"The excessive abdominal pain, increased by movement and on the
+slightest pressure, caused the patient to remain motionless upon his
+back and to avoid the slightest movement of the abdomen either by
+speaking or coughing."
+
+[This is a characteristic symptom when there is great distention of
+the bowels.]
+
+"At the start the temperature was uniformly high, but later
+remissions in the pus fever were recognized."
+
+[All fever would have disappeared had it not been that the
+intestinal putrefaction was kept alive by feeding.]
+
+"The pulse from the onset was comparatively frequent, regular and
+somewhat tense.
+
+"The vomitus was at first composed of the gastric contents, the bile
+of a peculiarly pure, grass-green, biliverdin color mixed with a
+yellowish chyme-like material, and in the later stages of the
+disease showed thin masses having a fecal odor_ (ileus
+paralyticus)._ In regard to the dejecta, the two passages at the
+onset of the disease pointed to increased peristalsis; this was of
+short duration, soon changing to the opposite condition, and until
+the rupture of the perityphlitic abscess absolute constipation
+existed."
+
+[The vomiting would have gone to stay within three days if no drugs
+nor food had been given; as it was, when real vomiting ceased the
+opium nausea began.
+
+This patient was not allowed to come into that state of peristaltic
+elimination that is due in all cases in three days at the farthest,
+and which would have come to this man if food and drugs had been
+withheld.]
+
+"Pain upon urination and strangury was due to inflammation of the
+peritoneal coat of the bladder, in which a noticeable irritation was
+produced by slight distention as well as by contraction of the
+bladder. The albuminuria was the well known infectio-toxic 'febrile'
+form; indicanuria was in proportion to tile fecal stasis.
+
+"In the course of the next few days a new symptom was added to this
+group: Exudation, which was demonstrable both by palpation and
+percussion. It was the natural consequence of inflammation of the
+peritoneum, and was both of diagnostic value as indicating general
+peritonitis and of special value in that, more definitely than the
+pain, it pointed to the original seat of the affection, which,
+according to present indications, could only have been an internal
+incarceration following right-sided inguinal hernia, or femoral
+hernia, or appendicitis. As neither the history nor the general
+status (normal condition of the hernial rings) furnished any points
+of support for the first view, only the diagnosis of appendicitis,
+that is, of perforation of the appendix, could be made with that
+degree of certainty attainable in diseases of the abdominal cavity
+in general.
+
+"After the appearance of these symptoms, a more or less firmly
+adherent but limited perityphlitic abscess, and a less intense
+although well developed peritonitis in this region, were assumed;
+the latter, notwithstanding the painful meteorism, was not
+necessarily diffuse in the strict sense of the term; the omentum
+often protects the upper abdominal cavity from infection, as was
+proven in this case at the autopsy. It is possible that this diffuse
+peritonitis, which did not in the early period of the affection
+extend beyond the limited local focus, was not due to the intestinal
+contents and to bacteria, but chiefly to bacterial toxins which
+arose from the circumscribed original focus. This fact is pointed
+out by the prompt retrogression of the diffuse peritoneal symptoms
+after rupture of the abscess; the diffuse peritonitis of this stage
+might then be designated a nonbacterial 'chemical' inflammation,
+according to the terminology now in vogue; finally, it was
+positively a bacterial infection, although the postmortem finding of
+bacteria in the distant folds of the peritoneum is not proof of
+this; we know that during the terminal agony or after death these
+may wander a long distance from the perityphlitic focus."
+
+[The author plays so fast and loose with the words, "diffuse
+peritonitis," that I am reminded of a remark made to me several
+years ago by a society lady who posed as a pace-setter in all
+matters pertaining to the intricacies of what one should and should
+not do. The subject was one that I did not know much about at that
+time, and upon which I am not much better informed at present. It
+was on diamonds. I complimented her on a very beautiful sunburst.
+She took the compliment modestly, of course. The center diamond was
+large and, I thought, of uncommon brilliancy, and I remarked, "That
+center stone properly mounted would make a very fine solitaire." She
+then informed me that she once owned a _cluster of solitares._
+
+The author tells us that at first the diffuse peritonitis probably
+did not extend beyond the local focus; this of course is exactly
+what I am contending for from first to last and I insist that there
+was not peritonitis proper until the occurrence of the fatal
+relapse.
+
+It is somewhat surprising that this article should be selected to
+represent the last word on this subject, when the author builds his
+treatment upon diffuse peritonitis; then enters into a lengthy
+analysis and explanation of symptoms to fit the diagnosis and
+treatment and before he is through with the subject he declares that
+the _diffusion is confined _to the focus of infection.
+
+If I did not know something of the worth of words I am not sure but
+such an excellent explanation might persuade me!! If I did not know
+from experience that all this is _theory, beautiful theory, _it
+might be very hard to resist!]
+
+"After the symptoms of local and general inflammation with their
+secondary signs in the stomach and intestine had lasted for six
+days, suddenly a complete change took place: The nervous, anxious,
+extremely distressed patient became feeble and scarcely complained
+at all; his formerly congested face was pale and elongated, the nose
+pointed and cool; the skin lost its turgescence and warmth and was
+covered with a cold sweat; the bodily temperature also fell, the
+pulse became small and frequent but remained quite regular, the
+abdomen became softer and to a great extent lost its sensitiveness;
+the vomiting decreased to a few painless attacks,"
+
+[Wholly due to the opium and morphine given]
+
+"and singultus disappeared: A picture which, to a certain extent, is
+a combination of collapse and narcosis although not to the degree of
+profound loss of consciousness, being the picture of an intoxication
+in sharp contrast to the preceding febrile state."
+
+[That is exactly what I stated above--a case of narcotism. How is it
+possible that the author, recognizing the narcotism, feels it
+incumbent to give other explanations?]
+
+"Just as the affection had suddenly developed to its full height at
+the onset of the disease, and much more swiftly than, for example,
+is the case in phlegmon of the external walls, so with extraordinary
+rapidity did the clinical picture assume a new type. In this respect
+we must consider the very great area of the peritoneal folds, their
+numerous lymphstomata, and their intimate relation to the
+circulation, and we are impressed with the fact that fluids and
+solubles, as well as formed products, are rapidly absorbed by the
+peritoneum.
+
+"Somewhat less rapidly than this, but nevertheless in the course of
+a few hours, another change took place, a favorable turn following
+the rupture of pus into the intestine. Here we were dealing with a
+well known and familiar phenomenon; if this occurs in the peritoneum
+the effects are particularly well marked; similarly as in the case
+of a phlegmon which rapidly disappears with the discharge of pus
+even although the inflammation extend beyond the pus focus, the
+symptoms of diffuse peritonitis promptly disappeared after the
+rupture. Very likely, as has already been stated, the symptoms of
+diffuse peritonitis in the first stages of the disease are to be
+referred to a chemical inflammation of the serosa, i. e., one due to
+toxins and without the ingress of bacteria; and it must be
+remembered that the clinical picture of this chemical peritonitis
+cannot be differentiated from that of the severe bacterial form.
+With the rupture of the abscess, the entrance of poisons into the
+free peritoneal cavity, and their resorption by the extensive
+peritoneal surfaces, as well as the vomiting and the intestinal
+paralysis, ceased. The taking of nourishment again be came possible.
+
+"The point of rupture formed adhesions, the natural drainage of the
+peritoneal ichorous focus ceased, perhaps a new influx of
+inflammatory material from the perforated appendix also took; place.
+There was a fresh relapse of the local peritonitis which extended
+beyond the boundaries of the limiting adhesions, and permitted the
+invasion by bacteria of the free abdominal cavity. This, time the
+severe toxic picture of collapse immediately followed, and with
+marked decrease in cardiac strength led to death.
+
+"Doubtless the patient might have been saved in the first stages of
+the disease by the evacuation of the abscess; the incision would at
+first have acted similarly to spontaneous rupture into the
+intestine, but the relapse would have been prevented by permanent
+drainage, and a radical cure might have been brought about by the
+immediate or subsequent removal of the appendix.
+
+"Opium, no doubt, had a favorable effect upon the affection. By
+relieving intestinal irritability, and by bringing about a mild
+degree of narcosis, the patient was kept quiet and this materially
+assisted in limiting the severe perityphlitic suppuration in the
+first stage of the disease."
+
+[All of which is positively not true, as I have witnessed for
+years.]
+
+"If, as it unfortunately happened, the point of rupture had not
+immediately closed again, if it had remained open until suppuration
+ceased and contraction and healing of the perforated appendix had
+taken place, opium would have been regarded as instrumental in
+saving the patient, and unquestionably, at least to some extent,
+justly so. Among other factors in the treatment, the relief to the
+intestine by the suspension of nourishment was of paramount
+importance. The subcutaneous saline infusion had an obvious but,
+naturally, only a transitory effect."
+
+The subcutaneous saline infusion is another ridiculous habit. It
+would really be amusing if it were not so tragic, to see patients
+driven to the edge of the great divide and then see the innocent
+doctor throw out an impotent life line.
+
+The absolute innocence displayed by this professional man, from
+first to last, his belief in himself and the mechanism of his theory
+and practice exculpate him from the charge of carelessness, neglect
+of duty or even that he didn't know what he is doing. He does know
+what he is doing in a way. He works as exactly as a Waltham watch
+and he thinks about as much as the stem that winds the watch.
+
+I cannot agree to the summing up of this case. There was not at any
+time, previous to the relapse and death of this patient, what we
+understand as peritonitis. A post-mortem examination might have
+shown the intra-peritoneal covering, of that portion of the cecum
+involved in the inflammation, slightly inflamed, but it is not
+reasonable to believe that the inflammation was of a toxic character
+unless adhesive inflammations can be so called.
+
+Inflammation is always the same, it matters not what the _exciting
+cause _may be. It is an exaggerated physiological process. If there
+is inflammation of any part of the body it means that there is an
+exaggeration of function. Its intensity will be in keeping with the
+exciting cause. If the cause is intense heat or cold, or a corroding
+acid or alkali, the local action may be great enough to destroy the
+part; the inflammation following will be of the contiguous structure
+outside of the killing range of the cause, and it will be a
+simple--non-toxic--inflammation unless the secretions thrown out in
+excess of the reparative need are retained by dressings or prevented
+in some other way from draining away. If these secretions are kept
+bound on the raw surface by dressings until they decompose--yes,
+until the fermentation causes germs--the wound will become infected,
+and to what extent will depend upon the amount of
+malpractice--carelessness or ignorance--to which the case is
+subjected.
+
+If the inflammation is caused by decomposition or a toxic agent, the
+extent of the process will depend upon the integrity of the part
+infected and the state of the general health, also upon the local
+environment--such as pressure interfering with the circulation of
+the blood.
+
+In this fatal case there was the constitutional derangement and the
+toxic state of the alimentary canal; then there was the exciting
+cause, sufficient to create a local infection the symptoms of which
+were given at the beginning of this description, and which lasted
+for a few days; during which time the patient, no doubt, was eating
+and possibly taking home remedies to move the bowels, etc. These
+preliminary symptoms were followed by a severe pain in the right
+lower abdominal region, followed with chills, fever, nausea,
+vomiting and later by painful movements from the bowels, small in
+character, and soon after this distention of the bowels from gas.
+
+During the few days of preliminary symptoms nature was going through
+the usual preparation of fixing the parts. The muscles were becoming
+rigid, which is one of nature's plans for protecting an inflamed
+part; the infection was striking deeper and arousing all the
+defenses. Possibly there had been a local inflammation of long
+standing, gradually degenerating into a fecal ulcer, which means
+that there was a spot of ulceration deep enough for fecal
+accumulation and the accumulation created fresh infection, which
+lighted up an active inflammation setting all the parts into
+defensive activity. The muscles of the abdomen--the bowels and all
+involved and contiguous parts--became set or fixed; and when this
+rigid state became established, the bowels below the cecum refused
+to receive the contents of the small intestine; hence when the
+peristaltic movement started at the head of the small intestine it
+found that an embargo had been laid on the cecum and lower bowels so
+that nothing could pass. This embargo took effect "about midday; he
+was seized with very severe pain." What was this pain? What is the
+pain that always attends obstruction of any kind? It is the desire
+for the bowels to move when they are unable, on account of the
+stoppage, to do so. Is there a reader who can't conceive of the
+terrible suffering that must come from such a state of the bowels,
+The pain is not from the spot inflamation, or ulceration, or the
+forming abscess, whichever is the exciting cause of all this
+trouble; for, if it wore, the pain would not stop in three days, or
+after the patient has been fasted long enough for the peristaltic
+movements to subside side. No, the local inflammation is not
+sufficient within itself to cause any more pain than this patient
+had the few days before he went to bed; it takes obstruction to
+bring suffering, and even obstruction will not cause pain _per se,
+_for this is proven in all cases rightly treated. As soon as the
+stomach and upper bowels are rested from food and drugs, all pain is
+gone and will never return unless the patient is badly handled.
+
+In this case opium and morphine were given; this was very bad
+treatment, for these drugs always produce nausea and vomiting,
+exactly what was not desired because of the evil effect the retching
+had on the forming abscess. It is true that these cases frequently
+vomit the first three days after the obstruction, but there is
+practically no danger from retching that early in the disease.
+Again, the opium masked the case dreadfully; for it produced
+vomiting at that stage of the case when there should have been no
+trouble with the stomach at all, and induced a tympanites that was
+mistaken for the same state brought on by peritonitis.
+
+In this case the doctor was in a mental mist from the beginning to
+the end; notwithstanding he was so confident that he knew all about
+his patient, that he has given the case a careful summing up so that
+it may be put with the medical classics.
+
+The doctor is in error when he gives the name of "Acute, Diffuse
+Peritonitis." The case could not have been peritoneal perforation at
+the start, for the symptoms do not justify the diagnosis. A
+perforation causing diffuse peritonitis so early would have a higher
+pulse and temperature, and death would have followed within a few
+hours.
+
+I can believe that there might have been an ulcer extending to the
+peritoneal covering, and this set up local peritonitis; but there
+was not at any time before the fatal relapse, a toxic inflammation
+within the peritoneal cavity; hence there was not diffuse
+peritonitis, and there could not have been without complete
+perforation which would have ended the case in death very soon.
+
+In this case the point of infection was walled in, as all such cases
+are, with exudates and whether the appendix was primarily affected
+or not doesn't matter; it was within this enclosure and found to be
+ruptured, which is common; but its rupture was of no consequence
+because the escaped contents were in the abscess cavity that finally
+emptied into the cecum, the natural outlet in all these cases if
+they are left to nature and not officiously fingered--thumbed and
+punched to death.
+
+The distinction drawn by this author between toxic and bacterial
+peritonitis is, to my mind, a distinction without a difference.
+
+In this case the tympanites following the obstruction was due to the
+fact that the gas in the bowels was retained for a few days because
+of the completeness of the obstruction, and would have passed off in
+three days had it not been for the paralyzing effect of the opium;
+hence the distention that came from gas was succeeded by the
+distention peculiar to opium and caused the doctor to believe that
+he had a case of diffuse peritonitis when, in fact, he had a case
+of gas distention due to morphine paralysis. The morphine directly
+and indirectly weakened the heart. The distention of the bowels was
+a constant interference. The pulse at the start was fine at 112, but
+in six days it had increased to 140 and finally reached 160.
+
+
+
+
+
+CHAPTER VIII
+
+
+
+
+The following case comes to my mind, for some of the initial
+symptoms are similar to those of the case just described: M. B., age
+42, farmer, was taken sick with the usual symptoms of appendicitis
+as near as I could get the history from his wife, who was his nurse.
+He lived twenty miles from Denver. When he was taken sick he called
+a local physician who treated him for _bilious diarrhea. _The drugs
+used, as near as the wife could remember, were small doses of
+calomel followed with salts to correct the I liver, morphine for
+pain, and bismuth and pepsin for digestion and diarrhea, and quinine
+to break the fever; also hot applications on the bowels.
+
+The pain was so great that morphine had been given quite freely. At
+the end of one week the sick man, being no better, declared that he
+would go to Denver and consult another physician. When he told his
+physician what his intentions were, the doctor advised him not to
+attempt the trip himself, for he was too sick, but to send for the
+physician. The sick man was willful and forceful, and he was also
+afraid of the cost; and, being a plucky fellow, he declared that he
+could go just as well as not and that he would and he did.
+
+His wife was a large, strong woman and gave him valuable assistance,
+but I never have understood how it was possible for so sick a man to
+make the journey from his home to my office. He was obliged to help
+himself a great deal in climbing in and out of ordinary conveyances
+to reach the train and, when in Denver, with his wife's assistance,
+he walked a half block to the street car; then from the car to my
+office he was obliged to walk one block and at last climb one flight
+of stairs. When they came into my office the wife was almost
+carrying him. I saw at a glance that he was a desperately sick man,
+and before I attempted to examine him I had him lie down for a
+while.
+
+He had no history of any previous sickness; he had always been very
+healthy, and his life had been spent in hard work in the open air.
+
+The general appearance of the man was that of one suffering from
+diffuse peritonitis. The abdomen was enormously distended; this
+symptom more than any other caused me to fear and wonder--fear that
+rupture would take place before he could be put to bed, and wonder
+how it was possible for a man to be out of bed and go through what
+he had gone through that morning without causing a fatal injury of
+some kind. The distention, I was informed, had been gradually coming
+on from the first, and he had been given morphine to control the
+pain from the first day of his illness. When they gave me this
+information I knew that the tympanites was due to narcotic
+paralysis, instead of coming from perforative, septic peritonitis,
+as the general appearance and symptoms indicated. This reasoning
+gave me hope in spite of the formidable appearance of the case.
+
+The pulse was 130, temperature 102 degree F., in the forenoon; he
+had been troubled with nausea a great deal, but with the exception
+of one or two vomiting spells, the first and second day, the nausea
+did not often cause retching. The mouth and lips were dry, tongue
+coated, bad taste in mouth and breath very offensive.
+
+The reason there had not been more vomiting in this case was because
+there was diarrhea at first and not quite so much locked up fecal
+matter as common. The bowels had been relieved of the usual
+accumulation more than is common to the majority of such diseases
+before the swelling and fixation had become established.
+
+There is a small percentage of people who are not quite so irritable
+as others; in these the contraction, constriction or fixation--the
+embargo laid on these parts by nature in her conservative effort at
+preventing movement--is not established quite so early, and the
+efforts on the part of doctors to force a movement are more
+successful in cleaning out a part of the accumulation; or there may
+come a diarrhea from the putrefactive poisoning which is causing the
+infection of the cecum or appendix and leading to abscess, and this
+causes a partial cleaning out before fixation is established; in
+these cases there is never so much vomiting nor nausea, neither do
+they suffer so much pain for there is not the usual accumulation in
+the alimentary canal to excite the peristaltic movement.
+
+The history that the patient and his wife gave me from memory was
+that the urine had been scant, and at times painful to pass. There
+had been from the start severe pain in the lower bowels, but neither
+the patient nor his wife could remember if there had been more pain
+on right, lower frontal region than anywhere else; they both
+declared that the pain was all through the bowels and that there was
+much bearing down like unto the pain of a diarrhea.
+
+Breathing was shallow, of course; it never is otherwise in severe
+abdominal distention.
+
+I scarcely touched the abdomen, for I knew I dare not press, in
+percussing, enough to distinguish any sound except the tympanitic.
+It has never been my custom to allow my curiosity to run away with
+my judgment, and cause me to make needless examinations.
+
+All examinations are needless when, it matters not what the
+diagnosis can or must be, the treatment will be the same. All
+possible bowel troubles which present the same general symptoms of
+the disease I am here describing, must receive a like general
+treatment. This being true, it matters not what the difference is,
+there cannot be a variation requiring a bimanual examination to
+differentiate it that will justify the risk. All examinations are
+needless and criminal when there is a possibility of rupturing an
+abscess. Especially is this true when it is a_ positive fact _that
+all typhlitic and appendicular abscesses will open into the bowels
+if allowed to do so.
+
+In this ease I reasoned as follows: This must be a case of abscess,
+for the signs of obstruction are not those of complete obstruction,
+such as are seen in hernias, volvulus, constricting bands and many
+other causes not necessary to mention. If there were complete
+obstruction there would be increasing nausea and vomiting, ending in
+collapse and death. This tympanites cannot be from peritonitis for
+perforation would be necessary to cause it and nothing would stop
+the progress after it had once started except to open the cavity
+wash and drain. Hence this cannot be peritonitis, for there has been
+no operation and the patient still lives. It can be distention from
+the effects of morphine, but there must be more than morphine
+paralysis, for there is a temperature of 102 degree to 103 degree
+F., and there has been, so the wife says, a temperature of 104
+degree F. The pulse rate being 130 does not indicate fever nor
+exhaustion, and is not in keeping with the temperature nor physical
+strength, hence the rapidity must be partly due to pressure on the
+diaphragm from the gas distention and partly from the paralyzing
+effect that opium has on the heart.
+
+The professional reader will see that I have by my analysis
+eliminated much of the formidableness that the physical appearance
+gives to this case, but I would not have you believe that this man
+was not a desperately sick man even if I have accounted for the
+dangerous symptoms. The fact is, if the pronounced symptoms had been
+what they appeared to be, the man would have been saved his trip to
+me, for he would have been dead.
+
+The farmer had learned from experience that the less he put in his
+stomach the better he felt; hence, for a day or two before he left
+his home to consult me, he had refused food and drugs and had taken
+very little water.
+
+After giving the sick man a rest in my office I had his wife take
+him to the home of a friend with whom they had arranged to stay
+while in the city. In a few hours I visited him and made the
+following prescriptions and proscriptions: Positively no food, not
+one teaspoonful of anything except water. An enema of half a gallon
+of tepid water to be used once each day for the purpose of clearing
+out the bowels below the constriction, and I advised against
+violence--rough handling. A hot water jug to the feet, fee to the
+abdomen, all the fresh air possible in his bedroom and absolute
+quiet. If nauseated, enough water to control thirst was to be used
+by enema; if the stomach was all right all the water desired by
+mouth.
+
+I called the second day; the patient had slept some--he thought
+about three hours of broken rest--feeling fairly comfortable; pulse
+120, temperature 101 degree F. at 9:00 a.m.; 102 degree F. at 5:00
+p. m. Third day: Temperature 100 degree F. at 9:00 a. m.; 101 degree
+F. at 5:00 p. m.; one-third of the tympanites gone; slept six hours;
+hungry and demanding food. I said, "No, you get no food until the
+bowels move." The ice was taken off the bowels; hot cloths were
+substituted.
+
+The fourth day the temperature in the morning was 100 degree F.; in
+the afternoon 101 degree F., pulse 100; slept well, hungry, bowel
+distention reduced fifty per cent. I touched him very lightly and
+found enough to confirm my diagnosis of typhlitic abscess; this was
+the first time I had felt that I was justified in attempting to
+confirm my suspicions, and even this examination could not be called
+a palpation, for I put no weight upon the abdomen. The patient was
+very dissatisfied because I would not allow him food. I said, "No.
+you can't eat until your bowels move." "How soon will they move!"
+he asked in an irritating and ungracious manner, to which I replied,
+"Your God only knows, and He won't tell."
+
+Fifth day about the same, a little better; very ugly because I would
+not allow him food. He said: "I don't believe there is anything the
+matter with me; you are holding me down."
+
+Sixth day about the same, feeling fine, sleeping fine and _starving
+to death. _He made himself so unpleasant by his clamoring for food
+that I permitted his wife to give him a half dozen Tokay grapes. He
+had scarcely swallowed the sixth when he had all the pain he wanted.
+His wife came to my office in great excitement: "Doctor, please come
+at once to see my husband; he is much worse, he is in agony with his
+bowels." My answer was: "Go back and renew your hot applications to
+the bowels and tell your husband I permitted him to eat the grapes
+because he had been so unkind and ungrateful for the comfort that
+had been given him; tell him that I knew the grapes would give him
+pain and that the pain will not wear off entirely for twelve hours,
+and that I will not see him before tomorrow morning."
+
+I called as I agreed to do the next day, the seventh day since the
+case came under my management, and the fourteenth day from the
+beginning of the disease. The sick man was out of humor. To my
+question, "Would you like something to eat!" he drawled, "Na-a-aw! I
+never intend to eat any more; but I would like to know when my
+bowels are going to move." Of course I could not tell him any more
+than I had told him before, namely, that under such circumstances
+they usually require from fourteen to twenty-eight days.
+
+From this time on every day was much the same; no elevation in
+temperature, and the pulse ranged from eighty to occasionally one
+hundred; no pain, sleep good, that is, as good as people generally
+sleep who are on a continuous fast--under a continuous fast the
+sleep is good but not heavy nor long at a time.
+
+It is a fact that when these cases are properly handled they are not
+sick after the first week; they do not look sick; they get to
+thinking that it is folly to stay in bed and live without food, and
+of course their neighbors know that there isn't anything the matter
+with them; that the doctor is starving them to death. Quite a number
+of my patients have brought themselves near death's door from
+disobeying instructions and taking the advice of knowing neighbors.
+They were persuaded to "eat"--"eat all you want, for the doctor
+will not know it."
+
+This is one disease that will give the disloyalty of the patient
+away every time.
+
+On the morning of the nineteenth day of his sickness, and the
+twelfth day of my services, I called to see the sick man, and before
+I could ask him a question he shot out his hand toward me and
+exclaimed, "My bowels moved at four o'clock this morning! I want a
+beefsteak for my breakfast!" I congratulated him on his fine
+condition and ordered him a dish of mutton broth. This disgusted him
+thoroughly, and his reply was in kind: "A dish of broth! After
+fasting two days on my own prescription, and then twelve days on
+yours, I am to be rewarded with a dish of broth." I explained that
+he had a large abscess cavity that would require several days to
+empty, collapse and draw together, and if he should eat solid foods
+too soon he would run the risk of cultivating chronic
+appendicitis--recurring appendicitis. I advised him to live on
+liquid foods for three or four days, and after that he could have
+solid foods if he would practice thorough mastication.
+
+The action from the bowels had been saved for me; there was an
+ordinary chamber half full; it looked to me like at least a half
+gallon of fecal matter, pus and blood; it was dreadfully offensive.
+Six hours after the first movement I was informed that he had
+another movement very similar in quantity and consistency; this
+movement I did not see, for I did not visit the man after the
+morning of the nineteenth. He left for his home on the morning of
+the twenty-third and has had excellent health ever since.
+
+If this man had been subjected to daily examinations food and drugs,
+would he have presented the same symptoms! Indeed the tympanites
+alone would have killed him. Was his case _diffuse peritonitis? _No!
+For if there had been intra-peritoneal infection in the first place,
+it would have indicated perforation, and then, without the opening
+up of the peritoneal cavity, washing and draining, there would have
+been a funeral.
+
+The following is a similar case except that the woman came into my
+hands the first day of her sickness. Her symptoms were: Nausea,
+vomiting and pain all over the bowels as she said--as much pain in
+one place as another--temperature 102 degree F., which ran up to 103
+degree F. in the p. m.; pulse 110, and a history of constipation.
+She had several movements from the bowels through the night before I
+was called in the morning. The movements were small and accompanied
+with much griping; the patient said that if she could have a good
+cleaning out of the bowels she felt that she would be well. I
+informed her that she had appendicitis and that she would be
+compelled to remain very quiet in bed, with ice applied locally
+until the temperature was reduced to 101 degree F., or less, and
+then substitute hot applications. For the pain I had her stay in the
+hot bath until relieved, and when the pain returned she was to go to
+the bath again. The bath water was ordered to be used as hot as
+possible. Every night an enema of warm water. The treatment did not
+vary from the farmer's and the results were the same--her bowels
+moved on the nineteenth day; the consistency and amount were about
+the same, and I had her exercise care about her eating for a week
+after the abscess discharged. From the end of the first week of her
+sickness until the abscess broke she expressed herself freely that
+she did not believe there was anything the matter, and that going
+without food when one felt well was foolish; however, she obeyed and
+had no suffering.
+
+A son of the woman whose case I have reported above was taken down
+the same way one year after. I explained the situation and told the
+young man that he must keep quiet and go without food just as his
+mother did the year before. I did not think it necessary to visit
+him very often, for he knew how his mother was treated, besides she
+was with him to advise.
+
+Within three days he was comfortable, and remained so until about
+the seventh or eighth day, when he decided he would take a glass of
+milk and not say anything to me about it. He took the milk and was
+writhing in pain within two hours. I was sent for, and of course
+asked what he had eaten, whereupon he told me that he had taken
+milk. Within twenty-four hours he was easy and cured of his desire
+to eat until ready for it. This case terminated by rupture of the
+abscess on the fifteenth day.
+
+Neither of these cases had any tympanites worth mentioning. All
+cases that I have ever seen with great bowel distention are those
+coming into my care after being subjected to the usual feeding and
+medicating.
+
+Now we will go over Dr. Vierordt's case in connection with mine and
+see if his case of diffuse peritonitis is not about as near like my
+case as it is possible to have two cases.
+
+His patient was a merchant 31 years old, mine a farmer 42 years old.
+There is a difference in these two men, caused by their occupations.
+The merchant could not have made the trip to my office as did the
+farmer, for several reasons: First, merchants are pampered; they are
+not used to discomfort; they are not used to waiting upon themselves
+as country men are. When they are sick they send for the doctor; the
+farmer goes to the doctor. The merchant has learned the habit of
+spending his money and the farmer has learned the habit of saving
+his, and perhaps that one statement is enough for the discerning.
+
+The merchant was too sick to make such a trip and he knew it. The
+farmer was too sick to make the trip and he didn't know it. This is
+the vital difference between these two cases.
+
+The merchant was tympanitic from the first day of his prostration,
+which is not usual. On the fourth day his temperature was 104 degree
+F., pulse 120 to 136, mind clear but anxious. His lesser symptoms
+were about like the farmer's, with the exception that the merchant
+had been given more narcotics and presented more of the dorsal
+decubitus than the farmer. Laymen, the plain everyday meaning of
+dorsal decubitus is lying on the back. In low forms of disease it is
+looked upon as an unfavorable symptom. Where much morphine has been
+given it denotes prostration peculiar to the drug. My patient was on
+his back for several days, because it is impossible for a patient to
+stay on either side while suffering from severe tympanites.
+
+On the sixth day the merchant's pulse was 140 and the temperature
+101.3 degree F., which proves, if nothing else does, that he did not
+have diffuse peritonitis, for it is impossible for a patient to have
+_acute, diffuse peritonitis, _be drugged and fed, and go through the
+daily physical examinations such as he was put through, and on the
+day before the abscess breaks into the bowels show a temperature of
+101.3 degree F. The pulse counts for nothing in such a case as this;
+I did not look upon the farmer's pulse as indicative of any serious
+state, for I knew the opium had caused it. If the pulse of either
+the merchant or the farmer had been due to peritonitis death would
+have ended either one before his abscess had broken. In fact diffuse
+peritonitis comes from perforation with discharge of the abscess
+contents into the peritoneal cavity, and it always spells death.
+
+When vomiting recurs, or continues after the third day, there is
+malpractice, or there is a serious complication, or there is a
+mistaken diagnosis.
+
+It is well to get this one fact well in mind, namely, appendicular
+and typhlitic abscesses are not accompanied with complete
+obstruction; hence, when the symptoms are so profound as to point to
+absolute obstruction, no delay should be made in having the abdomen
+opened and the obstruction, whatever it is, should be removed at
+once.
+
+The fact that the bowels do not move in from twelve to twenty-one
+days should not be looked upon as total obstruction. What
+obstruction there is is due to fixation of the parts and is truly a
+physiological rest--it is on the order of the fixation of an
+inflamed joint--the joint appears to be anchylosed, but as soon as
+the pain is gone it becomes as movable as ever.
+
+Again, if the case is really obstruction it will grow worse daily
+even if my plan of treatment--absolute rest from everything--is
+carried out to the letter.
+
+There is not any danger of the abscess opening anywhere except into
+the bowels, for that is in the line of least resistance and, if it
+fails to do so, it is because it is badly managed.
+
+
+
+
+
+CHAPTER IX
+
+
+
+
+_I have appendicitis; what shall I do to be saved? _Don't eat
+anything until well. Use a stomach tube and wash out the stomach;
+then use a fountain syringe and wash out the bowels; take a hot bath
+as hot as can be borne, and stay in the tub until all the pain is
+gone, or as long as possible; then go to bed, put ice on the bowels
+and keep it on until the temperature is reduced to 101 degree F.,
+then apply hot applications or poultices and continue the poulticing
+until the bowels move, and the bowels will not move until the
+abscess breaks.
+
+Use an enema every night as a routine, and drink all the water
+desired, when there is no nausea.
+
+Don't manipulate the forming abscess, nor allow anyone else to do
+so.
+
+If you are really in doubt about what you have, think over what I
+have written about strangulation or positive obstruction, and if you
+think you have it, send for the best physician you know and get his
+opinion of whether you have obstruction or not, but don't allow him
+to burst an abscess with his manipulations! For, my word for it, if
+he can't weigh symptoms and tell whether or not you have complete
+obstruction without punching holes in you with his bimanual
+manipulation, neither would he be able to do so after examining you.
+
+I do not say this because I like to make it hard for doctors, but I
+prefer staying the heavy hand of the doctor to keeping still and
+allowing him unwittingly to kill his patient.
+
+First of all wash the stomach out with a siphon tube, then see to it
+that nothing but water goes into the stomach until the bowels move.
+
+I put my cases on a complete fast, give no drugs, apply ice to the
+region of the appendix, keep the feet warm, and keep the patient in
+an atmosphere of hope and belief in his recovery, and a recovery
+always follows. I prescribe an enema of warm water once or twice
+daily, getting all the water possible into the bowels.
+
+These patients are so comfortable after the second or third day that
+it is hard to make them or their friends believe that they have
+appendicitis People are so afraid that they will starve to death if
+they have no food for a few days that they make haste to get put on
+a killing treatment rather than run any risk. This fear is absurd
+Physicians are largely to blame for this popular ear, for those who
+do not feed by mouth still have the idea that their patients must
+have nourishment, so they feed by rectum. This is also absurd. What
+the patient needs is rest, and the more complete the rest the
+quicker the recovery. Give the patient all the water he wants.
+
+The bowels will move in fourteen to twenty eight days from the
+beginning of the attack. Then the fast can be broken by giving a
+glass of hot milk, which is to be chewed well, or given in the form
+of junket; this is to be repeated three times a day for a week, or
+give the milk twice a day and a plate of mutton broth for the third
+meal. I do not give solid food because there is a large abscess
+cavity opening into the bowels, and if solid food is given before it
+has time to close, it is liable to find its way into this cavity,
+thereby preventing healing, and bringing on a chronic condition that
+will ultimately end in death. The less food taken for one week after
+the discharge takes place, the better. Any rational individual
+should see that withholding food is the proper treatment. Milk
+should be thoroughly mixed with saliva or not taken at all. Remember
+that if milk is not taken with great deliberation, and great care
+given to _thoroughly insalivate each sip, then it amounts to the
+same thing as eating solid food._
+
+Milk is a solid food when taken into the stomach as a beverage or a
+drink like water.
+
+In appendicitis all nature cries out for rest, and if it is given 99
+out of every 100 cases will get well and there will be no suffering
+and no danger after the first seventy-two hours.
+
+The ordinary physician sends for a surgeon, and if he is a victim of
+the surgical mania the patient must be operated upon at once, for if
+twelve or twenty-four hours are given, the conditions may clear up
+and an operation will be unnecessary. The majority of surgeons feel
+that they will forfeit their right to heaven if they do not cut at
+once. The consequence is that there are many patients operated upon
+who are as innocent of having the disease as the surgeon is innocent
+of a knowledge of a better plan of treatment.
+
+Of course, the surgeon declares that pus should be let out by
+cutting into it, or it is liable to break into the peritoneal cavity
+and cause death This is positively not the truth, for when an
+abscess threatens, nature at once proceeds to throw a wall around in
+order to avoid accidents. All around the point of prospective
+abscesses, heavy walls of adhesions are built, and if nature is not
+interfered with, the abscess will break into the gut, because it is
+the point of least resistance, and it is also the point favored by
+gravity. The surgeons when they operate in these cases work exactly
+opposite to nature.
+
+If these abscesses are allowed to open into the bowel and solid food
+is kept away from the patient, full and uncomplicated recovery will
+take place. If solid food is given too soon it is liable to find its
+way into the abscess cavity and cause a blind fistula, which may
+take on acute inflammation at any time. These cases then become
+chronic and are called recurring appendicitis. It is sound surgery,
+in dealing with abscesses, to find, if possible, the direction
+nature is taking to evacuate pus and be guided by this suggestion in
+evacuating a pus cavity.
+
+In order to cure appendicitis you must remove the cause. Cutting off
+the appendix, opening an abscess, withholding food till the acute
+symptoms have passed; such treatment is not removing the cause.
+Nothing short of changing the eating habits of the patient will
+cure, so the surgeon who knows nothing about food and its
+action--what part improper eating has to do with bringing on the
+disease--will never be able to cure.
+
+Operating for this disease will fall into disrepute in time, for
+there are already cases recurring and the second and third operation
+will be necessary among those who survived the first. There is not a
+scintilla of logical reasoning in defense of the operation. Because
+some get well after an operation is no proof that the operation was
+necessary; fortunately for the operator there is no way to prove
+that the case operated upon would have recovered without the
+operation. If the case be not complicated by bungling treatment an
+operation is uncalled for. If a case has been medicated and fed to
+death--abused to the extent of causing a rupture into the peritoneal
+cavity--surgery must be resorted to as the only hope.
+
+If a case survive an operation the patient is no wiser than he was
+before, and knows nothing about avoiding another attack, for let it
+be said loud enough to be heard by all, and with no fear of
+successful contradiction, that if every child at birth should have
+the appendix removed there would not be one case less of
+appendicitis than there is with the appendix intact. Of course,
+technically there could be no appendicitis without an appendix, but
+the cecum would become inflamed just as readily.
+
+No amount of forcing drugs given by the mouth can induce a movement
+from above the constriction, but a great amount of pain can be
+produced by attempting to force a passage. No one comprehending the
+true state of affairs would be foolhardy enough to try to force the
+bowels to move. The reader can readily imagine the great pain and
+danger liable to follow cathartic drugs, for they stimulate severe
+peristaltic contractions. The contractions drive the contents of the
+small intestine against the inflamed cut-off, but there it must
+stop. If the parts have become softened, which they do by the
+inflammation, there is danger of perforation and an escape of the
+contents of the bowels into the peritoneal cavity, after which
+diffuse peritonitis and death follow. Surgery can hardly hope to
+save such patients; in fact they usually die; this is why the
+surgeon recommends an early operation.
+
+If all cases are to be so abused and if there were no better way to
+treat them I also should say, operate at once as soon as the disease
+is discovered; but I know from years of experience that there is a
+better way to care for these patients.
+
+
+
+
+CHAPTER X
+
+
+
+
+Allow me to repeat: As soon as a case is diagnosed the proper
+treatment is to stop all medicine and food, for they excite
+movement, and this should be avoided. Give nothing but water. Keep
+ice over the inflamed spot. Keep the patient quiet, end the feet
+warm. There is absolutely nothing to be done until the bowels move,
+which will take place in from fourteen to twenty-eight days. The
+patient will not starve to death, nor will there be any danger that
+the abscess will open anywhere except into the bowels. After the
+bowels move, one glass of hot milk is to be given three times a day,
+so there will be no danger of solid food finding its way into the
+cavity of the abscess.
+
+To be safe I insist on a fluid diet for a week after the bowels
+move, and a light diet for two or three weeks more. Cases taken
+through in this way, and then instructed in never allowing the
+bowels to become loaded again, will not only make a good recovery,
+but there is no tendency for the disease to return if the patient is
+prudent. I say that there need not be a death from this disease if
+these suggestions are properly carried out. The cases that die every
+year are killed by food and medicine.
+
+Surgery has gained its reputation in these cases because of the
+stupidity of the average physician and patient. Cases taken through
+in this way are comparatively comfortable; they may pretend to
+suffer from hunger, but it is principally imagination. If my plan
+were generally adopted the dread of this disease would disappear;
+surgeons would get left on some fat fees, and the undertaker would
+look glum after the fall crop.
+
+There are a few laymen so willful and incorrigible that they can't
+be depended upon to follow instructions. They will break rules, be
+imprudent in eating, and in many ways disregard their own interests.
+Such cases should be sent to the surgeons as early as possible,
+before they have time to complicate their disease and make a
+complete recovery impossible; however, people with such temperaments
+usually find an early grave and they might as well go by the
+surgical route as any other.
+
+
+End of The Project Gutenberg Etext of Appendicitis:  The Etiology, Hygenic and Dietetic Treatment
+by John H. Tilden, M.D.

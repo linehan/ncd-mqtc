@@ -28,18 +28,18 @@ int ytree_mutate(struct ytree_t *tree, struct alias_t *alias)
 
                 switch (r) {
                 case 0:
-                        a = ynode_random_leaf(tree->root);
-                        b = ynode_random_leaf(tree->root);
+                        a = ynode_get_random_leaf(tree->root);
+                        b = ynode_get_random_leaf(tree->root);
                         ynode_LEAF_INTERCHANGE(a, b);
                         break;
                 case 1:
-                        a = ynode_random(tree->root);
-                        b = ynode_random(tree->root);
+                        a = ynode_get_random(tree->root);
+                        b = ynode_get_random(tree->root);
                         ynode_SUBTREE_INTERCHANGE(a, b);
                         break;
                 case 2:
-                        a = ynode_random(tree->root);
-                        b = ynode_random(tree->root);
+                        a = ynode_get_random(tree->root);
+                        b = ynode_get_random(tree->root);
                         ynode_SUBTREE_TRANSFER(a, b);
                         break;
                 }
@@ -87,8 +87,8 @@ int ytree_mutate_mmc(struct ytree_t *tree, struct alias_t *alias)
 
                 switch (r) {
                 case 0:
-                        a = ynode_random_leaf(tree->root);
-                        b = ynode_random_leaf(tree->root);
+                        a = ynode_get_random_leaf(tree->root);
+                        b = ynode_get_random_leaf(tree->root);
                         ynode_LEAF_INTERCHANGE(a, b);
 
                         /* Check cost and undo if bad step */
@@ -103,8 +103,8 @@ int ytree_mutate_mmc(struct ytree_t *tree, struct alias_t *alias)
                         }
                         break;
                 case 1:
-                        a = ynode_random(tree->root);
-                        b = ynode_random(tree->root);
+                        a = ynode_get_random(tree->root);
+                        b = ynode_get_random(tree->root);
                         ynode_SUBTREE_INTERCHANGE(a, b);
 
                         /* Check cost and undo if bad step */
@@ -118,8 +118,8 @@ int ytree_mutate_mmc(struct ytree_t *tree, struct alias_t *alias)
                         }
                         break;
                 case 2:
-                        a = ynode_random(tree->root);
-                        b = ynode_random(tree->root);
+                        a = ynode_get_random(tree->root);
+                        b = ynode_get_random(tree->root);
                         ynode_SUBTREE_TRANSFER(a, b);
 
                         /* Check cost and undo if bad step */
@@ -185,8 +185,8 @@ struct ytree_t *ytree_mutate_mmc2(struct ytree_t *tree, struct alias_t *alias, i
 
                 switch (r) {
                 case 0:
-                        a = ynode_random_leaf(test->root);
-                        b = ynode_random_leaf(test->root);
+                        a = ynode_get_random_leaf(test->root);
+                        b = ynode_get_random_leaf(test->root);
                         ynode_LEAF_INTERCHANGE(a, b);
 
                         /* Check cost and undo if bad step */
@@ -202,8 +202,8 @@ struct ytree_t *ytree_mutate_mmc2(struct ytree_t *tree, struct alias_t *alias, i
                         /*}*/
                         break;
                 case 1:
-                        a = ynode_random(test->root);
-                        b = ynode_random(test->root);
+                        a = ynode_get_random(test->root);
+                        b = ynode_get_random(test->root);
                         ynode_SUBTREE_INTERCHANGE(a, b);
 
                         /* Check cost and undo if bad step */
@@ -218,8 +218,8 @@ struct ytree_t *ytree_mutate_mmc2(struct ytree_t *tree, struct alias_t *alias, i
                         /*}*/
                         break;
                 case 2:
-                        a = ynode_random(test->root);
-                        b = ynode_random(test->root);
+                        a = ynode_get_random(test->root);
+                        b = ynode_get_random(test->root);
                         ynode_SUBTREE_TRANSFER(a, b);
 
                         /* Check cost and undo if bad step */

@@ -70,6 +70,7 @@ MQTC_OBJECTS=$(MQTC_SOURCES:.c=.o)
 
 NCD_SOURCES=src/compress/main.c 	\
 	src/compress/filesystem.c 	\
+	src/compress/ncd.c 		\
 	src/compress/module/mod_zlib.c 	\
 	src/compress/module/mod_bzlib.c
 

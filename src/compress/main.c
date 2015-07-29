@@ -5,101 +5,16 @@
 #include <errno.h>
 #include <assert.h>
 #include "filesystem.h"
+#include "ncd.h"
 #include "module/mod_zlib.h"
 #include "module/mod_bzlib.h"
-
-struct ncd_t {
-        int count;
-        int *size_single;
-        int **size_double;
-};
-
-struct ncd_t *make_ncd(int count)
-{
-        int i;
-        struct ncd_t *ncd;
-
-        ncd = calloc(1, sizeof(struct ncd_t));
-
-        ncd->count = count;
-        ncd->size_single = calloc(1, count * sizeof(int));
-        ncd->size_double = calloc(1, count * sizeof(int *));
-
-        for (i=0; i<count; i++) {
-                ncd->size_double[i] = calloc(1, sizeof(int));
-        }
-
-        return ncd;
-}
-
-void ncd_test(struct ncd_t *ncd)
-{
-        int i;
-        int j;
-
-        for (i=0; i<ncd->count; i++) {
-                printf("[%d]: %d\n", i, ncd->size_single[i]);
-                for (j=0; j<ncd->count; j++) {
-                        printf("[%d][%d]: %d\n", i, j, ncd->size_double[i][j]);
-                }
-        }
-}
-
-double ncd_compute(int size_a, int size_b, int size_ab)
-{
-        if (size_a < size_b) {
-                return (double)((double)(size_ab - size_a)/(double)size_b);
-        } else {
-                return (double)((double)(size_ab - size_b)/(double)size_a);
-        }
-}
-
-
-void ncd_print(struct ncd_t *ncd, struct directory_t *dir)
-{
-        int i;
-        int j;
-
-        printf("WORKING PATH: %s__ncd/\n", dir->path);
-        printf("FILE_COUNT:%d, NCD_COUNT:%d\n", dir->file_count, ncd->count);
-
-        printf("#>>>\n");
-        for (j=0; j<dir->file_count; j++) {
-                printf("%-2d %s\n", j, dir->file_name[j]);
-        }
-        printf("#>>>\n");
-
-        printf("%-2s ", " ");
-        for (j=0; j<dir->file_count; j++) {
-                printf("%-20d ", j);
-        }
-
-        for (i=0; i<dir->file_count; i++) {
-                printf("\n");
-                for (j=0; j<dir->file_count; j++) {
-                        if (j == 0) {
-                                printf("%-2d ", i);
-                        }
-
-                        printf("%-20g ",
-                                ncd_compute(
-                                        ncd->size_single[i], 
-                                        ncd->size_single[j], 
-                                        ncd->size_double[i][j]
-                                )
-                        );
-                }
-        }
-}
-
-
 
 
 typedef int (*cmpr1_t)(FILE*, FILE*);
 typedef int (*cmpr2_t)(FILE*, FILE*, FILE*);
 
 
-void run_compress(struct directory_t *dir, cmpr1_t __cmpr1, cmpr2_t __cmpr2, const char *ext)
+void run_compression(struct directory_t *dir, cmpr1_t __cmpr1, cmpr2_t __cmpr2, const char *ext)
 {
         int i;
         int j;
@@ -112,7 +27,7 @@ void run_compress(struct directory_t *dir, cmpr1_t __cmpr1, cmpr2_t __cmpr2, con
         int two_z;
         int dst_z;
 
-        struct ncd_t *ncd = make_ncd(dir->file_count);
+        struct ncd_t *ncd = ncd_create(dir->file_count);
 
         mkdirf(S_IRWXU|S_IRWXG|S_IRWXO, "%s__ncd", dir->path);
 
@@ -200,7 +115,8 @@ void run_compress(struct directory_t *dir, cmpr1_t __cmpr1, cmpr2_t __cmpr2, con
         ncd_print(ncd, dir);
 }
 
-void run_zpaq(struct directory_t *dir)
+
+void shell_compression(struct directory_t *dir)
 {
         int i;
         int j;
@@ -213,7 +129,7 @@ void run_zpaq(struct directory_t *dir)
         int two_z;
         int dst_z;
 
-        struct ncd_t *ncd = make_ncd(dir->file_count);
+        struct ncd_t *ncd = ncd_create(dir->file_count);
 
         mkdirf(S_IRWXU|S_IRWXG|S_IRWXO, "%s__ncd", dir->path);
 
@@ -315,7 +231,8 @@ void run_zpaq(struct directory_t *dir)
         ncd_print(ncd, dir);
 }
 
-void just_ncd(struct directory_t *dir)
+
+void shell_calculate_ncd(struct directory_t *dir)
 {
         int i;
         int j;
@@ -323,7 +240,7 @@ void just_ncd(struct directory_t *dir)
         FILE *dst;
         int dst_z;
 
-        struct ncd_t *ncd = make_ncd(dir->file_count);
+        struct ncd_t *ncd = ncd_create(dir->file_count);
 
         for (i=0; i<dir->file_count; i++) {
 
@@ -371,6 +288,7 @@ void just_ncd(struct directory_t *dir)
 }
 
 
+
 int main(int argc, char **argv)
 {
         struct directory_t dir;
@@ -379,13 +297,17 @@ int main(int argc, char **argv)
                 directory_scan(argv[2], &dir);
 
                 if (!strcmp(argv[1], "--zlib")) {
-                        run_compress(&dir, zlib_compress, zlib_compress_cat, "gz");
+                        /* Compress and calculate NCD using zlib */
+                        run_compression(&dir, zlib_compress, zlib_compress_cat, "gz");
                 } else if (!strcmp(argv[1], "--bzlib")) {
-                        run_compress(&dir, bzlib_compress, bzlib_compress_cat, "bz2");
+                        /* Compress and calculate NCD using bzlib2 */
+                        run_compression(&dir, bzlib_compress, bzlib_compress_cat, "bz2");
                 } else if (!strcmp(argv[1], "--zpaq")) {
-                        run_zpaq(&dir);
+                        /* Compress and calculate NCD using zpaq */
+                        shell_compression(&dir);
                 } else if (!strcmp(argv[1], "--zpaqncd")) {
-                        just_ncd(&dir);
+                        /* Calculate NCD using zpaq files */
+                        shell_calculate_ncd(&dir);
                 } else {
                         printf("%s? I don't know that one.\n", argv[1]);
                 }
