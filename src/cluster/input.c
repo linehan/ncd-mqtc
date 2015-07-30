@@ -4,6 +4,94 @@
 #include <string.h>
 
 
+int read_float_line(FILE *input, float **vector, int *count)
+{
+        float   data_buffer[4096];
+        char    line_buffer[4096];
+
+        char   *ptr;
+        float   datum;
+        int     status;
+        int     i = 0;
+        int     n = 0;
+
+        if (NULL != fgets(line_buffer, 4096, input)) {
+
+                ptr = line_buffer;
+
+                for (;;) {
+
+                        /* Skip any leading whitespace */
+                        while ((ptr[i]==' ')) {
+                                i++;
+                        }
+
+                        /* 
+                         * If we hit a newline, that's 
+                         * the end of the loop. 
+                         */
+                        if (ptr[i] == '\n') {
+                                break;
+                        } else {
+                                /* 
+                                 * Otherwise, we must have
+                                 * stopped in front of a
+                                 * non-whitespace character.
+                                 *
+                                 * Let's scan it.
+                                 */
+                                status = sscanf(&(ptr[i]), "%f", &datum);
+
+                                if (status == 0 || status == EOF) {
+                                        printf("Scan error.\n");
+                                        return 0;
+                                } else {
+                                        /* Add the new item to our data */ 
+                                        data_buffer[n] = datum;
+                                        n++;
+
+                                        /* 
+                                         * Scan until the end of the
+                                         * thing we just read.
+                                         */
+                                        while ((ptr[i]!=' ' && ptr[i]!='\n')) {
+                                                i++;
+                                        }
+                                }
+                        }
+                }
+        } else {
+                return EOF;
+        }
+
+        /*
+         * If the user gave us a count pointer
+         * to fill in, go ahead and do that.
+         */
+        if (count != NULL) {
+                *count = n;
+        }
+
+        /*
+         * If the user gave us a NULL pointer,
+         * allocate some memory for it and
+         * put the contents of data_buffer at
+         * that memory location.
+         */
+        if (vector != NULL) {
+                if (*vector == NULL) {
+                        *vector = calloc(1, n*sizeof(float));
+                }
+                for (i=0; i<n; i++) {
+                        (*vector)[i] = data_buffer[i];
+                }
+        }
+
+        return 1;
+}
+
+
+
 /**
  * read_square_matrix()
  * -------------------- 
@@ -23,105 +111,50 @@
  */
 float **read_square_matrix(FILE *input, int *count)
 {
-        char    linebuffer[4096];
-        float   databuffer[4096];
-        char    fieldbuffer[256];
-        char   *ptr;
-        float   datum;
         float **matrix;
-        int     linecount = 0;
-        int     i;
-        int     j;
+        float  *first_line = NULL;
+        int     n = 0;
+        int     i = 0;
 
         /*
-         * We assume the input specifies a square matrix.
-         * Then to determine the size of the file, we need
-         * only read the first line and count the number of
-         * fields.
+         * Parse the first line into an array of floats.
          */
-        if (NULL != fgets(linebuffer, 4096, input)) {
-                ptr = linebuffer;
-                for (i=0, j=0; ptr[i]!='\n'; i++) {
-                        if (ptr[i] == ' ') {
-                                /* 
-                                 * WARNING:
-                                 * If there is trailing whitespace
-                                 * before a newline symbol in the
-                                 * input, it will cause an "extra"
-                                 * field to be scanned, and blow this
-                                 * thing up.
-                                 */
-                                /*
-                                 * Scan the field to the databuffer.
-                                 */
-                                sscanf(fieldbuffer, "%f", &datum);
-                                databuffer[linecount++] = datum;
-
-                                /*
-                                 * Zero the field buffer.
-                                 */
-                                memset(fieldbuffer, 0, 256);
-                                j = 0;
-
-                                /*
-                                 * Skip any subsequent whitespace
-                                 */
-                                while ((ptr[i]==' ') && (ptr[i]!='\n')) {
-                                        i++;
-                                }
-                        } else {
-                                /*
-                                 * Read the digit into the field
-                                 * buffer.
-                                 */
-                                fieldbuffer[j++] = ptr[i];
-                        }
-                }
+        if (EOF == read_float_line(input, &first_line, &n)) {
+                fprintf(stderr, "Couldn't read first line.\n");
+                return NULL;
         }
-                        
+                
         /*
-         * Now we are free to allocate the correct amount
-         * of memory for the square matrix.
+         * Now we know how many fields there are, we can
+         * allocate the right number of row pointers
+         * (since the matrix is square). 
          */
-
-        if (NULL == (matrix=calloc(linecount, sizeof(float *)))) {
+        if (NULL == (matrix=calloc(n, sizeof(float *)))) {
                 fprintf(stderr, "Out of memory.\n");
                 return NULL;
         }
 
-        for (i=0; i<linecount; i++) {
-               if (NULL == (matrix[i] = calloc(linecount, sizeof(float)))) {
-                       fprintf(stderr, "Out of memory.\n");
-                       return NULL;
+        /* 
+         * Assign the first row (We already scanned it in)
+         */
+        matrix[0] = first_line;
+
+        /*
+         * Scan the remaining lines into the allocated
+         * matrix region.
+         */
+        for (i=1; i<n; i++) {
+                float *line = NULL;
+                if (EOF != read_float_line(input, &line, NULL)) {
+                        matrix[i] = line; 
                 }
         }
 
-        /*
-         * Copy the values from the first line into the 
-         * allocated memory region.
-         */
-
-        for (j=0; j<linecount; j++) {
-                matrix[0][j] = databuffer[j];
-        }
-
-        /*
-         * Scan the rest of the file into the allocated
-         * memory region.
-         */
-
-        for (i=1; i<linecount; i++) {
-                for (j=0; j<linecount; j++) {
-                        if (EOF == (fscanf(input, "%f", &matrix[i][j]))) {
-                                fprintf(stderr, "EOF reached prematurely.\n");
-                        }
-                }
-        }
-
-        /* Assign for the caller to have */
+        /* Assign for the caller to have a count. */
         if (count != NULL) {
-                *count = linecount;
+                *count = n;
         }
 
         return matrix;
 }
+

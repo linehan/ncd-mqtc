@@ -44,7 +44,7 @@ void run_compression(struct directory_t *dir, cmpr1_t __cmpr1, cmpr2_t __cmpr2, 
 
                         ncd->size_single[i] = dst_z;
 
-                        fprintf(stderr,
+                        fprintf(stdout,
                                 "SOURCE: %s\n" 
                                 "TARGET: %s.zpaq\n"
                                 "\tSource size: %d bits\n"
@@ -60,7 +60,7 @@ void run_compression(struct directory_t *dir, cmpr1_t __cmpr1, cmpr2_t __cmpr2, 
                         );
 
                 } else {
-                        fprintf(stderr, "One of the file streams is NULL\n");
+                        fprintf(stdout, "One of the file streams is NULL\n");
                         /* 
                          * Don't let the size_single array get fucked 
                          * by leaving a gap from the else { condition 
@@ -86,7 +86,7 @@ void run_compression(struct directory_t *dir, cmpr1_t __cmpr1, cmpr2_t __cmpr2, 
 
                                 ncd->size_double[i][j] = dst_z;
 
-                                fprintf(stderr,
+                                fprintf(stdout,
                                         "SOURCE: %s(+)%s\n" 
                                         "TARGET: %s%s.zpaq\n"
                                         "\tSource size: %d bits\n"
@@ -102,7 +102,7 @@ void run_compression(struct directory_t *dir, cmpr1_t __cmpr1, cmpr2_t __cmpr2, 
                                 );
 
                         } else {
-                                fprintf(stderr, "One of the file streams is NULL\n");
+                                fprintf(stdout, "One of the file streams is NULL\n");
                                 /* 
                                  * Don't let the size_single array get fucked 
                                  * by leaving a gap from the else { condition 
@@ -151,7 +151,7 @@ void shell_compression(struct directory_t *dir)
 
                         ncd->size_single[i] = dst_z;
 
-                        fprintf(stderr,
+                        fprintf(stdout,
                                 "SOURCE: %s\n" 
                                 "TARGET: %s.zpaq\n"
                                 "\tSource size: %d bits\n"
@@ -167,7 +167,7 @@ void shell_compression(struct directory_t *dir)
                         );
 
                 } else {
-                        fprintf(stderr, "One of the file streams is NULL\n");
+                        fprintf(stdout, "One of the file streams is NULL\n");
                         /* 
                          * Don't let the size_single array get fucked 
                          * by leaving a gap from the else { condition 
@@ -202,7 +202,7 @@ void shell_compression(struct directory_t *dir)
 
                                 ncd->size_double[i][j] = dst_z;
 
-                                fprintf(stderr,
+                                fprintf(stdout,
                                         "SOURCE: %s(+)%s\n" 
                                         "TARGET: %s%s.zpaq\n"
                                         "\tSource size: %d bits\n"
@@ -218,7 +218,7 @@ void shell_compression(struct directory_t *dir)
                                 );
 
                         } else {
-                                fprintf(stderr, "One of the file streams is NULL\n");
+                                fprintf(stdout, "One of the file streams is NULL\n");
                                 /* 
                                  * Don't let the size_single array get fucked 
                                  * by leaving a gap from the else { condition 
@@ -253,7 +253,7 @@ void shell_calculate_ncd(struct directory_t *dir)
                         ncd->size_single[i] = dst_z;
 
                 } else {
-                        fprintf(stderr, "One of the file streams is NULL\n");
+                        fprintf(stdout, "One of the file streams is NULL\n");
                         /* 
                          * Don't let the size_single array get fucked 
                          * by leaving a gap from the else { condition 
@@ -274,7 +274,7 @@ void shell_calculate_ncd(struct directory_t *dir)
                                 ncd->size_double[i][j] = dst_z;
 
                         } else {
-                                fprintf(stderr, "One of the file streams is NULL\n");
+                                fprintf(stdout, "One of the file streams is NULL\n");
                                 /* 
                                  * Don't let the size_single array get fucked 
                                  * by leaving a gap from the else { condition 
