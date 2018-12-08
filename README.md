@@ -8,7 +8,7 @@ Once you have the NCD data file, input it to the `mqtc` tool, along with a numbe
 
 Note that MQTC is a Markov-chain Monte Carlo genetic algorithm.
 
-![A phylogenetic tree, used in the MQTC algorithm](image/ytree.svg)
+<img src="image/ytree.svg" align="right"></img>
 
 ## Which compressor to use?
 The NCD is a family of similarity metrics, so you must specify a suitable data compressor to use. Each has benefits and tradeoffs. For a full explanation, see <paper link>.
