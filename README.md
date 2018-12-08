@@ -1,3 +1,5 @@
+<img src="image/ytree.svg" align="right"></img>
+
 # ncd-mqtc
 Toolbench for working with Normalized Compression Distance (NCD) and the Minimum Quartet Tree Cost (MQTC) clustering algorithm.
 
@@ -7,8 +9,6 @@ Assemble a corpus in a directory, and use the `ncd` tool to generate an NCD data
 Once you have the NCD data file, input it to the `mqtc` tool, along with a number of generations, and it will perform MQTC clustering and output its answer.
 
 Note that MQTC is a Markov-chain Monte Carlo genetic algorithm.
-
-<img src="image/ytree.svg" align="right"></img>
 
 ## Which compressor to use?
 The NCD is a family of similarity metrics, so you must specify a suitable data compressor to use. Each has benefits and tradeoffs. For a full explanation, see <paper link>.
