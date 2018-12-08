@@ -46,6 +46,35 @@ void ncd_test(struct ncd_t *ncd)
 }
 
 
+void ncd_print_2files(struct ncd_t *ncd, struct directory_t *dir)
+{
+        int i;
+        int j;
+
+        FILE *key = fopen("ncd.key", "w+");
+        FILE *dat = fopen("ncd.dat", "w+");
+
+        for (j=0; j<dir->file_count; j++) {
+                fprintf(key, "%-2d %s\n", j, dir->file_name[j]);
+        }
+
+        for (i=0; i<dir->file_count; i++) {
+                fprintf(dat, "\n");
+                for (j=0; j<dir->file_count; j++) {
+                        fprintf(dat, "%-20g ",
+                                ncd_compute(
+                                        ncd->size_single[i], 
+                                        ncd->size_single[j], 
+                                        ncd->size_double[i][j]
+                                )
+                        );
+                }
+        }
+
+        fclose(key);
+        fclose(dat);
+}
+
 void ncd_print(struct ncd_t *ncd, struct directory_t *dir)
 {
         int i;

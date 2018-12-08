@@ -118,6 +118,19 @@ void run_mutations(int gens, FILE *input)
 
         data = read_square_matrix(input, &DATA_COUNT);
 
+        /*for (i=0; i<DATA_COUNT; i++) {*/
+                /*for (j=0; j<DATA_COUNT; j++) {*/
+                        /*if (data[i][j] < 0.0) {*/
+                                /*data[i][j] = 0.0;*/
+                                /*printf("[ALERT] '<0' datum corrected\n");*/
+                        /*}*/
+                        /*if (data[i][j] > 1.0) {*/
+                                /*data[i][j] = 1.0;*/
+                                /*printf("[ALERT] '>1' datum corrected\n");*/
+                        /*}*/
+                /*}*/
+        /*}*/
+
         for (i=0; i<N_TREES; i++) {
                 tree[i] = ytree_create(DATA_COUNT, data);
         }

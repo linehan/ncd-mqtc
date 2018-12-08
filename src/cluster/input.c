@@ -3,7 +3,6 @@
 #include <stdbool.h>
 #include <string.h>
 
-
 int read_float_line(FILE *input, float **vector, int *count)
 {
         float   data_buffer[4096];
@@ -22,7 +21,7 @@ int read_float_line(FILE *input, float **vector, int *count)
                 for (;;) {
 
                         /* Skip any leading whitespace */
-                        while ((ptr[i]==' ')) {
+                        while ((ptr[i]==' ' || ptr[i]=='\t')) {
                                 i++;
                         }
 
@@ -157,4 +156,3 @@ float **read_square_matrix(FILE *input, int *count)
 
         return matrix;
 }
-

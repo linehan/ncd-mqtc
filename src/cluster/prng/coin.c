@@ -55,3 +55,4 @@ int coin_tails(double bias)
         return (prng_uniform_random()<bias) ? TAILS : HEADS;
 }
 
+

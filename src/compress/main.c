@@ -112,7 +112,7 @@ void run_compression(struct directory_t *dir, cmpr1_t __cmpr1, cmpr2_t __cmpr2, 
                 }
         }
 
-        ncd_print(ncd, dir);
+        ncd_print_2files(ncd, dir);
 }
 
 
@@ -228,7 +228,7 @@ void shell_compression(struct directory_t *dir)
                 }
         }
 
-        ncd_print(ncd, dir);
+        ncd_print_2files(ncd, dir);
 }
 
 
@@ -284,10 +284,180 @@ void shell_calculate_ncd(struct directory_t *dir)
                 }
         }
 
-        ncd_print(ncd, dir);
+        ncd_print_2files(ncd, dir);
 }
 
 
+void gypsy_compression(struct directory_t *dir)
+{
+        int i;
+        int j;
+
+        FILE *one;
+        FILE *two;
+        FILE *dst;
+
+        int one_z;
+        int two_z;
+        int dst_z;
+
+        struct ncd_t *ncd = ncd_create(dir->file_count);
+
+        mkdirf(S_IRWXU|S_IRWXG|S_IRWXO, "%s__ncd", dir->path);
+
+        for (i=0; i<dir->file_count; i++) {
+
+                shell("gypsy -c %s -o %s__ncd/%s.gy", 
+                        dir->file_path[i],
+                        dir->path, 
+                        dir->file_name[i]
+                );
+
+                one = fopen(dir->file_path[i], "r+");
+                dst = fopenf("r+", "%s__ncd/%s.gy", dir->path, dir->file_name[i]);
+
+                if (one!=NULL && dst!=NULL) {
+
+                        one_z = (int)file_length(one);
+                        dst_z = (int)file_length(dst);
+
+                        ncd->size_single[i] = dst_z;
+
+                        fprintf(stdout,
+                                "SOURCE: %s\n" 
+                                "TARGET: %s.gy\n"
+                                "\tSource size: %d bits\n"
+                                "\tTarget size: %d bits\n"
+                                "\tCompressed: %d bits\n"
+                                "\tComp. Ratio: %g bits\n\n",
+                                dir->file_name[i],
+                                dir->file_name[i],
+                                one_z,
+                                dst_z,
+                                one_z - dst_z,
+                                (double)((double)dst_z/(double)one_z)
+                        );
+
+                } else {
+                        fprintf(stdout, "One of the file streams is NULL\n");
+                        /* 
+                         * Don't let the size_single array get fucked 
+                         * by leaving a gap from the else { condition 
+                         */
+                        return;
+                }
+        }
+
+        for (i=0; i<dir->file_count; i++) {
+                for (j=0; j<dir->file_count; j++) {
+
+                        shell("cat %s %s | gypsy -c -o %s__ncd/%s%s.gy", 
+                                dir->file_path[i], dir->file_path[j],
+                                dir->path, 
+                                dir->file_name[i], dir->file_name[j]
+                        );
+
+                        one = fopen(dir->file_path[i], "r+");
+                        two = fopen(dir->file_path[j], "r+");
+
+                        dst = fopenf("r+", "%s__ncd/%s%s.gy", 
+                                dir->path, 
+                                dir->file_name[i], 
+                                dir->file_name[j]
+                        );
+
+                        if (one!=NULL && two!=NULL && dst!=NULL) {
+
+                                one_z = (int)file_length(one);
+                                two_z = (int)file_length(two);
+                                dst_z = (int)file_length(dst);
+
+                                ncd->size_double[i][j] = dst_z;
+
+                                fprintf(stdout,
+                                        "SOURCE: %s(+)%s\n" 
+                                        "TARGET: %s%s.gy\n"
+                                        "\tSource size: %d bits\n"
+                                        "\tTarget size: %d bits\n"
+                                        "\tCompressed: %d bits\n"
+                                        "\tComp. Ratio: %g bits\n\n",
+                                        dir->file_name[i], dir->file_name[j],
+                                        dir->file_name[i], dir->file_name[j],
+                                        (one_z+two_z),
+                                        dst_z,
+                                        (one_z+two_z) - dst_z,
+                                        (double)((double)dst_z/(double)((double)one_z+(double)two_z))
+                                );
+
+                        } else {
+                                fprintf(stdout, "One of the file streams is NULL\n");
+                                /* 
+                                 * Don't let the size_single array get fucked 
+                                 * by leaving a gap from the else { condition 
+                                 */
+                                return;
+                        }
+                }
+        }
+
+        ncd_print_2files(ncd, dir);
+}
+
+
+void gypsy_calculate_ncd(struct directory_t *dir)
+{
+        int i;
+        int j;
+
+        FILE *dst;
+        int dst_z;
+
+        struct ncd_t *ncd = ncd_create(dir->file_count);
+
+        for (i=0; i<dir->file_count; i++) {
+
+                dst = fopenf("r+", "%s__ncd/%s.gy", dir->path, dir->file_name[i]);
+
+                if (dst != NULL) {
+
+                        dst_z = (int)file_length(dst);
+
+                        ncd->size_single[i] = dst_z;
+
+                } else {
+                        fprintf(stdout, "One of the file streams is NULL\n");
+                        /* 
+                         * Don't let the size_single array get fucked 
+                         * by leaving a gap from the else { condition 
+                         */
+                        return;
+                }
+        }
+
+        for (i=0; i<dir->file_count; i++) {
+                for (j=0; j<dir->file_count; j++) {
+
+                        dst = fopenf("r+", "%s__ncd/%s%s.gy", dir->path, dir->file_name[i], dir->file_name[j]);
+
+                        if (dst != NULL) {
+
+                                dst_z = (int)file_length(dst);
+
+                                ncd->size_double[i][j] = dst_z;
+
+                        } else {
+                                fprintf(stdout, "One of the file streams is NULL\n");
+                                /* 
+                                 * Don't let the size_single array get fucked 
+                                 * by leaving a gap from the else { condition 
+                                 */
+                                return;
+                        }
+                }
+        }
+
+        ncd_print_2files(ncd, dir);
+}
 
 int main(int argc, char **argv)
 {
@@ -308,11 +478,17 @@ int main(int argc, char **argv)
                 } else if (!strcmp(argv[1], "--zpaqncd")) {
                         /* Calculate NCD using zpaq files */
                         shell_calculate_ncd(&dir);
+                } else if (!strcmp(argv[1], "--gypsy")) {
+                        /* Compress and calculate NCD using zpaq */
+                        gypsy_compression(&dir);
+                } else if (!strcmp(argv[1], "--gypsyncd")) {
+                        /* Calculate NCD using zpaq files */
+                        gypsy_calculate_ncd(&dir);
                 } else {
                         printf("%s? I don't know that one.\n", argv[1]);
                 }
         } else {
-                printf("Usage: %s --zlib|--bzlib|--zpaq|--zpaqncd <DIRECTORY>\n", argv[0]);
+                printf("Usage: %s --zlib|--bzlib|--zpaq|--zpaqncd|--gypsy|--gypsyncd <DIRECTORY>\n", argv[0]);
         }
 
         return 0;
