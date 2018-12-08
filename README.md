@@ -36,7 +36,7 @@ Instructions for `cluster`:
 
         ./mqtc < 1000 _data/10x10.txt
         
-<img src="example/image/ncd-mqtc-run.png" width="100px"></img>
+<img src="example/image/ncd-mqtc-run.png" width="400px"></img>
 
 ## Example `ncd` datafile:
 
