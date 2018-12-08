@@ -21,22 +21,23 @@ Make everything:
 
         make all
 
-Make just the `compress` program:
+Make just the `ncd` program:
 
-        make compress
+        make ncd
 
-Make just the `cluster` program:
+Make just the `mqtc` program:
 
-        make cluster
+        make mqtc
 
+Instructions for `ncd`:
 
-Instructions for `compress`:
+        Usage: ./ncd --zlib|--bzlib|--zpaq|--zpaqncd|--gypsy|--gypsyncd <DIRECTORY>
 
-        Run `./ncd` for usage.
+Instructions for `mqtc`:
 
-Instructions for `cluster`:
-
-        ./mqtc < 1000 _data/10x10.txt
+        Usage 1: ./mqtc < <GENERATIONS> <DATAFILE>
+        
+        Usage 2: cat <DATAFILE> | ./mqtc <GENERATIONS>
         
 ## Example `ncd` datafile:
 
