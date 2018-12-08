@@ -36,3 +36,6 @@ Instructions for `cluster`:
 
         ./mqtc < 1000 _data/10x10.txt
         
+## Example `ncd` datafile:
+
+        
