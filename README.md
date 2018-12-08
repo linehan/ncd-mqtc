@@ -1,4 +1,4 @@
-<img src="image/ytree.svg" align="right"></img>
+<img src="example/image/ytree.svg" align="right"></img>
 
 # ncd-mqtc
 Toolbench for working with Normalized Compression Distance (NCD) and the Minimum Quartet Tree Cost (MQTC) clustering algorithm.
@@ -14,6 +14,8 @@ Note that MQTC is a Markov-chain Monte Carlo genetic algorithm.
 The NCD is a family of similarity metrics, so you must specify a suitable data compressor to use. Each has benefits and tradeoffs. For a full explanation, see <paper link>.
 
 ## Walkthrough
+<img src="example/image/ncd-mqtc-run.png" align="right" width="400px"></img>
+
 
 Make everything:
 
@@ -35,7 +37,7 @@ Instructions for `compress`:
 Instructions for `cluster`:
 
         ./mqtc < 1000 _data/10x10.txt
-
+        
 ## Example `ncd` datafile:
 
         WORKING PATH: testdata/.ncd/
@@ -71,3 +73,25 @@ Instructions for `cluster`:
         11 0.685546             0.688419             0.793654             0.79455              0.710649             0.6981               0.77716              0.795267             0.776622             0.75995              0.336501             0.371639             0.788992
         12 0.795426             0.79233              0.373236             0.413972             0.793259             0.792292             0.786731             0.376095             0.792804             0.793228             0.793896             0.794729             0
         <<<NCD
+
+## Example `mqtc` output:
+                          0                                                                
+                         / \                                                               
+                        /   \                                                              
+                       /     \                                                             
+                      /       \                                                            
+                     /         \                                                           
+                    /           \                                                          
+                   /             \                                                         
+                  .               .                                                        
+                 / \             / \                                                       
+                /   \           /   \                                                      
+               /     \         /     \                                                     
+              /       \       .       .                                                    
+             /         \     / \     / \                                                   
+            .           .   9   1   .  10                                                  
+           / \         / \         / \                                                     
+          0   .       .   8       5   .                                                    
+             / \     / \             / \                                                   
+            4   2   7  11           3   6                                                  
+         best:0.548225 init:0.272466 0.404677 0.376294 
