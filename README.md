@@ -35,6 +35,8 @@ Instructions for `compress`:
 Instructions for `cluster`:
 
         ./mqtc < 1000 _data/10x10.txt
+        
+<img src="example/image/ncd-mqtc-run.png" align="center"></img>
 
 ## Example `ncd` datafile:
 
