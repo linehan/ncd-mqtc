@@ -28,7 +28,6 @@ Make just the `compress` program:
 Make just the `cluster` program:
 
         make cluster
-<img src="example/image/ncd-mqtc-run1.png" align="right" width="400px"></img>
 
 
 Instructions for `compress`:
@@ -38,6 +37,9 @@ Instructions for `compress`:
 Instructions for `cluster`:
 
         ./mqtc < 1000 _data/10x10.txt
+        
+<img src="example/image/ncd-mqtc-run1.png" align="right" width="400px"></img>
+
         
 
 
