@@ -1,4 +1,4 @@
-<img src="image/ytree.svg" align="right"></img>
+<img src="example/image/ytree.svg" align="right"></img>
 
 # ncd-mqtc
 Toolbench for working with Normalized Compression Distance (NCD) and the Minimum Quartet Tree Cost (MQTC) clustering algorithm.
