@@ -14,6 +14,8 @@ Note that MQTC is a Markov-chain Monte Carlo genetic algorithm.
 The NCD is a family of similarity metrics, so you must specify a suitable data compressor to use. Each has benefits and tradeoffs. For a full explanation, see <paper link>.
 
 ## Walkthrough
+<img src="example/image/ncd-mqtc-run.png" align="right" width="400px"></img>
+
 
 Make everything:
 
@@ -26,6 +28,7 @@ Make just the `compress` program:
 Make just the `cluster` program:
 
         make cluster
+<img src="example/image/ncd-mqtc-run1.png" align="right" width="400px"></img>
 
 
 Instructions for `compress`:
@@ -36,9 +39,7 @@ Instructions for `cluster`:
 
         ./mqtc < 1000 _data/10x10.txt
         
-<img src="example/image/ncd-mqtc-run.png" align="right" width="400px"></img>
 
-<img src="example/image/ncd-mqtc-run1.png" align="right" width="400px"></img>
 
 
 ## Example `ncd` datafile:
